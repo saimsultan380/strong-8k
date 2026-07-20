@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
+import { MaskReveal } from "@/components/animation/mask-reveal";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -33,15 +34,14 @@ export function SubscriptionPlansHero() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.12}>
-          <h1
-            className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
-            style={{ color: "var(--hero-heading)" }}
-          >
-            Strong 8K IPTV Subscription Plans &{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Prices UK</span>
-          </h1>
-        </FadeIn>
+        <MaskReveal
+          delay={0.2}
+          className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
+          style={{ color: "var(--hero-heading)" }}
+        >
+          Strong 8K IPTV Subscription Plans &{" "}
+          <span style={{ color: "var(--hero-accent)" }}>Prices UK</span>
+        </MaskReveal>
 
         <FadeIn delay={0.18}>
           <div className="mx-auto mt-6 max-w-[750px] space-y-4 text-sm leading-[1.8] sm:text-[15px] md:text-base">

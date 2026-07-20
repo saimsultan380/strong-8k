@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface FadeInProps {
@@ -9,7 +9,7 @@ interface FadeInProps {
   className?: string;
   delay?: number;
   duration?: number;
-  /** Kept for API compatibility — animations always replay on scroll */
+  /** Play only the first time in view (default true — smoother scrolling) */
   once?: boolean;
   /** Stagger children by this interval in seconds */
   staggerChildren?: number;
@@ -25,7 +25,7 @@ const containerVariants = (stagger: number): Variants => ({
 });
 
 const itemVariants = (duration: number, delay: number): Variants => ({
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 14 },
   visible: {
     opacity: 1,
     y: 0,
@@ -41,16 +41,23 @@ export function FadeIn({
   children,
   className,
   delay = 0,
-  duration = 0.4,
+  duration = 0.35,
+  once = true,
   staggerChildren,
 }: FadeInProps) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return <div className={cn(className)}>{children}</div>;
+  }
+
   if (staggerChildren) {
     return (
       <motion.div
         className={cn(className)}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, margin: "-40px" }}
+        viewport={{ once, margin: "-40px", amount: 0.2 }}
         variants={containerVariants(staggerChildren)}
       >
         {React.Children.map(children, (child) => (
@@ -65,7 +72,7 @@ export function FadeIn({
       className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "-40px" }}
+      viewport={{ once, margin: "-40px", amount: 0.2 }}
       variants={itemVariants(duration, delay)}
     >
       {children}

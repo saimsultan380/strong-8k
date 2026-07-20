@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { FallingStars } from "@/components/falling-stars";
+import { NetworkBackground } from "@/components/network-background";
 import { siteConfig, siteMetadataBase } from "@/lib/site";
 
 const geistSans = Geist({
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   ...siteMetadataBase,
   icons: {
-    icon: "/strong-8k.PNG",
-    shortcut: "/strong-8k.PNG",
-    apple: "/strong-8k.PNG",
+    icon: "/strong-8k.PNG?v=2",
+    shortcut: "/strong-8k.PNG?v=2",
+    apple: "/strong-8k.PNG?v=2",
   },
 };
 
@@ -77,7 +77,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <FallingStars />
+          <NetworkBackground />
           <div className="relative z-10 flex min-h-full flex-1 flex-col">
             {children}
           </div>

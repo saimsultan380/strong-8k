@@ -46,13 +46,13 @@ export function Header() {
             onClick={closeMenu}
           >
             <Image
-              src="/strong-8k.PNG"
+              src="/strong-8k.PNG?v=2"
               alt="Strong 8K IPTV"
-              width={56}
-              height={56}
+              width={64}
+              height={64}
               loading="eager"
               unoptimized
-              className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+              className="h-12 w-12 object-contain sm:h-[3.25rem] sm:w-[3.25rem]"
             />
           </Link>
 

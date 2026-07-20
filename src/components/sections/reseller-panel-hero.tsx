@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
+import { MaskReveal } from "@/components/animation/mask-reveal";
 
 const WHATSAPP_LINK = "https://wa.me/447000000000";
 
@@ -30,15 +31,14 @@ export function ResellerPanelHero() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.12}>
-          <h1
-            className="mx-auto max-w-[960px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
-            style={{ color: "var(--hero-heading)" }}
-          >
-            Strong 8K IPTV Reseller Panel UK – Start Your Own{" "}
-            <span style={{ color: "var(--hero-accent)" }}>IPTV Business</span>
-          </h1>
-        </FadeIn>
+        <MaskReveal
+          delay={0.2}
+          className="mx-auto max-w-[960px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
+          style={{ color: "var(--hero-heading)" }}
+        >
+          Strong 8K IPTV Reseller Panel UK – Start Your Own{" "}
+          <span style={{ color: "var(--hero-accent)" }}>IPTV Business</span>
+        </MaskReveal>
 
         <FadeIn delay={0.18}>
           <div className="mx-auto mt-6 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">

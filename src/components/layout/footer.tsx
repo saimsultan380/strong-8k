@@ -51,12 +51,12 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center gap-2.5 no-underline">
               <Image
-                src="/strong-8k.PNG"
+                src="/strong-8k.PNG?v=2"
                 alt="Strong 8K IPTV"
-                width={56}
-                height={56}
+                width={64}
+                height={64}
                 unoptimized
-                className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+                className="h-12 w-12 object-contain sm:h-[3.25rem] sm:w-[3.25rem]"
               />
             </Link>
 
@@ -74,8 +74,8 @@ export function Footer() {
                   key={point}
                   className="rounded-full border px-3 py-1 text-[11px] font-medium"
                   style={{
-                    borderColor: "var(--hero-pill-border)",
-                    backgroundColor: "var(--hero-pill-bg)",
+                    borderColor: "rgba(255, 255, 255, 0.22)",
+                    backgroundColor: "transparent",
                     color: "var(--hero-pill-text)",
                   }}
                 >

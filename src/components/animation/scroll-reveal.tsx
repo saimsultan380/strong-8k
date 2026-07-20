@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface ScrollRevealProps {
@@ -9,7 +9,7 @@ interface ScrollRevealProps {
   className?: string;
   delay?: number;
   duration?: number;
-  /** Kept for API compatibility — animations always replay on scroll */
+  /** Play only the first time in view (default true — smoother scrolling) */
   once?: boolean;
   direction?: "up" | "down" | "left" | "right" | "none";
 }
@@ -18,10 +18,12 @@ export function ScrollReveal({
   children,
   className,
   delay = 0,
-  duration = 0.5,
+  duration = 0.4,
+  once = true,
   direction = "up",
 }: ScrollRevealProps) {
-  const offset = 24;
+  const reduceMotion = useReducedMotion();
+  const offset = 20;
   const initial: Record<string, number> = { opacity: 0 };
 
   if (direction === "up") initial.y = offset;
@@ -43,12 +45,16 @@ export function ScrollReveal({
     },
   };
 
+  if (reduceMotion) {
+    return <div className={cn(className)}>{children}</div>;
+  }
+
   return (
     <motion.div
       className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "-60px" }}
+      viewport={{ once, margin: "-50px", amount: 0.15 }}
       variants={variants}
     >
       {children}

@@ -129,8 +129,8 @@
   --hero-stats-label: rgba(255, 255, 255, 0.55);
   --hero-stats-value-shadow: none;
   --hero-nav-bg: rgba(0, 0, 0, 0.72);
-  --hero-nav-border: rgba(212, 168, 75, 0.22);
-  --hero-nav-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --hero-nav-border: rgba(255, 255, 255, 0.1);
+  --hero-nav-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.015);
   --hero-nav-text: #ffffff;
   --hero-nav-link: rgba(255, 255, 255, 0.72);
 
@@ -216,7 +216,7 @@ div[style*="feature-icon-bg"] {
   border-radius: 9999px !important;
 }
 
-/* Periodic shine sweep across gold CTA buttons (once every 5s) */
+/* Periodic shine sweep across gold CTA buttons (once every 2.5s) */
 @keyframes btn-shine {
   0% {
     left: -70%;
@@ -255,7 +255,7 @@ button[style*="hero-cta-primary-bg"]::after {
     transparent 100%
   );
   transform: skewX(-20deg);
-  animation: btn-shine 5s ease-in-out infinite;
+  animation: btn-shine 2.5s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
 }

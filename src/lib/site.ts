@@ -24,7 +24,7 @@ export const pageTitles = {
   subscriptionPlans: "Strong 8K IPTV Subscription Plans & Prices UK",
   installationGuide: "Strong 8K IPTV Installation Guide – Set Up Any Device in Minutes",
   resellerPanel: "Strong 8K IPTV Reseller Panel UK – Start Your Own IPTV Business",
-  contactUs: "Contact Strong 8K IPTV – 24/7 Support, Free Trial & Subscriptions",
+  contactUs: "IPTV Free Trial UK – Test Strong 8K Free for 24 Hours",
 } as const;
 
 export const pageDescriptions = {
@@ -36,7 +36,7 @@ export const pageDescriptions = {
   resellerPanel:
     "Become an IPTV reseller in the UK with Strong 8K. Credits from £59.99, non-expiring balance, white label branding, sub-reseller network, instant activation and 24/7 support.",
   contactUs:
-    "Contact Strong 8K IPTV for 24/7 WhatsApp support, free 24-hour trials, subscription help, device setup, and reseller panel enquiries. Real replies in minutes.",
+    "Claim a free IPTV trial UK with Strong 8K — 24 hours of full access to 40,000+ channels and 120,000+ VOD. No card, no commitment. Contact us 24/7 on WhatsApp for trials, setup and support.",
 } as const;
 
 export const siteMetadataBase = {
