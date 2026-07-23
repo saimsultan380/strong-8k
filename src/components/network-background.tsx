@@ -22,21 +22,33 @@ function mulberry32(seed: number) {
 
 function buildNodes(width: number, height: number) {
   const area = width * height;
-  const count = Math.max(18, Math.min(28, Math.round(area / 65000)));
+  const count = Math.max(28, Math.min(48, Math.round(area / 42000)));
   const rand = mulberry32(0x534b38);
-  const margin = 0.03;
   const nodes: Node[] = [];
 
-  for (let i = 0; i < count; i++) {
-    const speed = 0.08 + rand() * 0.14;
-    const angle = rand() * Math.PI * 2;
-    nodes.push({
-      x: (margin + rand() * (1 - margin * 2)) * width,
-      y: (margin + rand() * (1 - margin * 2)) * height,
-      r: 1.1 + rand() * 1.4,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-    });
+  // Jittered grid — even coverage across the viewport (no random clumps)
+  const cols = Math.max(4, Math.round(Math.sqrt(count * (width / height))));
+  const rows = Math.max(3, Math.ceil(count / cols));
+  const cellW = width / cols;
+  const cellH = height / rows;
+  let placed = 0;
+
+  for (let row = 0; row < rows && placed < count; row++) {
+    for (let col = 0; col < cols && placed < count; col++) {
+      const jitterX = (rand() - 0.5) * cellW * 0.55;
+      const jitterY = (rand() - 0.5) * cellH * 0.55;
+      const speed = 0.12 + rand() * 0.2;
+      const angle = rand() * Math.PI * 2;
+
+      nodes.push({
+        x: Math.min(width, Math.max(0, (col + 0.5) * cellW + jitterX)),
+        y: Math.min(height, Math.max(0, (row + 0.5) * cellH + jitterY)),
+        r: 1.2 + rand() * 1.4,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+      });
+      placed++;
+    }
   }
 
   return nodes;
@@ -72,26 +84,51 @@ export function NetworkBackground() {
     let lastFrame = 0;
     let running = false;
 
-    // ~20fps is enough for a soft drift and much cheaper than 60fps
-    const FRAME_MS = 50;
-    const lineColor = "rgba(180, 186, 198, 0.16)";
-    const nodeFill = "rgba(210, 216, 226, 0.26)";
+    // ~30fps — smoother drift without full 60fps cost
+    const FRAME_MS = 33;
+    const lineColor = "rgba(148, 156, 168, 0.42)";
+    const nodeFill = "rgba(180, 188, 200, 0.5)";
+    const nodeGlow = "rgba(140, 148, 160, 0.18)";
 
-    const setup = () => {
-      // DPR 1 for bg layer — big win on retina without visible loss
-      width = window.innerWidth;
-      height = window.innerHeight;
-      maxDistSq = Math.pow(Math.min(width, height) * 0.26, 2);
-      canvas.width = width;
-      canvas.height = height;
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
+    const readSize = () => {
+      // Prefer layout size from CSS (inset-0 / 100%) so DevTools device
+      // toggles never leave a stale inline pixel width on the left edge.
+      const rect = canvas.getBoundingClientRect();
+      const nextW = Math.max(
+        1,
+        Math.round(rect.width || window.innerWidth || 1),
+      );
+      const nextH = Math.max(
+        1,
+        Math.round(rect.height || window.innerHeight || 1),
+      );
+      return { nextW, nextH };
+    };
+
+    const setup = (forceRebuild = false) => {
+      const { nextW, nextH } = readSize();
+      const sizeChanged =
+        Math.abs(nextW - width) > 1 || Math.abs(nextH - height) > 1;
+
+      width = nextW;
+      height = nextH;
+      maxDistSq = Math.pow(Math.min(width, height) * 0.34, 2);
+
+      // Buffer size only — never set inline style width/height (breaks
+      // fixed inset-0 coverage after mobile ↔ desktop viewport changes)
+      if (canvas.width !== width) canvas.width = width;
+      if (canvas.height !== height) canvas.height = height;
       ctx.setTransform(1, 0, 0, 1, 0, 0);
 
-      // Keep existing velocities/directions when possible so resize doesn't restart
-      if (nodes.length === 0) {
+      const targetCount = Math.max(
+        28,
+        Math.min(48, Math.round((width * height) / 42000)),
+      );
+      const densityChanged = Math.abs(nodes.length - targetCount) > 6;
+
+      if (forceRebuild || nodes.length === 0 || densityChanged) {
         nodes = buildNodes(width, height);
-      } else {
+      } else if (sizeChanged) {
         for (const node of nodes) {
           node.x = ((node.x % width) + width) % width;
           node.y = ((node.y % height) + height) % height;
@@ -102,7 +139,7 @@ export function NetworkBackground() {
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
 
-      ctx.lineWidth = 0.75;
+      ctx.lineWidth = 1.15;
       ctx.strokeStyle = lineColor;
       ctx.beginPath();
       for (let i = 0; i < nodes.length; i++) {
@@ -118,11 +155,16 @@ export function NetworkBackground() {
       }
       ctx.stroke();
 
-      ctx.fillStyle = nodeFill;
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
         ctx.beginPath();
+        ctx.arc(node.x, node.y, node.r * 1.8, 0, Math.PI * 2);
+        ctx.fillStyle = nodeGlow;
+        ctx.fill();
+
+        ctx.beginPath();
         ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+        ctx.fillStyle = nodeFill;
         ctx.fill();
       }
     };
@@ -171,13 +213,19 @@ export function NetworkBackground() {
 
     const onResize = () => {
       window.clearTimeout(resizeTimer);
+      // Double-rAF + short debounce: DevTools device mode often fires
+      // resize before layout has settled on the new viewport size.
       resizeTimer = window.setTimeout(() => {
-        setup();
-        draw();
-      }, 150);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setup();
+            draw();
+          });
+        });
+      }, 50);
     };
 
-    setup();
+    setup(true);
     draw();
 
     if (!reduceMotion) {
@@ -186,11 +234,13 @@ export function NetworkBackground() {
     }
 
     window.addEventListener("resize", onResize);
+    window.visualViewport?.addEventListener("resize", onResize);
 
     return () => {
       stop();
       window.clearTimeout(resizeTimer);
       window.removeEventListener("resize", onResize);
+      window.visualViewport?.removeEventListener("resize", onResize);
       document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);
