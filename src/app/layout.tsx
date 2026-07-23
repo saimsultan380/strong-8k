@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   ...siteMetadataBase,
+  verification: {
+    google: "6css43Rhe2qtd8Qoqo6sByeuJKNR16A3P4h5LBTTBLc",
+  },
   icons: {
     icon: "/strong-8k.PNG?v=2",
     shortcut: "/strong-8k.PNG?v=2",
