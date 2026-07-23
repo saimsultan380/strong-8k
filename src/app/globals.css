@@ -186,6 +186,11 @@
     @apply bg-background text-foreground;
     background-color: #000000;
   }
+  /* Keep section surfaces clear so the fixed network mesh shows through */
+  main,
+  section {
+    background-color: transparent;
+  }
   h1,
   h2 {
     background-image: var(--grad-text);

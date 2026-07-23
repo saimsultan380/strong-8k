@@ -80,8 +80,9 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          {/* Fixed site-wide mesh — sits behind every page/section */}
           <NetworkBackground />
-          <div className="relative z-10 flex min-h-full flex-1 flex-col">
+          <div className="relative z-10 flex min-h-full flex-1 flex-col bg-transparent">
             {children}
           </div>
         </ThemeProvider>
