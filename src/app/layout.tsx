@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { NetworkBackground } from "@/components/network-background";
+import ParticlesBg from "@/components/ui/particles-bg";
 import { siteConfig, siteMetadataBase } from "@/lib/site";
 
 const geistSans = Geist({
@@ -80,8 +80,8 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          {/* Fixed site-wide mesh — sits behind every page/section */}
-          <NetworkBackground />
+          {/* Site-wide particles.js mesh — transparent, grey/white links */}
+          <ParticlesBg />
           <div className="relative z-10 flex min-h-full flex-1 flex-col bg-transparent">
             {children}
           </div>
