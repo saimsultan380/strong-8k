@@ -61,11 +61,11 @@ export function HeroSection() {
           </FadeIn>
 
           <FadeIn delay={0.28}>
-            <div className="mt-5 flex flex-row items-stretch justify-start gap-3 sm:mt-6 sm:gap-4">
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="flex-1 sm:flex-initial">
+            <div className="mt-5 flex flex-row items-stretch justify-start gap-2 sm:mt-6 sm:gap-4">
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 sm:flex-initial">
                 <a
                   href="#pricing"
-                  className="flex min-h-11 items-center justify-center rounded-xl bg-gradient-brand px-4 py-3 text-[13px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
+                  className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
@@ -73,10 +73,10 @@ export function HeroSection() {
                   Subscribe Now
                 </a>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="flex-1 sm:flex-initial">
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-[1.35] sm:flex-initial">
                 <Link
                   href="/free-trial"
-                  className="flex min-h-11 items-center justify-center rounded-xl bg-gradient-brand px-4 py-3 text-[13px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
+                  className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
