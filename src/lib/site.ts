@@ -148,16 +148,13 @@ export const siteMetadataBase: Metadata = {
     "4K IPTV",
     "IPTV reseller",
   ],
-  alternates: {
-    canonical: canonicalUrl("/"),
-  },
+  // Canonical is set per-page via createPageMetadata — never inherit homepage here.
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     siteName: siteConfig.name,
     title: pageTitles.home,
     description: siteConfig.description,
-    url: canonicalUrl("/"),
   },
   twitter: {
     card: "summary_large_image",

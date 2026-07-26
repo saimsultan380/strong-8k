@@ -253,7 +253,7 @@ export function PricingSection() {
             >
               Want to compare every plan in detail? Visit our{" "}
               <Link
-                href="/subscription-plans"
+                href="/subscription-plans/"
                 className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                 style={{ color: "var(--hero-heading)" }}
               >

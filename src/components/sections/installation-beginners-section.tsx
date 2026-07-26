@@ -343,7 +343,7 @@ export function InstallationBeginnersSection() {
             >
               <span>Don't have a subscription yet?</span>
               <Link
-                href="/subscription-plans"
+                href="/subscription-plans/"
                 className="inline-flex items-center gap-1 font-semibold transition-colors hover:opacity-80"
                 style={{ color: "var(--hero-accent)" }}
               >
@@ -384,7 +384,7 @@ export function InstallationBeginnersSection() {
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row md:mt-16">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="flex items-center gap-2 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:text-[15px]"
                 style={{
                   background: "var(--hero-cta-primary-bg)",
@@ -398,7 +398,7 @@ export function InstallationBeginnersSection() {
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/subscription-plans"
+                href="/subscription-plans/"
                 className="flex items-center gap-2 rounded-xl border bg-transparent px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] hover:text-[var(--hero-accent)] sm:text-[15px]"
                 style={{
                   borderColor: "var(--hero-btn-border)",

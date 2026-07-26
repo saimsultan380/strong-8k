@@ -73,7 +73,7 @@ export function ResellerCustomersSection() {
           >
             It&apos;s the same service sold on our{" "}
             <Link
-              href="/subscription-plans"
+              href="/subscription-plans/"
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >
@@ -82,7 +82,7 @@ export function ResellerCustomersSection() {
             — so you can check exactly what your customers will experience, or test it yourself with
             a{" "}
             <Link
-              href="/free-trial"
+              href="/contact-us/"
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >

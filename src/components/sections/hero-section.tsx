@@ -75,7 +75,7 @@ export function HeroSection() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-[1.35] sm:flex-initial">
                 <Link
-                  href="/free-trial"
+                  href="/contact-us/"
                   className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",

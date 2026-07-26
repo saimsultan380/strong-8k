@@ -105,7 +105,7 @@ export function IptvSubscriptionExplainer() {
               </p>
             </div>
             <Link
-              href="/free-trial"
+              href="/contact-us/"
               className="mt-8 inline-flex text-sm font-bold underline transition-colors hover:opacity-85"
               style={{ color: "var(--hero-accent)" }}
             >

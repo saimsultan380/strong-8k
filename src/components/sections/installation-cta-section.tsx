@@ -51,7 +51,7 @@ export function InstallationCtaSection() {
               <p style={{ color: "var(--hero-muted)" }}>
                 Haven&apos;t got your login details yet? Choose a plan on our{" "}
                 <Link
-                  href="/subscription-plans"
+                  href="/subscription-plans/"
                   className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                   style={{ color: "var(--hero-heading)" }}
                 >
@@ -59,7 +59,7 @@ export function InstallationCtaSection() {
                 </Link>{" "}
                 page or test everything first with a{" "}
                 <Link
-                  href="/free-trial"
+                  href="/contact-us/"
                   className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                   style={{ color: "var(--hero-heading)" }}
                 >
@@ -87,7 +87,7 @@ export function InstallationCtaSection() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="flex-1 sm:flex-initial">
                 <Link
-                  href="/subscription-plans"
+                  href="/subscription-plans/"
                   className="flex min-h-12 items-center justify-center rounded-xl border px-4 py-3.5 text-[13px] font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] sm:px-8 sm:text-[15px]"
                   style={{
                     borderColor: "var(--hero-btn-border)",

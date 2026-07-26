@@ -110,7 +110,7 @@ export function InstallationTroubleshooting() {
             </a>{" "}
             or visit{" "}
             <Link
-              href="/contact-us"
+              href="/contact-us/"
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "#ffffff" }}
             >

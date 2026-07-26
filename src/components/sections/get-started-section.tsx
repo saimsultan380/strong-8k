@@ -25,7 +25,7 @@ const STEPS = [
         and the full VOD library, live on your screen. Average setup time: under 5 minutes. Full
         walkthroughs for every device are in our{" "}
         <Link
-          href="/installation-guide"
+          href="/installation-guide/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >

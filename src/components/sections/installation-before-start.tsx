@@ -15,7 +15,7 @@ const NEEDS = [
         The username, password and server URL (or M3U link / Xtream Codes) we sent you by WhatsApp
         or email after your order. Haven&apos;t subscribed yet? Grab a plan on our{" "}
         <Link
-          href="/subscription-plans"
+          href="/subscription-plans/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
@@ -23,7 +23,7 @@ const NEEDS = [
         </Link>{" "}
         page or start with the{" "}
         <Link
-          href="/free-trial"
+          href="/contact-us/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >

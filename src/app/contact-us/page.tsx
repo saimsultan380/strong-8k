@@ -10,6 +10,8 @@ import { ContactHelpTopics } from "@/components/sections/contact-help-topics";
 import { ContactFaqSection } from "@/components/sections/contact-faq-section";
 import { ContactCtaSection } from "@/components/sections/contact-cta-section";
 import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = createPageMetadata({
   title: pageTitles.contactUs,
@@ -21,6 +23,7 @@ export default function ContactUsPage() {
   return (
     <main className="relative flex flex-col">
       <Header />
+      <Breadcrumbs items={pageBreadcrumbs.contactUs} />
       <ContactHero />
       <ContactHowToClaim />
       <ContactWhatsIncluded />

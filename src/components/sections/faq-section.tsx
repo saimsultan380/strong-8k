@@ -29,7 +29,7 @@ const HOMEPAGE_FAQS: FaqItem[] = [
         Install an IPTV player such as IPTV Smarters or TiviMate, enter your Strong 8K credentials,
         and you&apos;re watching within minutes. A full Firestick walkthrough is available in our{" "}
         <Link
-          href="/installation-guide"
+          href="/installation-guide/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
@@ -78,7 +78,7 @@ const HOMEPAGE_FAQS: FaqItem[] = [
         panel gives you credits, instant account creation, and full pricing control. Learn more on
         our{" "}
         <Link
-          href="/reseller-panel"
+          href="/reseller-panel/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >

@@ -141,7 +141,7 @@ export function UkAndResellerSection() {
                 >
                   Learn how it works on our{" "}
                   <Link
-                    href="/reseller"
+                    href="/reseller-panel/"
                     className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                     style={{ color: "var(--hero-heading)" }}
                   >

@@ -13,6 +13,8 @@ import { SubscriptionWhyChoose } from "@/components/sections/subscription-why-ch
 import { SubscriptionFaqSection } from "@/components/sections/subscription-faq-section";
 import { SubscriptionCtaSection } from "@/components/sections/subscription-cta-section";
 import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = createPageMetadata({
   title: pageTitles.subscriptionPlans,
@@ -24,6 +26,7 @@ export default function SubscriptionPlansPage() {
   return (
     <main className="relative flex flex-col">
       <Header />
+      <Breadcrumbs items={pageBreadcrumbs.subscriptionPlans} />
       <SubscriptionPlansHero />
       <MultiConnectionPlansSection />
       <SubscriptionComparisonSection />

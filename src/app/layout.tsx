@@ -3,7 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ParticlesBg from "@/components/ui/particles-bg";
-import { canonicalUrl, siteConfig, siteMetadataBase } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
+import { siteJsonLd } from "@/lib/breadcrumbs";
+import { canonicalUrl, siteMetadataBase } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,35 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteConfig.name,
-    alternateName: [
-      siteConfig.shortName,
-      "Strong 8K IPTV UK",
-      "Strong 8K IPTV USA",
-    ],
-    url: canonicalUrl("/"),
-    description: siteConfig.description,
-    inLanguage: "en-GB",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: siteConfig.name,
-    url: canonicalUrl("/"),
-    logo: `${siteConfig.siteUrl.replace(/\/$/, "")}/strong-8k.PNG`,
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: siteConfig.email,
-      contactType: "customer support",
-      availableLanguage: ["English"],
-    },
-  },
-];
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,12 +42,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd),
-          }}
-        />
+        <JsonLd data={siteJsonLd()} />
       </head>
       <body className="relative min-h-full flex flex-col bg-black text-white">
         <ThemeProvider

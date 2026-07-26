@@ -10,6 +10,8 @@ import { InstallationTroubleshooting } from "@/components/sections/installation-
 import { InstallationFaqSection } from "@/components/sections/installation-faq-section";
 import { InstallationCtaSection } from "@/components/sections/installation-cta-section";
 import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = createPageMetadata({
   title: pageTitles.installationGuide,
@@ -21,6 +23,7 @@ export default function InstallationGuidePage() {
   return (
     <main className="relative flex flex-col">
       <Header />
+      <Breadcrumbs items={pageBreadcrumbs.installationGuide} />
       <InstallationGuideHero />
       <InstallationBeforeStart />
       <InstallationAppsCodes />

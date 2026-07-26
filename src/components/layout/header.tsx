@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Subscription Plan", href: "/subscription-plans" },
-  { label: "Installation Guide", href: "/installation-guide" },
-  { label: "Reseller Panel", href: "/reseller-panel" },
-  { label: "Contact Us", href: "/contact-us" },
+  { label: "Subscription Plan", href: "/subscription-plans/" },
+  { label: "Installation Guide", href: "/installation-guide/" },
+  { label: "Reseller Panel", href: "/reseller-panel/" },
+  { label: "Contact Us", href: "/contact-us/" },
 ];
 
 export function Header() {
@@ -94,7 +94,7 @@ export function Header() {
               className="hidden md:inline-flex"
             >
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 id="hero-get-started"
                 className="shrink-0 rounded-xl bg-gradient-brand px-4 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-200 hover:brightness-110 sm:px-5"
                 style={{
@@ -165,7 +165,7 @@ export function Header() {
                     whileTap={{ scale: 0.98 }}
                   >
                     <Link
-                      href="/contact-us"
+                      href="/contact-us/"
                       className="flex w-full items-center justify-center rounded-xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-black shadow-sm transition-all duration-200 hover:brightness-110"
                       style={{
                         boxShadow: "var(--hero-cta-primary-shadow)",

@@ -78,7 +78,7 @@ export function InstallationGuideHero() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="flex-1 sm:flex-initial">
               <Link
-                href="/subscription-plans"
+                href="/subscription-plans/"
                 className="flex min-h-12 items-center justify-center rounded-xl border px-4 py-3.5 text-[13px] font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] sm:px-7 sm:text-[15px]"
                 style={{
                   borderColor: "var(--hero-btn-border)",

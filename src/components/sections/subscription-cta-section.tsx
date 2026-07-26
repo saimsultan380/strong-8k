@@ -85,7 +85,7 @@ export function SubscriptionCtaSection() {
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-12">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/free-trial"
+                  href="/contact-us/"
                   className="inline-flex items-center gap-2.5 rounded-xl px-8 py-4 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
                   style={{
                     background: "var(--hero-cta-primary-bg)",

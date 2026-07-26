@@ -14,6 +14,8 @@ import { ResellerHowToSection } from "@/components/sections/reseller-how-to-sect
 import { ResellerFaqSection } from "@/components/sections/reseller-faq-section";
 import { ResellerCtaSection } from "@/components/sections/reseller-cta-section";
 import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = createPageMetadata({
   title: pageTitles.resellerPanel,
@@ -25,6 +27,7 @@ export default function ResellerPanelPage() {
   return (
     <main className="relative flex flex-col">
       <Header />
+      <Breadcrumbs items={pageBreadcrumbs.resellerPanel} />
       <ResellerPanelHero />
       <ResellerExplainerSection />
       <ResellerProfitabilitySection />

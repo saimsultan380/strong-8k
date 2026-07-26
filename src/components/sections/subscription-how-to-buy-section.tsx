@@ -27,7 +27,7 @@ const STEPS = [
         Enter your details into any compatible IPTV player and start watching. Never set up IPTV
         before? Our step-by-step{" "}
         <Link
-          href="/installation-guide"
+          href="/installation-guide/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >

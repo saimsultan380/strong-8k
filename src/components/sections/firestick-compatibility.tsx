@@ -147,7 +147,7 @@ export function FirestickCompatibilitySection() {
             Switching devices later? No problem — your login works across all of them. Setup
             instructions are in our{" "}
             <Link
-              href="/installation-guide"
+              href="/installation-guide/"
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >

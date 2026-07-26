@@ -109,7 +109,7 @@ export function SubscriptionWhyChoose() {
           >
             Questions about payment methods or multi-screen pricing? Message us any time via the{" "}
             <Link
-              href="/contact-us"
+              href="/contact-us/"
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >

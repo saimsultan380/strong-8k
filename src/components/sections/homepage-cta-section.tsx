@@ -64,7 +64,7 @@ export function HomepageCtaSection() {
             <div className="mt-10 flex flex-row items-center justify-center gap-3 md:mt-12">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
                 <Link
-                  href="/free-trial"
+                  href="/contact-us/"
                   className="flex items-center justify-center rounded-xl px-4 py-4 text-[13px] font-bold transition-all duration-200 hover:brightness-110 sm:px-8 sm:text-[15px]"
                   style={{
                     background: "var(--hero-cta-primary-bg)",
@@ -98,7 +98,7 @@ export function HomepageCtaSection() {
             >
               Questions before you order? Reach our team any time via the{" "}
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                 style={{ color: "var(--hero-heading)" }}
               >

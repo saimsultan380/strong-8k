@@ -81,7 +81,7 @@ export function SubscriptionPlansHero() {
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/free-trial"
+                href="/contact-us/"
                 className="flex w-full max-w-xs items-center justify-center gap-2 rounded-xl border px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] hover:text-[var(--hero-accent)] sm:w-auto sm:max-w-none sm:text-[15px]"
                 style={{
                   borderColor: "var(--hero-btn-border)",

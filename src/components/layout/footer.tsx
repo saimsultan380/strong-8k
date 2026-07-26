@@ -7,16 +7,16 @@ import { siteConfig } from "@/lib/site";
 const FOOTER_LINKS = {
   service: [
     { label: "Home", href: "/" },
-    { label: "Subscription Plan", href: "/subscription-plans" },
-    { label: "Installation Guide", href: "/installation-guide" },
-    { label: "Reseller Panel", href: "/reseller-panel" },
-    { label: "Contact Us", href: "/contact-us" },
+    { label: "Subscription Plan", href: "/subscription-plans/" },
+    { label: "Installation Guide", href: "/installation-guide/" },
+    { label: "Reseller Panel", href: "/reseller-panel/" },
+    { label: "Contact Us", href: "/contact-us/" },
   ],
   support: [
-    { label: "Pricing Plans", href: "/subscription-plans#pricing" },
-    { label: "Free Trial", href: "/contact-us" },
-    { label: "Device Compatibility", href: "#device-compatibility" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Pricing Plans", href: "/subscription-plans/#pricing" },
+    { label: "Free Trial", href: "/contact-us/" },
+    { label: "Device Compatibility", href: "/#device-compatibility" },
+    { label: "FAQ", href: "/#faq" },
   ],
   legal: [
     { label: "Privacy Policy", href: "#" },

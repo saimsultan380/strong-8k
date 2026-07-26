@@ -12,7 +12,7 @@ const TOPICS = [
       <>
         Not sure which duration suits you? Compare options on our{" "}
         <Link
-          href="/subscription-plans"
+          href="/subscription-plans/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
@@ -28,7 +28,7 @@ const TOPICS = [
       <>
         Stuck on any device? Our{" "}
         <Link
-          href="/installation-guide"
+          href="/installation-guide/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
@@ -44,7 +44,7 @@ const TOPICS = [
       <>
         Want to sell IPTV under your own brand? Ask about the{" "}
         <Link
-          href="/reseller-panel"
+          href="/reseller-panel/"
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
