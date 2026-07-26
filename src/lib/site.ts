@@ -2,7 +2,7 @@
  * Site-wide brand & SEO defaults for Strong 8K IPTV.
  *
  * Canonical rule: always HTTPS + non-www + trailing slash
- * e.g. https://strong8k.com/subscription-plans/
+ * e.g. https://strong-8k.co.uk/subscription-plans/
  */
 import type { Metadata } from "next";
 
@@ -13,7 +13,7 @@ export const siteConfig = {
   description:
     "Strong 8K IPTV – premium IPTV subscription for UK & USA. 40,000+ live channels, 120,000+ movies & series, HD/4K/8K streaming, instant activation and 24/7 support. Free 24-hour trial available.",
   /** Canonical origin — HTTPS, non-www, no trailing slash on the origin itself */
-  siteUrl: "https://strong8k.com",
+  siteUrl: "https://strong-8k.co.uk",
   email: "support@strong8k.com",
   locale: "en_GB",
   twitterHandle: "@strong8k",
