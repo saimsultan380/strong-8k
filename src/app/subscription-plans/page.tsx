@@ -12,22 +12,13 @@ import { SubscriptionIncludedSection } from "@/components/sections/subscription-
 import { SubscriptionWhyChoose } from "@/components/sections/subscription-why-choose";
 import { SubscriptionFaqSection } from "@/components/sections/subscription-faq-section";
 import { SubscriptionCtaSection } from "@/components/sections/subscription-cta-section";
-import { pageDescriptions, pageTitles } from "@/lib/site";
+import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: pageTitles.subscriptionPlans,
-  },
+export const metadata: Metadata = createPageMetadata({
+  title: pageTitles.subscriptionPlans,
   description: pageDescriptions.subscriptionPlans,
-  openGraph: {
-    title: pageTitles.subscriptionPlans,
-    description: pageDescriptions.subscriptionPlans,
-  },
-  twitter: {
-    title: pageTitles.subscriptionPlans,
-    description: pageDescriptions.subscriptionPlans,
-  },
-};
+  path: "/subscription-plans/",
+});
 
 export default function SubscriptionPlansPage() {
   return (

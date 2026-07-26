@@ -9,22 +9,13 @@ import { InstallationDeviceSelector } from "@/components/sections/installation-d
 import { InstallationTroubleshooting } from "@/components/sections/installation-troubleshooting";
 import { InstallationFaqSection } from "@/components/sections/installation-faq-section";
 import { InstallationCtaSection } from "@/components/sections/installation-cta-section";
-import { pageDescriptions, pageTitles } from "@/lib/site";
+import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: pageTitles.installationGuide,
-  },
+export const metadata: Metadata = createPageMetadata({
+  title: pageTitles.installationGuide,
   description: pageDescriptions.installationGuide,
-  openGraph: {
-    title: pageTitles.installationGuide,
-    description: pageDescriptions.installationGuide,
-  },
-  twitter: {
-    title: pageTitles.installationGuide,
-    description: pageDescriptions.installationGuide,
-  },
-};
+  path: "/installation-guide/",
+});
 
 export default function InstallationGuidePage() {
   return (

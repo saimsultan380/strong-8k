@@ -1,0 +1,31 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.strong8k.com" }],
+      "destination": "https://strong8k.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/free-trial",
+      "destination": "/contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/free-trial/",
+      "destination": "/contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact-us/",
+      "permanent": true
+    }
+  ]
+}

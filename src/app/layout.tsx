@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ParticlesBg from "@/components/ui/particles-bg";
-import { siteConfig, siteMetadataBase } from "@/lib/site";
+import { canonicalUrl, siteConfig, siteMetadataBase } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.siteUrl),
   ...siteMetadataBase,
+  metadataBase: new URL(canonicalUrl("/")),
   verification: {
     google: "6css43Rhe2qtd8Qoqo6sByeuJKNR16A3P4h5LBTTBLc",
   },
@@ -33,8 +33,12 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: siteConfig.name,
-    alternateName: [siteConfig.shortName, "Strong 8K IPTV UK", "Strong 8K IPTV USA"],
-    url: siteConfig.siteUrl,
+    alternateName: [
+      siteConfig.shortName,
+      "Strong 8K IPTV UK",
+      "Strong 8K IPTV USA",
+    ],
+    url: canonicalUrl("/"),
     description: siteConfig.description,
     inLanguage: "en-GB",
   },
@@ -42,8 +46,8 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.name,
-    url: siteConfig.siteUrl,
-    logo: `${siteConfig.siteUrl}/strong-8k.PNG`,
+    url: canonicalUrl("/"),
+    logo: `${siteConfig.siteUrl.replace(/\/$/, "")}/strong-8k.PNG`,
     contactPoint: {
       "@type": "ContactPoint",
       email: siteConfig.email,
@@ -80,7 +84,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          {/* Site-wide particles.js mesh — transparent, grey/white links */}
           <ParticlesBg />
           <div className="relative z-10 flex min-h-full flex-1 flex-col bg-transparent">
             {children}

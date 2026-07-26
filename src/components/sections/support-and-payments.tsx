@@ -152,7 +152,7 @@ export function SupportAndPaymentsSection() {
                 >
                   Reach us any time through our{" "}
                   <Link
-                    href="/contact"
+                    href="/contact-us/"
                     className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                     style={{ color: "var(--hero-heading)" }}
                   >

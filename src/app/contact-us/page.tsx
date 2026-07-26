@@ -9,22 +9,13 @@ import { ContactMethodsForm } from "@/components/sections/contact-methods-form";
 import { ContactHelpTopics } from "@/components/sections/contact-help-topics";
 import { ContactFaqSection } from "@/components/sections/contact-faq-section";
 import { ContactCtaSection } from "@/components/sections/contact-cta-section";
-import { pageDescriptions, pageTitles } from "@/lib/site";
+import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: pageTitles.contactUs,
-  },
+export const metadata: Metadata = createPageMetadata({
+  title: pageTitles.contactUs,
   description: pageDescriptions.contactUs,
-  openGraph: {
-    title: pageTitles.contactUs,
-    description: pageDescriptions.contactUs,
-  },
-  twitter: {
-    title: pageTitles.contactUs,
-    description: pageDescriptions.contactUs,
-  },
-};
+  path: "/contact-us/",
+});
 
 export default function ContactUsPage() {
   return (

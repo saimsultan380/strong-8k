@@ -1,17 +1,18 @@
 /**
  * Site-wide brand & SEO defaults for Strong 8K IPTV.
- * Update `siteUrl` (and email) when the final domain is ready.
  *
- * `pageTitles` are the exact SERP / browser <title> strings — keep them in sync
- * with each page's metadata.title.absolute.
+ * Canonical rule: always HTTPS + non-www + trailing slash
+ * e.g. https://strong8k.com/subscription-plans/
  */
+import type { Metadata } from "next";
+
 export const siteConfig = {
   name: "Strong 8K IPTV",
   shortName: "Strong 8K",
   tagline: "Premium 8K IPTV Subscription for UK & USA",
   description:
     "Strong 8K IPTV – premium IPTV subscription for UK & USA. 40,000+ live channels, 120,000+ movies & series, HD/4K/8K streaming, instant activation and 24/7 support. Free 24-hour trial available.",
-  /** Change this when your domain is ready */
+  /** Canonical origin — HTTPS, non-www, no trailing slash on the origin itself */
   siteUrl: "https://strong8k.com",
   email: "support@strong8k.com",
   locale: "en_GB",
@@ -22,9 +23,12 @@ export const siteConfig = {
 export const pageTitles = {
   home: "Strong 8K IPTV – Premium 8K IPTV Subscription for UK & USA",
   subscriptionPlans: "Strong 8K IPTV Subscription Plans & Prices UK",
-  installationGuide: "Strong 8K IPTV Installation Guide – Set Up Any Device in Minutes",
-  resellerPanel: "Strong 8K IPTV Reseller Panel UK – Start Your Own IPTV Business",
+  installationGuide:
+    "Strong 8K IPTV Installation Guide – Set Up Any Device in Minutes",
+  resellerPanel:
+    "Strong 8K IPTV Reseller Panel UK – Start Your Own IPTV Business",
   contactUs: "IPTV Free Trial UK – Test Strong 8K Free for 24 Hours",
+  notFound: "Page Not Found | Strong 8K IPTV",
 } as const;
 
 export const pageDescriptions = {
@@ -37,15 +41,103 @@ export const pageDescriptions = {
     "Become an IPTV reseller in the UK with Strong 8K. Credits from £59.99, non-expiring balance, white label branding, sub-reseller network, instant activation and 24/7 support.",
   contactUs:
     "Claim a free IPTV trial UK with Strong 8K — 24 hours of full access to 40,000+ channels and 120,000+ VOD. No card, no commitment. Contact us 24/7 on WhatsApp for trials, setup and support.",
+  notFound:
+    "The page you are looking for could not be found. Browse Strong 8K IPTV plans, installation guides, or contact support.",
 } as const;
 
-export const siteMetadataBase = {
+/** Indexable routes used by sitemap (canonical paths with trailing slash). */
+export const sitemapRoutes = [
+  { path: "/", changeFrequency: "weekly" as const, priority: 1 },
+  {
+    path: "/subscription-plans/",
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  },
+  {
+    path: "/installation-guide/",
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  },
+  {
+    path: "/reseller-panel/",
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  },
+  {
+    path: "/contact-us/",
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  },
+] as const;
+
+/** Absolute canonical URL — always non-www HTTPS with trailing slash. */
+export function canonicalUrl(path: string = "/"): string {
+  const origin = siteConfig.siteUrl.replace(/\/$/, "");
+  if (!path || path === "/") return `${origin}/`;
+
+  let normalized = path.startsWith("/") ? path : `/${path}`;
+  // Strip query/hash — canonicals never include them
+  normalized = normalized.split("?")[0].split("#")[0];
+  if (!normalized.endsWith("/")) normalized = `${normalized}/`;
+  return `${origin}${normalized}`;
+}
+
+type PageMetaInput = {
+  title: string;
+  description: string;
+  path: string;
+  index?: boolean;
+  follow?: boolean;
+};
+
+/** Shared page metadata with a single canonical + matching Open Graph URL. */
+export function createPageMetadata({
+  title,
+  description,
+  path,
+  index = true,
+  follow = true,
+}: PageMetaInput): Metadata {
+  const url = canonicalUrl(path);
+
+  return {
+    title: { absolute: title },
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: siteConfig.name,
+      locale: siteConfig.locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    robots: {
+      index,
+      follow,
+      googleBot: {
+        index,
+        follow,
+      },
+    },
+  };
+}
+
+export const siteMetadataBase: Metadata = {
   title: pageTitles.home,
   description: siteConfig.description,
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
+  metadataBase: new URL(canonicalUrl("/")),
   keywords: [
     "Strong 8K IPTV",
     "8K IPTV",
@@ -56,16 +148,19 @@ export const siteMetadataBase = {
     "4K IPTV",
     "IPTV reseller",
   ],
+  alternates: {
+    canonical: canonicalUrl("/"),
+  },
   openGraph: {
-    type: "website" as const,
+    type: "website",
     locale: siteConfig.locale,
     siteName: siteConfig.name,
     title: pageTitles.home,
     description: siteConfig.description,
-    url: siteConfig.siteUrl,
+    url: canonicalUrl("/"),
   },
   twitter: {
-    card: "summary_large_image" as const,
+    card: "summary_large_image",
     title: pageTitles.home,
     description: siteConfig.description,
   },

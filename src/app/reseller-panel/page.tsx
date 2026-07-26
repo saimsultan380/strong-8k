@@ -13,22 +13,13 @@ import { ResellerCustomersSection } from "@/components/sections/reseller-custome
 import { ResellerHowToSection } from "@/components/sections/reseller-how-to-section";
 import { ResellerFaqSection } from "@/components/sections/reseller-faq-section";
 import { ResellerCtaSection } from "@/components/sections/reseller-cta-section";
-import { pageDescriptions, pageTitles } from "@/lib/site";
+import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: pageTitles.resellerPanel,
-  },
+export const metadata: Metadata = createPageMetadata({
+  title: pageTitles.resellerPanel,
   description: pageDescriptions.resellerPanel,
-  openGraph: {
-    title: pageTitles.resellerPanel,
-    description: pageDescriptions.resellerPanel,
-  },
-  twitter: {
-    title: pageTitles.resellerPanel,
-    description: pageDescriptions.resellerPanel,
-  },
-};
+  path: "/reseller-panel/",
+});
 
 export default function ResellerPanelPage() {
   return (
