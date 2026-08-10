@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { Mail, MessageCircle } from "lucide-react";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, whatsappUrl } from "@/lib/site";
 
 const FOOTER_LINKS = {
   service: [
@@ -86,12 +86,14 @@ export function Footer() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href="#"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[var(--hero-accent)]"
                 style={{ color: "var(--footer-link)" }}
               >
                 <MessageCircle className="h-4 w-4" aria-hidden />
-                WhatsApp Support
+                {siteConfig.phone}
               </a>
               <span
                 className="hidden h-4 w-px sm:block"

@@ -15,9 +15,16 @@ export const siteConfig = {
   /** Canonical origin — HTTPS, non-www, no trailing slash on the origin itself */
   siteUrl: "https://strong-8k.co.uk",
   email: "support@strong8k.com",
+  /** Display format for the public support number */
+  phone: "+44 7482 794475",
+  /** Digits only for wa.me / tel: links (no + or spaces) */
+  phoneE164: "447482794475",
   locale: "en_GB",
   twitterHandle: "@strong8k",
 } as const;
+
+/** WhatsApp chat URL for all CTAs and support buttons */
+export const whatsappUrl = `https://wa.me/${siteConfig.phoneE164}` as const;
 
 /** Exact SERP titles (shown in Google + browser tab) */
 export const pageTitles = {

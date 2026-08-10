@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { siteConfig } from "@/lib/site";
 
-const WHATSAPP_LINK = "https://wa.me/447000000000";
+const WHATSAPP_LINK = "https://wa.me/447482794475";
 
 const DEVICES = [
   "Firestick / Fire TV",

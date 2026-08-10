@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animation/fade-in";
 import { Tv, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_LINK = "https://wa.me/447000000000"; // Replace with your actual WhatsApp Link
+const WHATSAPP_LINK = "https://wa.me/447482794475"; // Replace with your actual WhatsApp Link
 
 export function SubscriptionMultiScreen() {
   return (

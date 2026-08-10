@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const WHATSAPP_LINK = "https://wa.me/447000000000";
+const WHATSAPP_LINK = "https://wa.me/447482794475";
 
 const PLAN_FEATURES = [
   "1 Screen connection",

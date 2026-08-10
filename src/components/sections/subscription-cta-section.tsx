@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
 
-const WHATSAPP_LINK = "https://wa.me/447000000000";
+const WHATSAPP_LINK = "https://wa.me/447482794475";
 
 export function SubscriptionCtaSection() {
   return (

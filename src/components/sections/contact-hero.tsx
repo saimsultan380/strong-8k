@@ -5,7 +5,7 @@ import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { siteConfig } from "@/lib/site";
 
-const WHATSAPP_LINK = "https://wa.me/447000000000";
+const WHATSAPP_LINK = "https://wa.me/447482794475";
 
 export function ContactHero() {
   return (

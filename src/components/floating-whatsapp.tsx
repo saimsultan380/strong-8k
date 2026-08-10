@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { whatsappUrl } from "@/lib/site";
 
 const SHOW_AFTER_SECTION_ID = "why-choose";
 
@@ -37,7 +38,9 @@ export function FloatingWhatsApp() {
 
   return (
     <a
-      href="#"
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Contact us on WhatsApp"
       aria-hidden={!visible}
       className={cn(
