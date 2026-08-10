@@ -3,8 +3,14 @@
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
+import {
+  whatsappMessages,
+  whatsappUrlWithText,
+} from "@/lib/site";
 
-const WHATSAPP_LINK = "https://wa.me/447482794475";
+const freeTrialWhatsapp = whatsappUrlWithText(
+  whatsappMessages.startFreeTrial,
+);
 
 const TRIAL_INCLUDES = [
   "The complete 40,000+ channel list",
@@ -121,7 +127,9 @@ export function HomepageFreeTrialSection() {
               <FadeIn delay={0.3} className="mt-8">
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
                   <a
-                    href={WHATSAPP_LINK}
+                    href={freeTrialWhatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2.5 rounded-xl px-7 py-4 text-[14px] font-bold transition-all duration-200 hover:brightness-110 sm:text-[15px]"
                     style={{
                       background: "var(--hero-cta-primary-bg)",
@@ -129,7 +137,7 @@ export function HomepageFreeTrialSection() {
                       color: "var(--hero-cta-primary-fg)",
                     }}
                   >
-                    Claim My 24-Hour Free Trial →
+                    Start free trial →
                   </a>
                 </motion.div>
               </FadeIn>

@@ -5,7 +5,7 @@ import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
-const WHATSAPP_LINK = "https://wa.me/447482794475";
+const WHATSAPP_LINK = "https://wa.me/447401921250";
 
 export function ContactCtaSection() {
   return (

@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
 
-const WHATSAPP_LINK = "https://wa.me/447482794475";
+const WHATSAPP_LINK = "https://wa.me/447401921250";
 
 const PACK_FEATURES = [
   "1 credit = 1 month per customer",

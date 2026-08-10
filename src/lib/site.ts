@@ -16,15 +16,29 @@ export const siteConfig = {
   siteUrl: "https://strong-8k.co.uk",
   email: "support@strong8k.com",
   /** Display format for the public support number */
-  phone: "+44 7482 794475",
+  phone: "+44 7401 921250",
   /** Digits only for wa.me / tel: links (no + or spaces) */
-  phoneE164: "447482794475",
+  phoneE164: "447401921250",
   locale: "en_GB",
   twitterHandle: "@strong8k",
 } as const;
 
 /** WhatsApp chat URL for all CTAs and support buttons */
 export const whatsappUrl = `https://wa.me/${siteConfig.phoneE164}` as const;
+
+/**
+ * Prefill text sources so support can tell which CTA the client came from.
+ * First word capital; remaining words lowercase.
+ */
+export const whatsappMessages = {
+  /** Prefill when user clicks homepage free-trial CTAs (source tracking) */
+  startFreeTrial: "Start-free-trial",
+} as const;
+
+/** WhatsApp URL with prefilled message (source tracking). */
+export function whatsappUrlWithText(text: string): string {
+  return `${whatsappUrl}?text=${encodeURIComponent(text)}`;
+}
 
 /** Exact SERP titles (shown in Google + browser tab) */
 export const pageTitles = {

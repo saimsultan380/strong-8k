@@ -1,14 +1,21 @@
 "use client";
 
-import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
+import {
+  whatsappMessages,
+  whatsappUrlWithText,
+} from "@/lib/site";
 
 const BENEFITS = [
   "No dish, aerial, or engineer visit",
   "Works with the IPTV app you already use",
   "Login details delivered within minutes",
 ];
+
+const freeTrialWhatsapp = whatsappUrlWithText(
+  whatsappMessages.startFreeTrial,
+);
 
 export function IptvSubscriptionExplainer() {
   return (
@@ -104,13 +111,15 @@ export function IptvSubscriptionExplainer() {
                 watching. No engineer visit, no contract, no hardware to buy.
               </p>
             </div>
-            <Link
-              href="/contact-us/"
+            <a
+              href={freeTrialWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex text-sm font-bold underline transition-colors hover:opacity-85"
               style={{ color: "var(--hero-accent)" }}
             >
-              Test it free for 24 hours →
-            </Link>
+              Start free trial →
+            </a>
           </div>
         </FadeIn>
       </Container>

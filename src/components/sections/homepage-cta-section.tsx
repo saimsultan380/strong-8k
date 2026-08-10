@@ -5,6 +5,14 @@ import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
+import {
+  whatsappMessages,
+  whatsappUrlWithText,
+} from "@/lib/site";
+
+const freeTrialWhatsapp = whatsappUrlWithText(
+  whatsappMessages.startFreeTrial,
+);
 
 export function HomepageCtaSection() {
   return (
@@ -63,8 +71,10 @@ export function HomepageCtaSection() {
           <ScrollReveal direction="up" delay={0.1} once>
             <div className="mt-10 flex flex-row items-center justify-center gap-3 md:mt-12">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
-                <Link
-                  href="/contact-us/"
+                <a
+                  href={freeTrialWhatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center rounded-xl px-4 py-4 text-[13px] font-bold transition-all duration-200 hover:brightness-110 sm:px-8 sm:text-[15px]"
                   style={{
                     background: "var(--hero-cta-primary-bg)",
@@ -72,8 +82,8 @@ export function HomepageCtaSection() {
                     color: "var(--hero-cta-primary-fg)",
                   }}
                 >
-                  Start My Free Trial
-                </Link>
+                  Start free trial
+                </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
                 <a

@@ -4,7 +4,7 @@ import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { MaskReveal } from "@/components/animation/mask-reveal";
 
-const WHATSAPP_LINK = "https://wa.me/447482794475";
+const WHATSAPP_LINK = "https://wa.me/447401921250";
 
 export function ResellerPanelHero() {
   return (

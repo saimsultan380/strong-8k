@@ -7,7 +7,7 @@ import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 
-const WHATSAPP_LINK = "https://wa.me/447482794475"; // Replace with your actual WhatsApp Link
+const WHATSAPP_LINK = "https://wa.me/447401921250"; // Replace with your actual WhatsApp Link
 
 export function InstallationSupportSection() {
   return (

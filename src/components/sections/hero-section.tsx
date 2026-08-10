@@ -1,18 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Tv, MonitorPlay, Headphones } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { MaskReveal } from "@/components/animation/mask-reveal";
 import { motion } from "framer-motion";
+import {
+  whatsappMessages,
+  whatsappUrlWithText,
+} from "@/lib/site";
 
 const HERO_FEATURES = [
   { label: "40,000+ Live Channels", icon: Tv },
   { label: "HD, 4K & 8K Streaming", icon: MonitorPlay },
   { label: "24/7 Support", icon: Headphones },
 ];
+
+const freeTrialWhatsapp = whatsappUrlWithText(
+  whatsappMessages.startFreeTrial,
+);
 
 export function HeroSection() {
   return (
@@ -74,15 +81,17 @@ export function HeroSection() {
                 </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-[1.35] sm:flex-initial">
-                <Link
-                  href="/contact-us/"
+                <a
+                  href={freeTrialWhatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
                 >
-                  Start 24-Hour Free Trial
-                </Link>
+                  Start free trial
+                </a>
               </motion.div>
             </div>
           </FadeIn>
