@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { heroRevealDuration, motionEase } from "@/lib/motion";
+import { useMeshReady } from "@/lib/mesh-ready";
 
 type HeroTitleRevealProps = {
   id?: string;
@@ -25,6 +26,19 @@ export function HeroTitleReveal({
   lines,
 }: HeroTitleRevealProps) {
   const reduceMotion = useReducedMotion();
+  const meshReady = useMeshReady();
+  const hidden = {
+    y: "112%",
+    skewY: 7,
+    opacity: 0,
+    filter: "blur(10px)",
+  };
+  const shown = {
+    y: "0%",
+    skewY: 0,
+    opacity: 1,
+    filter: "none",
+  };
 
   return (
     <Tag id={id} className={className} style={style}>
@@ -32,22 +46,8 @@ export function HeroTitleReveal({
         <span key={index} className="telvis-h1-reveal-line">
           <motion.span
             className="telvis-h1-reveal-text telvis-motion-reveal"
-            initial={
-              reduceMotion
-                ? false
-                : {
-                    y: "112%",
-                    skewY: 7,
-                    opacity: 0,
-                    filter: "blur(10px)",
-                  }
-            }
-            animate={{
-              y: "0%",
-              skewY: 0,
-              opacity: 1,
-              filter: "blur(0px)",
-            }}
+            initial={reduceMotion ? false : hidden}
+            animate={reduceMotion || meshReady ? shown : hidden}
             transition={{
               duration: heroRevealDuration,
               delay: 0.12 + index * 0.1,

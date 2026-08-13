@@ -311,4 +311,17 @@ button[style*="hero-cta-primary-bg"]::after {
 .telvis-h1-reveal-text {
   display: inline-block;
   transform-origin: left center;
+  /* Gradient clip must live on this span — h1 color:transparent does not paint nested overflow lines */
+  background-image: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.telvis-h1-reveal-text span {
+  background-image: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: currentColor;
 }

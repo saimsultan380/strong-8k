@@ -10,6 +10,7 @@ import {
   motionEase,
   type ScrollRevealVariant,
 } from "@/lib/motion";
+import { useMeshReady } from "@/lib/mesh-ready";
 
 type HeroRevealProps = {
   children: ReactNode;
@@ -30,6 +31,7 @@ export function HeroReveal({
   style,
 }: HeroRevealProps) {
   const reduceMotion = useReducedMotion();
+  const meshReady = useMeshReady();
   const initial =
     variant === "text"
       ? heroRevealInitial
@@ -48,7 +50,7 @@ export function HeroReveal({
       className={`telvis-motion-reveal${className ? ` ${className}` : ""}`}
       style={style}
       initial={initial}
-      animate={heroRevealAnimate}
+      animate={meshReady ? heroRevealAnimate : initial}
       transition={{
         duration: variant === "cta" ? 0.52 : heroRevealDuration,
         delay,

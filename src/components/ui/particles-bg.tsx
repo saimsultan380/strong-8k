@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef } from "react";
+import { MESH_FADE_MS, notifyMeshReady } from "@/lib/mesh-ready";
 
 declare global {
   interface Window {
@@ -115,8 +116,9 @@ function initParticles(containerId: string, animate: boolean) {
   host.querySelectorAll("canvas").forEach((el) => el.remove());
   window.particlesJS(containerId, buildConfig(animate, isMobileViewport()));
 
-  // Hint the browser the mesh is ready (fade-in via CSS)
+  // Hint the browser the mesh is ready (fade-in via CSS), then start hero blur
   host.dataset.ready = "true";
+  window.setTimeout(() => notifyMeshReady(), MESH_FADE_MS);
 }
 
 let scriptPromise: Promise<void> | null = null;
