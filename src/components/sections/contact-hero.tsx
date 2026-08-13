@@ -2,7 +2,8 @@
 
 import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/layout/container";
-import { FadeIn } from "@/components/animation/fade-in";
+import { HeroReveal } from "@/components/animation/hero-reveal";
+import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
 import { siteConfig } from "@/lib/site";
 
 const WHATSAPP_LINK = "https://wa.me/447401921250";
@@ -11,7 +12,7 @@ export function ContactHero() {
   return (
     <section className="relative isolate overflow-hidden pb-12 md:pb-14">
       <Container className="relative z-10 pt-32 text-center sm:pt-36">
-        <FadeIn delay={0.05}>
+        <HeroReveal delay={0.05}>
           <div
             className="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5"
             style={{
@@ -30,19 +31,20 @@ export function ContactHero() {
               Free Trial & Contact
             </span>
           </div>
-        </FadeIn>
+        </HeroReveal>
 
-        <FadeIn delay={0.12}>
-          <h1
-            className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[52px]"
-            style={{ color: "var(--hero-heading)" }}
-          >
-            IPTV Free Trial UK – Test Strong 8K Free for{" "}
-            <span style={{ color: "var(--hero-accent)" }}>24 Hours</span>
-          </h1>
-        </FadeIn>
+        <HeroTitleReveal
+          className="mx-auto max-w-[920px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[52px]"
+          style={{ color: "var(--hero-heading)" }}
+          lines={[
+            "IPTV Free Trial UK – Test Strong 8K Free for",
+            <span key="accent" style={{ color: "var(--hero-accent)" }}>
+              24 Hours
+            </span>,
+          ]}
+        />
 
-        <FadeIn delay={0.18}>
+        <HeroReveal delay={0.18}>
           <div className="mx-auto mt-5 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
               Why pay for an IPTV service you haven&apos;t seen? {siteConfig.shortName} gives every
@@ -56,9 +58,9 @@ export function ContactHero() {
               reseller queries — the same team answers everything, 24/7.
             </p>
           </div>
-        </FadeIn>
+        </HeroReveal>
 
-        <FadeIn delay={0.28}>
+        <HeroReveal variant="cta" delay={0.28}>
           <div className="mt-8 flex justify-center">
             <a
               href={WHATSAPP_LINK}
@@ -73,7 +75,7 @@ export function ContactHero() {
               Get My Free Trial on WhatsApp →
             </a>
           </div>
-        </FadeIn>
+        </HeroReveal>
       </Container>
     </section>
   );

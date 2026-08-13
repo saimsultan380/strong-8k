@@ -1,8 +1,8 @@
 "use client";
 
 import { Container } from "@/components/layout/container";
-import { FadeIn } from "@/components/animation/fade-in";
-import { MaskReveal } from "@/components/animation/mask-reveal";
+import { HeroReveal } from "@/components/animation/hero-reveal";
+import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
 
 const WHATSAPP_LINK = "https://wa.me/447401921250";
 
@@ -10,7 +10,7 @@ export function ResellerPanelHero() {
   return (
     <section className="relative isolate overflow-hidden pb-16 md:pb-20">
       <Container className="relative z-10 pt-32 text-center sm:pt-36">
-        <FadeIn delay={0.05}>
+        <HeroReveal delay={0.05}>
           <div
             className="mb-7 inline-flex items-center gap-2 rounded-full border px-4 py-1.5"
             style={{
@@ -29,18 +29,20 @@ export function ResellerPanelHero() {
               Reseller Panel
             </span>
           </div>
-        </FadeIn>
+        </HeroReveal>
 
-        <MaskReveal
-          delay={0.2}
-          className="mx-auto max-w-[960px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
+        <HeroTitleReveal
+          className="mx-auto max-w-[960px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
           style={{ color: "var(--hero-heading)" }}
-        >
-          Strong 8K IPTV Reseller Panel UK – Start Your Own{" "}
-          <span style={{ color: "var(--hero-accent)" }}>IPTV Business</span>
-        </MaskReveal>
+          lines={[
+            "Strong 8K IPTV Reseller Panel UK – Start Your Own",
+            <span key="accent" style={{ color: "var(--hero-accent)" }}>
+              IPTV Business
+            </span>,
+          ]}
+        />
 
-        <FadeIn delay={0.18}>
+        <HeroReveal delay={0.18}>
           <div className="mx-auto mt-6 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
               Every month, thousands of UK households pay someone for their IPTV subscription. The
@@ -57,9 +59,9 @@ export function ResellerPanelHero() {
               Starter packages begin at £59.99, and your panel is live the same day you order.
             </p>
           </div>
-        </FadeIn>
+        </HeroReveal>
 
-        <FadeIn delay={0.34}>
+        <HeroReveal variant="cta" delay={0.34}>
           <div className="mt-8 flex flex-row items-center justify-center gap-3">
             <a
               href="#reseller-plans"
@@ -84,7 +86,7 @@ export function ResellerPanelHero() {
               Request a Free Demo
             </a>
           </div>
-        </FadeIn>
+        </HeroReveal>
       </Container>
     </section>
   );

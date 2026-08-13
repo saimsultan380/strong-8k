@@ -22,7 +22,6 @@ const PACKS = [
   {
     name: "Starter Pack",
     credits: "30 Credits",
-    price: "£59.99",
     description:
       "Perfect for testing the waters — enough for 30 monthly customers or a mix of longer plans.",
     highlight: false,
@@ -30,7 +29,6 @@ const PACKS = [
   {
     name: "Growth Pack",
     credits: "50 Credits",
-    price: "£99.99",
     description:
       "For resellers ready to build a customer base — better value per credit as you scale.",
     highlight: true,
@@ -38,8 +36,6 @@ const PACKS = [
   {
     name: "Pro Pack",
     credits: "100+ Credits",
-    price: "£1.50",
-    priceNote: "per credit",
     description:
       "Our best wholesale rate, for established resellers and high-volume sellers.",
     highlight: false,
@@ -47,10 +43,10 @@ const PACKS = [
 ];
 
 const CREDIT_COSTS = [
-  { sub: "1 Month", credits: "1 credit", cost: "from £1.50" },
-  { sub: "3 Months", credits: "3 credits", cost: "from £4.50" },
-  { sub: "6 Months", credits: "6 credits", cost: "from £9.00" },
-  { sub: "12 Months", credits: "12 credits", cost: "from £18.00" },
+  { sub: "1 Month", credits: "1 credit", cost: "Contact Support for Price" },
+  { sub: "3 Months", credits: "3 credits", cost: "Contact Support for Price" },
+  { sub: "6 Months", credits: "6 credits", cost: "Contact Support for Price" },
+  { sub: "12 Months", credits: "12 credits", cost: "Contact Support for Price" },
 ];
 
 function PriceGlowDivider() {
@@ -147,18 +143,14 @@ export function ResellerPlansSection() {
                 </div>
 
                 <p className="mt-2 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--hero-muted)" }}>
-                  Starting at
+                  Pricing
                 </p>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold tracking-tight" style={{ color: "var(--hero-accent)" }}>
-                    {pack.price}
-                  </span>
-                  {pack.priceNote ? (
-                    <span className="text-sm" style={{ color: "var(--hero-muted)" }}>
-                      {pack.priceNote}
-                    </span>
-                  ) : null}
-                </div>
+                <p
+                  className="mt-1 text-xl font-bold tracking-tight sm:text-2xl"
+                  style={{ color: "var(--hero-accent)" }}
+                >
+                  Contact Support for Price
+                </p>
 
                 <PriceGlowDivider />
 
@@ -181,6 +173,8 @@ export function ResellerPlansSection() {
 
                 <motion.a
                   href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="mt-7 flex min-h-12 items-center justify-center rounded-xl px-5 py-3.5 text-sm font-bold transition-all duration-200 hover:brightness-110"

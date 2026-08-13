@@ -42,6 +42,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="preload" href="/vendor/particles.min.js" as="script" />
         <JsonLd data={siteJsonLd()} />
       </head>
       <body className="relative min-h-full flex flex-col bg-black text-white">

@@ -200,6 +200,22 @@
   }
 }
 
+/* Network mesh: soft fade-in once particles.js boots */
+.particles-mesh {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.particles-mesh[data-ready="true"] {
+  opacity: 1;
+}
+
+.particles-mesh canvas {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 /* Soft section glows: keep black base (no tinted panels) */
 section [aria-hidden][class*="absolute"][style*="radial-gradient"] {
   opacity: 0 !important;
@@ -273,4 +289,26 @@ button[style*="hero-cta-primary-bg"]::after {
     animation: none;
     display: none;
   }
+
+  .telvis-motion-reveal {
+    filter: none !important;
+    transform: none !important;
+  }
+}
+
+/* Telvis blur-reveal GPU hint */
+.telvis-motion-reveal {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.telvis-h1-reveal-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+
+.telvis-h1-reveal-text {
+  display: inline-block;
+  transform-origin: left center;
 }

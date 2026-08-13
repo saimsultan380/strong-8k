@@ -2,18 +2,16 @@
 
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
-import { FadeIn } from "@/components/animation/fade-in";
-import { MaskReveal } from "@/components/animation/mask-reveal";
+import { HeroReveal } from "@/components/animation/hero-reveal";
+import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function SubscriptionPlansHero() {
   return (
-    <section
-      className="relative isolate overflow-hidden pb-16 md:pb-20"
-    >
+    <section className="relative isolate overflow-hidden pb-16 md:pb-20">
       <Container className="relative z-10 pt-32 text-center sm:pt-36">
-        <FadeIn delay={0.05}>
+        <HeroReveal delay={0.05}>
           <div
             className="mb-7 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 backdrop-blur-sm"
             style={{
@@ -32,18 +30,20 @@ export function SubscriptionPlansHero() {
               Subscription Plans
             </span>
           </div>
-        </FadeIn>
+        </HeroReveal>
 
-        <MaskReveal
-          delay={0.2}
-          className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
+        <HeroTitleReveal
+          className="mx-auto max-w-[920px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
           style={{ color: "var(--hero-heading)" }}
-        >
-          Strong 8K IPTV Subscription Plans &{" "}
-          <span style={{ color: "var(--hero-accent)" }}>Prices UK</span>
-        </MaskReveal>
+          lines={[
+            "Strong 8K IPTV Subscription Plans &",
+            <>
+              <span style={{ color: "var(--hero-accent)" }}>Prices UK</span>
+            </>,
+          ]}
+        />
 
-        <FadeIn delay={0.18}>
+        <HeroReveal delay={0.18}>
           <div className="mx-auto mt-6 max-w-[750px] space-y-4 text-sm leading-[1.8] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
               Every Strong 8K IPTV subscription comes with the same full package — 40,000+ live
@@ -61,9 +61,9 @@ export function SubscriptionPlansHero() {
               the pricing questions we get asked most.
             </p>
           </div>
-        </FadeIn>
+        </HeroReveal>
 
-        <FadeIn delay={0.36}>
+        <HeroReveal variant="cta" delay={0.36}>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
@@ -93,7 +93,7 @@ export function SubscriptionPlansHero() {
               </Link>
             </motion.div>
           </div>
-        </FadeIn>
+        </HeroReveal>
       </Container>
     </section>
   );

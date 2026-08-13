@@ -1,81 +1,66 @@
 "use client";
 
-import * as React from "react";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { useReducedMotion } from "framer-motion";
+import type { CSSProperties, ReactNode } from "react";
+import {
+  createScrollRevealVariants,
+  getMotionComponent,
+  motionViewport,
+  type ScrollRevealVariant,
+} from "@/lib/motion";
 
-interface FadeInProps {
-  children: React.ReactNode;
+type FadeInProps = {
+  children: ReactNode;
   className?: string;
   delay?: number;
-  duration?: number;
-  /** Play only the first time in view (default true — smoother scrolling) */
+  /** Maps to scroll blur preset (default text). */
+  variant?: ScrollRevealVariant;
+  as?: "div" | "article" | "li" | "p" | "section";
+  style?: CSSProperties;
+  /** @deprecated Kept for compatibility — viewport is always once. */
   once?: boolean;
-  /** Stagger children by this interval in seconds */
+  /** @deprecated Duration comes from the variant preset. */
+  duration?: number;
+  /** @deprecated Stagger handled by CardReveal / staggerDelay. */
   staggerChildren?: number;
-}
+};
 
-const containerVariants = (stagger: number): Variants => ({
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: stagger,
-    },
-  },
-});
-
-const itemVariants = (duration: number, delay: number): Variants => ({
-  hidden: { opacity: 0, y: 14 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration,
-      delay,
-      ease: [0.21, 0.47, 0.32, 0.98],
-    },
-  },
-});
-
+/**
+ * Scroll blur-reveal for section text blocks (Telvis text/cta/media presets).
+ */
 export function FadeIn({
   children,
   className,
   delay = 0,
-  duration = 0.35,
-  once = true,
-  staggerChildren,
+  variant = "text",
+  as = "div",
+  style,
 }: FadeInProps) {
   const reduceMotion = useReducedMotion();
+  const Tag = as;
+  const variants = createScrollRevealVariants(variant);
 
   if (reduceMotion) {
-    return <div className={cn(className)}>{children}</div>;
-  }
-
-  if (staggerChildren) {
     return (
-      <motion.div
-        className={cn(className)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once, margin: "-40px", amount: 0.2 }}
-        variants={containerVariants(staggerChildren)}
-      >
-        {React.Children.map(children, (child) => (
-          <motion.div variants={itemVariants(duration, 0)}>{child}</motion.div>
-        ))}
-      </motion.div>
+      <Tag className={className} style={style}>
+        {children}
+      </Tag>
     );
   }
 
+  const MotionTag = getMotionComponent(as);
+
   return (
-    <motion.div
-      className={cn(className)}
+    <MotionTag
+      className={`telvis-motion-reveal${className ? ` ${className}` : ""}`}
+      style={style}
+      custom={delay}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, margin: "-40px", amount: 0.2 }}
-      variants={itemVariants(duration, delay)}
+      viewport={motionViewport}
+      variants={variants}
     >
       {children}
-    </motion.div>
+    </MotionTag>
   );
 }

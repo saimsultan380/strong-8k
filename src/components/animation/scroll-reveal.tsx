@@ -1,63 +1,73 @@
 "use client";
 
-import * as React from "react";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { useReducedMotion } from "framer-motion";
+import type { CSSProperties, ReactNode } from "react";
+import {
+  cardRevealVariants,
+  createScrollRevealVariants,
+  getMotionComponent,
+  motionViewport,
+  type ScrollRevealVariant,
+} from "@/lib/motion";
 
-interface ScrollRevealProps {
-  children: React.ReactNode;
+type ScrollRevealProps = {
+  children: ReactNode;
   className?: string;
   delay?: number;
-  duration?: number;
-  /** Play only the first time in view (default true — smoother scrolling) */
+  y?: number;
+  variant?: ScrollRevealVariant;
+  as?: "div" | "article" | "li" | "p" | "section" | "details";
+  style?: CSSProperties;
+  /** @deprecated Kept for call-site compatibility — viewport is always once. */
   once?: boolean;
+  /**
+   * @deprecated Legacy directional slide.
+   * When set (without an explicit variant), uses the card blur-reveal preset
+   * so existing card grids keep Telvis card timings (y 20 / blur 10 / 0.56s).
+   */
   direction?: "up" | "down" | "left" | "right" | "none";
-}
+  /** @deprecated Duration comes from the variant preset. */
+  duration?: number;
+};
 
 export function ScrollReveal({
   children,
   className,
   delay = 0,
-  duration = 0.4,
-  once = true,
-  direction = "up",
+  y,
+  variant,
+  as = "div",
+  style,
+  direction,
 }: ScrollRevealProps) {
   const reduceMotion = useReducedMotion();
-  const offset = 20;
-  const initial: Record<string, number> = { opacity: 0 };
-
-  if (direction === "up") initial.y = offset;
-  else if (direction === "down") initial.y = -offset;
-  else if (direction === "left") initial.x = offset;
-  else if (direction === "right") initial.x = -offset;
-
-  const variants: Variants = {
-    hidden: initial,
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: {
-        duration,
-        delay,
-        ease: [0.21, 0.47, 0.32, 0.98],
-      },
-    },
-  };
+  const Tag = as;
+  const useCardPreset = direction != null && variant == null;
+  const variants = useCardPreset
+    ? cardRevealVariants
+    : createScrollRevealVariants(variant ?? "text", y);
 
   if (reduceMotion) {
-    return <div className={cn(className)}>{children}</div>;
+    return (
+      <Tag className={className} style={style}>
+        {children}
+      </Tag>
+    );
   }
 
+  const MotionTag = getMotionComponent(as);
+
   return (
-    <motion.div
-      className={cn(className)}
+    <MotionTag
+      className={`telvis-motion-reveal${className ? ` ${className}` : ""}`}
+      style={style}
+      custom={delay}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, margin: "-50px", amount: 0.15 }}
+      viewport={motionViewport}
       variants={variants}
     >
       {children}
-    </motion.div>
+    </MotionTag>
   );
 }

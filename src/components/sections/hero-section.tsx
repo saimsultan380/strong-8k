@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { Tv, MonitorPlay, Headphones } from "lucide-react";
 import { Container } from "@/components/layout/container";
-import { FadeIn } from "@/components/animation/fade-in";
-import { MaskReveal } from "@/components/animation/mask-reveal";
+import { HeroReveal } from "@/components/animation/hero-reveal";
+import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
 import { motion } from "framer-motion";
 import {
   whatsappMessages,
@@ -25,7 +25,11 @@ export function HeroSection() {
   return (
     <section className="relative isolate">
       <Container className="relative z-10 grid min-h-[100svh] items-start gap-4 pb-8 pt-28 sm:gap-6 sm:pt-32 lg:grid-cols-[minmax(0,1.08fr)_minmax(280px,0.85fr)] lg:items-center lg:gap-10 lg:pb-14 lg:pt-32">
-        <FadeIn delay={0.08} className="order-1 flex justify-center lg:order-2">
+        <HeroReveal
+          variant="media"
+          delay={0.08}
+          className="order-1 flex justify-center lg:order-2"
+        >
           <div className="relative w-full max-w-[180px] sm:max-w-[250px] lg:max-w-[360px]">
             <div
               aria-hidden
@@ -42,18 +46,18 @@ export function HeroSection() {
               className="relative h-auto w-full object-contain drop-shadow-[0_0_24px_rgba(212,168,75,0.25)]"
             />
           </div>
-        </FadeIn>
+        </HeroReveal>
 
         <div className="order-2 text-left lg:order-1">
-          <MaskReveal
-            delay={0.2}
-            align="left"
-            className="max-w-[720px] text-[28px] font-bold leading-[1.12] tracking-tight text-gradient-brand sm:text-4xl md:text-[44px] lg:text-[48px]"
-          >
-            Strong 8K IPTV UK – Premium IPTV Subscription with 40,000+ Channels & 8K UHD Streaming
-          </MaskReveal>
+          <HeroTitleReveal
+            className="max-w-[720px] text-left text-[28px] font-bold leading-[1.12] tracking-tight text-gradient-brand sm:text-4xl md:text-[44px] lg:text-[48px]"
+            lines={[
+              "Strong 8K IPTV UK – Premium IPTV Subscription",
+              "with 40,000+ Channels & 8K UHD Streaming",
+            ]}
+          />
 
-          <FadeIn delay={0.2}>
+          <HeroReveal delay={0.2}>
             <div
               className="mt-3 max-w-[700px] space-y-2 text-[11px] leading-[1.5] sm:mt-4 sm:space-y-3 sm:text-sm sm:leading-[1.65]"
               style={{ color: "var(--hero-muted)" }}
@@ -65,9 +69,9 @@ export function HeroSection() {
                 Whether you watch on a Smart TV, Firestick, Android box, iPhone, or PC, your Strong 8K subscription follows you everywhere. Setup takes minutes, every major IPTV player is supported, and our team is on hand 24/7 whenever you need them.
               </p>
             </div>
-          </FadeIn>
+          </HeroReveal>
 
-          <FadeIn delay={0.28}>
+          <HeroReveal variant="cta" delay={0.28}>
             <div className="mt-5 flex flex-row items-stretch justify-start gap-2 sm:mt-6 sm:gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 sm:flex-initial">
                 <a
@@ -94,9 +98,9 @@ export function HeroSection() {
                 </a>
               </motion.div>
             </div>
-          </FadeIn>
+          </HeroReveal>
 
-          <FadeIn delay={0.36}>
+          <HeroReveal delay={0.36}>
             <ul className="mt-5 grid grid-cols-3 gap-2 text-center sm:gap-4 sm:text-left lg:max-w-[680px]">
               {HERO_FEATURES.map((feature) => {
                 const Icon = feature.icon;
@@ -122,7 +126,7 @@ export function HeroSection() {
                 );
               })}
             </ul>
-          </FadeIn>
+          </HeroReveal>
         </div>
       </Container>
     </section>
