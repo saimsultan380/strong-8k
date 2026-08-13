@@ -43,45 +43,45 @@ function destroyParticles() {
 }
 
 function buildConfig(animate: boolean, isMobile: boolean): Record<string, unknown> {
-  // Lean counts — line linking is O(n²); old mobile used 120 and felt sluggish
-  const count = isMobile ? 28 : 40;
-
+  // Same density / line linking as the previous mesh look
   return {
     particles: {
-      number: {
-        value: count,
-        density: { enable: true, value_area: isMobile ? 820 : 1100 },
-      },
+      number: isMobile
+        ? { value: 120, density: { enable: true, value_area: 700 } }
+        : { value: 95, density: { enable: true, value_area: 950 } },
       color: { value: MESH.particles },
       shape: {
         type: "circle",
-        stroke: { width: 0.4, color: MESH.accent },
+        stroke: { width: 0.5, color: MESH.accent },
       },
       opacity: {
-        value: isMobile ? 0.5 : 0.46,
-        random: false,
-        // Skip opacity pulse — cheaper first paint + steady FPS
-        anim: { enable: false },
+        value: isMobile ? 0.52 : 0.48,
+        random: true,
+        anim: animate
+          ? { enable: true, speed: 1, opacity_min: 0.2, sync: false }
+          : { enable: false },
       },
       size: {
-        value: isMobile ? 2.1 : 2.3,
+        value: isMobile ? 2.4 : 2.6,
         random: true,
-        anim: { enable: false },
+        anim: animate
+          ? { enable: true, speed: 2, size_min: 1, sync: false }
+          : { enable: false },
       },
       line_linked: {
         enable: true,
-        distance: isMobile ? 108 : 130,
+        distance: isMobile ? 120 : 145,
         color: MESH.lines,
-        opacity: isMobile ? 0.34 : 0.3,
-        width: 1,
+        opacity: isMobile ? 0.36 : 0.32,
+        width: 1.1,
       },
       move: {
         enable: animate,
-        speed: isMobile ? 0.9 : 1.05,
+        speed: isMobile ? 1.2 : 1.35,
         direction: "none",
         random: true,
         straight: false,
-        out_mode: "out",
+        out_mode: "bounce",
         bounce: false,
         attract: { enable: false, rotateX: 600, rotateY: 1200 },
       },
@@ -94,13 +94,12 @@ function buildConfig(animate: boolean, isMobile: boolean): Record<string, unknow
         resize: true,
       },
       modes: {
-        grab: { distance: 180, line_linked: { opacity: 0.6 } },
-        push: { particles_nb: 2 },
-        repulse: { distance: 140, duration: 0.3 },
+        grab: { distance: 220, line_linked: { opacity: 0.75 } },
+        push: { particles_nb: 4 },
+        repulse: { distance: 180, duration: 0.4 },
       },
     },
-    // Retina doubles pixel work — keep off for faster init/FPS
-    retina_detect: false,
+    retina_detect: true,
   };
 }
 
@@ -158,7 +157,7 @@ type ParticlesBgProps = {
 };
 
 /**
- * Fast network mesh: self-hosted particles.js, lean particle count, no retina.
+ * Network mesh — previous density/links restored; script self-hosted for faster load.
  */
 export default function ParticlesBg({ className }: ParticlesBgProps) {
   const reactId = useId().replace(/:/g, "");
