@@ -34,7 +34,7 @@ const RESELLER_FAQS: FaqItem[] = [
   {
     id: "minimum",
     q: "Is there a minimum purchase to become a reseller?",
-    a: "The Starter Pack at £59.99 (30 credits) is the entry point — one of the lowest barriers in the UK market. No contracts and no obligation to top up on any schedule.",
+    a: "The Starter Pack at £59.99 (120 credits) is the entry point — one of the lowest barriers in the UK market. No contracts and no obligation to top up on any schedule.",
   },
   {
     id: "support",

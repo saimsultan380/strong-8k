@@ -21,21 +21,21 @@ const PACK_FEATURES = [
 const PACKS = [
   {
     name: "Starter Pack",
-    credits: "30 Credits",
+    credits: "120 Credits",
     description:
-      "Perfect for testing the waters — enough for 30 monthly customers or a mix of longer plans.",
+      "Perfect for testing the waters — enough for 120 monthly customers or a mix of longer plans.",
     highlight: false,
   },
   {
     name: "Growth Pack",
-    credits: "50 Credits",
+    credits: "240 Credits",
     description:
       "For resellers ready to build a customer base — better value per credit as you scale.",
     highlight: true,
   },
   {
     name: "Pro Pack",
-    credits: "100+ Credits",
+    credits: "360 Credits",
     description:
       "Our best wholesale rate, for established resellers and high-volume sellers.",
     highlight: false,
