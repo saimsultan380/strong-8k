@@ -59,7 +59,7 @@ export const pageDescriptions = {
   installationGuide:
     "Step-by-step Strong 8K IPTV installation guide for Firestick, Android TV, Smart TVs, iPhone, Android, Windows and Mac. Average setup under 5 minutes. 24/7 WhatsApp support.",
   resellerPanel:
-    "Become an IPTV reseller in the UK with Strong 8K. Credits from £59.99, non-expiring balance, white label branding, sub-reseller network, instant activation and 24/7 support.",
+    "Become an IPTV reseller in the UK with Strong 8K. Contact support for credit package pricing, non-expiring balance, white label branding, sub-reseller network, instant activation and 24/7 support.",
   contactUs:
     "Claim a free IPTV trial UK with Strong 8K — 24 hours of full access to 40,000+ channels and 120,000+ VOD. No card, no commitment. Contact us 24/7 on WhatsApp for trials, setup and support.",
   notFound:

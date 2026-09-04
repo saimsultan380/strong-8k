@@ -45,10 +45,10 @@ export function ResellerCtaSection() {
               className="mx-auto mt-7 max-w-[680px] text-[15px] leading-[1.8]"
               style={{ color: "var(--hero-muted)" }}
             >
-              You bring the customers — we bring the servers, the streams, and the support. From
-              £59.99, the Strong 8K IPTV reseller panel gives you everything you need to earn from
-              day one: instant activation, non-expiring credits, white label branding, and a service
-              your customers will actually want to renew.
+              You bring the customers — we bring the servers, the streams, and the support. Contact
+              support for pricing. The Strong 8K IPTV reseller panel gives you everything you need to
+              earn from day one: instant activation, non-expiring credits, white label branding, and a
+              service your customers will actually want to renew.
             </p>
           </FadeIn>
 

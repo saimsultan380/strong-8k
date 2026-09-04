@@ -243,8 +243,8 @@ export function ResellerPlansSection() {
               className="mt-5 text-center text-sm leading-[1.75] sm:text-[15px]"
               style={{ color: "var(--hero-muted)" }}
             >
-              Sell a 12-month subscription at the market rate of £40–£45 and your margin speaks for
-              itself.
+              Your reseller panel includes progressive account ranks, with the ability to create up to
+              10 customer trials per day from the start.
             </p>
           </div>
         </FadeIn>

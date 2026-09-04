@@ -56,7 +56,8 @@ export function ResellerPanelHero() {
               Strong8K handles the servers, the streams, and the infrastructure behind the scenes.
             </p>
             <p style={{ color: "var(--hero-muted)" }}>
-              Starter packages begin at £59.99, and your panel is live the same day you order.
+              Starter packages begin at a price from support, and your panel is live the same day you
+              order.
             </p>
           </div>
         </HeroReveal>

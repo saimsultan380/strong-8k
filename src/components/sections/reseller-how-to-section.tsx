@@ -11,7 +11,7 @@ const STEPS = [
   },
   {
     title: "2. Start with the Starter Pack",
-    body: "120 credits (£59.99) is enough to onboard your first customers without over-committing. You'll learn the panel inside-out with real customers on real lines.",
+    body: "120 credits is enough to onboard your first customers without over-committing. Contact support for the pack price. You'll learn the panel inside-out with real customers on real lines.",
   },
   {
     title: "3. Set Simple, Profitable Prices",
