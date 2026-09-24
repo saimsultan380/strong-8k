@@ -8,6 +8,11 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "destination": "/strong-8k-iptv-uk/",
+      "permanent": true
+    },
+    {
       "source": "/subscription-plans",
       "destination": "/iptv-subscription-plans/",
       "permanent": true
