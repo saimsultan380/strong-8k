@@ -12,18 +12,17 @@ const CARDS = [
     eyebrow: "White Label",
     title: (
       <>
-        White Label IPTV Panel – Sell Under Your Own{" "}
-        <span style={{ color: "var(--hero-accent)" }}>Brand</span>
+        White label IPTV{" "}
+        <span style={{ color: "var(--hero-accent)" }}>branding</span>
       </>
     ),
     paragraphs: [
-      "Your customers should know your name, not your supplier's. With Strong 8K white label branding, every part of the customer experience carries your business identity.",
-      "Set your own brand name, run your own offers, and present subscriptions as your own product. Your customers see your brand — the strong IPTV infrastructure behind it stays completely invisible to them.",
+      "Strong 8K offers branding options for businesses that want customers to recognise their own name. Contact us about the available presentation, setup requirements and delivery time.",
+      "An IPTV reseller can keep a consistent brand across customer messages and renewal reminders while using the panel to manage accounts.",
     ],
     footer: (
       <>
-        White label setup is handled by our team and is typically live within 1–2 days of your
-        request. Just{" "}
+        Contact us about the available presentation, setup requirements and delivery time. Just{" "}
         <a
           href={WHATSAPP_LINK}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
@@ -31,7 +30,7 @@ const CARDS = [
         >
           message us
         </a>{" "}
-        after purchase and we&apos;ll configure everything for you.
+        to discuss branding options.
       </>
     ),
   },
@@ -40,14 +39,12 @@ const CARDS = [
     eyebrow: "Sub-Reseller Network",
     title: (
       <>
-        Grow Bigger: Build Your Own{" "}
-        <span style={{ color: "var(--hero-accent)" }}>Sub-Reseller Network</span>
+        Sub-resellers and{" "}
+        <span style={{ color: "var(--hero-accent)" }}>network accounts</span>
       </>
     ),
     paragraphs: [
-      "Once your business is established, you don't have to sell only to end customers — you can supply other resellers underneath you.",
-      "Create sub-reseller accounts from your own panel, sell them credits at your chosen rate, and earn margin on every credit they spend. The maths adds up quickly: keep just £1 margin per credit, and ten sub-resellers buying 50 credits a month each puts an extra £500 in your pocket monthly — on top of your own direct sales.",
-      "Your subscriptions and your sub-reseller network sit in the same dashboard, so there's nothing new to learn as you scale. Ask our team about sub-reseller unlocking when you order.",
+      "Sub-reseller tools let established sellers organise additional accounts within their operation. Speak to our team about access, credit allocation and account permissions before adding another seller.",
     ],
   },
 ] as const;

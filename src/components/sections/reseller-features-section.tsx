@@ -15,33 +15,33 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 const FEATURES = [
   {
     Icon: Zap,
-    title: "Instant Auto-Activation",
-    body: "Lines go live the moment you create them. Your customer pays you, you generate their login, they're watching two minutes later — day or night, no waiting on support.",
+    title: "Account administration",
+    body: "Create, renew, suspend and review lines from the dashboard.",
   },
   {
     Icon: Users,
-    title: "Unlimited Customer Accounts",
-    body: 'No caps, no tiers, no "upgrade to add more users." Whether you have 5 customers or 500, the panel scales with you at no extra platform cost.',
+    title: "Credit visibility",
+    body: "Track your remaining balance and usage.",
   },
   {
     Icon: Clock,
-    title: "Credits That Never Expire",
-    body: "Buy credits when the rate suits you and spend them at your own pace. Unused balance stays in your account permanently — no deadlines, no forced top-ups.",
+    title: "Programme guide and formats",
+    body: "Help customers connect using a supported player and login format.",
   },
   {
     Icon: Server,
-    title: "Multi-Server Stability",
-    body: "Your customers' streams run on load-balanced servers with automatic failover. If one route has issues, traffic switches over in seconds — most viewers never notice a thing.",
+    title: "Reseller support",
+    body: "Contact our team when an account or setup needs attention.",
   },
   {
     Icon: CalendarCheck,
-    title: "Accurate EPG",
-    body: 'The TV guide your customers see updates automatically and stays accurate. Fewer "why is the guide wrong?" messages means less support work landing on you.',
+    title: "120,000+ on-demand films and series",
+    body: "Strong 8K customer access includes 120,000+ on-demand films and series, supported streams up to 8K UHD and 24/7 support.",
   },
   {
     Icon: Headphones,
-    title: "24/7 Reseller Support",
-    body: "A dedicated reseller line on WhatsApp, around the clock. Panel questions, technical issues, or advice on growing your base — real answers, fast.",
+    title: "Channel availability",
+    body: "Check the latest channel availability before confirming a specific programme or event to a customer.",
   },
 ];
 
@@ -66,8 +66,8 @@ export function ResellerFeaturesSection() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Built for Serious IPTV Resellers in the{" "}
-            <span style={{ color: "var(--hero-accent)" }}>UK</span>
+            Tools for daily account{" "}
+            <span style={{ color: "var(--hero-accent)" }}>management</span>
           </h2>
         </FadeIn>
 

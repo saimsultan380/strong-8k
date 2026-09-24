@@ -35,8 +35,8 @@ export function ResellerCtaSection() {
               className="mx-auto mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Start Your IPTV Reseller Business with Strong 8K{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Today</span>
+              Ask for the current wholesale{" "}
+              <span style={{ color: "var(--hero-accent)" }}>terms</span>
             </h2>
           </FadeIn>
 
@@ -45,10 +45,9 @@ export function ResellerCtaSection() {
               className="mx-auto mt-7 max-w-[680px] text-[15px] leading-[1.8]"
               style={{ color: "var(--hero-muted)" }}
             >
-              You bring the customers — we bring the servers, the streams, and the support. Contact
-              support for pricing. The Strong 8K IPTV reseller panel gives you everything you need to
-              earn from day one: instant activation, non-expiring credits, white label branding, and a
-              service your customers will actually want to renew.
+              Explore the Strong 8K reseller panel with a demonstration, then choose the credit
+              balance that suits your operation. Our team can explain the current prices, account
+              tools and permitted sales territories.
             </p>
           </FadeIn>
 

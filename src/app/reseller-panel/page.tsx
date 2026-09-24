@@ -1,46 +1,22 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
-import { ResellerPanelHero } from "@/components/sections/reseller-panel-hero";
-import { ResellerExplainerSection } from "@/components/sections/reseller-explainer-section";
-import { ResellerProfitabilitySection } from "@/components/sections/reseller-profitability-section";
-import { ResellerPlansSection } from "@/components/sections/reseller-plans-section";
-import { ResellerInfrastructureSection } from "@/components/sections/reseller-infrastructure-section";
-import { ResellerFeaturesSection } from "@/components/sections/reseller-features-section";
-import { ResellerWhiteLabelSection } from "@/components/sections/reseller-white-label-section";
-import { ResellerCustomersSection } from "@/components/sections/reseller-customers-section";
-import { ResellerHowToSection } from "@/components/sections/reseller-how-to-section";
-import { ResellerFaqSection } from "@/components/sections/reseller-faq-section";
-import { ResellerCtaSection } from "@/components/sections/reseller-cta-section";
-import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
-import { Breadcrumbs } from "@/components/seo/breadcrumbs";
-import { pageBreadcrumbs } from "@/lib/breadcrumbs";
+import { LegacyRedirect } from "@/components/seo/legacy-redirect";
+import { createPageMetadata, pageDescriptions, pageTitles } from "@/lib/site";
+import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = createPageMetadata({
   title: pageTitles.resellerPanel,
   description: pageDescriptions.resellerPanel,
-  path: "/reseller-panel/",
+  path: routes.resellerPanel,
+  index: false,
+  follow: true,
 });
 
-export default function ResellerPanelPage() {
+export default function ResellerPanelRedirectPage() {
   return (
-    <main className="relative flex flex-col">
-      <Header />
-      <Breadcrumbs items={pageBreadcrumbs.resellerPanel} />
-      <ResellerPanelHero />
-      <ResellerExplainerSection />
-      <ResellerProfitabilitySection />
-      <ResellerPlansSection />
-      <ResellerInfrastructureSection />
-      <ResellerFeaturesSection />
-      <ResellerWhiteLabelSection />
-      <ResellerCustomersSection />
-      <ResellerHowToSection />
-      <ResellerFaqSection />
-      <ResellerCtaSection />
-      <Footer />
-      <FloatingWhatsApp />
-    </main>
+    <LegacyRedirect
+      href={routes.resellerPanel}
+      message="Redirecting to the reseller panel…"
+      linkLabel="Continue to Reseller Panel"
+    />
   );
 }

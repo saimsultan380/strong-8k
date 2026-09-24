@@ -2,16 +2,17 @@
  * Site-wide brand & SEO defaults for Strong 8K IPTV.
  *
  * Canonical rule: always HTTPS + non-www + trailing slash
- * e.g. https://strong-8k.co.uk/subscription-plans/
+ * e.g. https://strong-8k.co.uk/iptv-subscription-plans/
  */
 import type { Metadata } from "next";
+import { routes } from "@/lib/routes";
 
 export const siteConfig = {
   name: "Strong 8K IPTV",
   shortName: "Strong 8K",
-  tagline: "Premium 8K IPTV Subscription for UK & USA",
+  tagline: "Premium Live TV with 40,000+ Channels and 8K UHD",
   description:
-    "Strong 8K IPTV – premium IPTV subscription for UK & USA. 40,000+ live channels, 120,000+ movies & series, HD/4K/8K streaming, instant activation and 24/7 support. Free 24-hour trial available.",
+    "Explore Strong 8K IPTV for UK and USA viewers: channel catalogue, compatible devices, 1–12 month plans and a 24-hour trial. Compare the service before you subscribe.",
   /** Canonical origin — HTTPS, non-www, no trailing slash on the origin itself */
   siteUrl: "https://strong-8k.co.uk",
   email: "support@strong8k.com",
@@ -42,50 +43,49 @@ export function whatsappUrlWithText(text: string): string {
 
 /** Exact SERP titles (shown in Google + browser tab) */
 export const pageTitles = {
-  home: "Strong 8K IPTV – Premium 8K IPTV Subscription for UK & USA",
-  subscriptionPlans: "Strong 8K IPTV Subscription Plans & Prices UK",
+  home: "Strong 8K IPTV UK – Premium 8K Streaming & 40,000+ Channels",
+  subscriptionPlans: "Strong 8K IPTV Subscription Plans UK – Prices from £9.99",
   installationGuide:
-    "Strong 8K IPTV Installation Guide – Set Up Any Device in Minutes",
-  resellerPanel:
-    "Strong 8K IPTV Reseller Panel UK – Start Your Own IPTV Business",
-  contactUs: "IPTV Free Trial UK – Test Strong 8K Free for 24 Hours",
+    "Strong 8K IPTV Installation Guide – Setup for Supported Devices",
+  resellerPanel: "Strong 8K IPTV Reseller Panel UK – Wholesale Credit Packages",
+  contactUs: "IPTV Free Trial UK – Test Strong 8K Channels for 24 Hours",
   notFound: "Page Not Found | Strong 8K IPTV",
 } as const;
 
 export const pageDescriptions = {
   home: siteConfig.description,
   subscriptionPlans:
-    "Compare Strong 8K IPTV subscription plans UK. From £9.99/mo — 40,000+ channels, 120,000+ VOD, up to 8K UHD, instant activation. No contracts. Free 24-hour trial available.",
+    "Compare Strong 8K IPTV subscription plans from £9.99. Review 1, 3, 6 and 12-month prices, the same channel catalogue in every plan, and trial and renewal details.",
   installationGuide:
-    "Step-by-step Strong 8K IPTV installation guide for Firestick, Android TV, Smart TVs, iPhone, Android, Windows and Mac. Average setup under 5 minutes. 24/7 WhatsApp support.",
+    "Set up Strong 8K IPTV on Fire TV, Android, iPhone, Windows, Mac or Smart TV. Find supported login formats, Downloader code 4330396 and fixes for common issues.",
   resellerPanel:
-    "Become an IPTV reseller in the UK with Strong 8K. Contact support for credit package pricing, non-expiring balance, white label branding, sub-reseller network, instant activation and 24/7 support.",
+    "Explore the Strong 8K IPTV reseller panel: 120, 240 and 360-credit packages, account tools, branding options and current pricing by request. See how the panel works.",
   contactUs:
-    "Claim a free IPTV trial UK with Strong 8K — 24 hours of full access to 40,000+ channels and 120,000+ VOD. No card, no commitment. Contact us 24/7 on WhatsApp for trials, setup and support.",
+    "Request a 24-hour Strong 8K IPTV trial in the UK. Check device compatibility, test the channel catalogue and contact the team for setup, plans or reseller questions.",
   notFound:
     "The page you are looking for could not be found. Browse Strong 8K IPTV plans, installation guides, or contact support.",
 } as const;
 
 /** Indexable routes used by sitemap (canonical paths with trailing slash). */
 export const sitemapRoutes = [
-  { path: "/", changeFrequency: "weekly" as const, priority: 1 },
+  { path: routes.home, changeFrequency: "weekly" as const, priority: 1 },
   {
-    path: "/subscription-plans/",
+    path: routes.subscriptionPlans,
     changeFrequency: "weekly" as const,
     priority: 0.9,
   },
   {
-    path: "/installation-guide/",
+    path: routes.installationGuide,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   },
   {
-    path: "/reseller-panel/",
+    path: routes.resellerPanel,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   },
   {
-    path: "/contact-us/",
+    path: routes.contactUs,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   },
@@ -158,7 +158,7 @@ export const siteMetadataBase: Metadata = {
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  metadataBase: new URL(canonicalUrl("/")),
+  metadataBase: new URL(canonicalUrl(routes.home)),
   keywords: [
     "Strong 8K IPTV",
     "8K IPTV",

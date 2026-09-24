@@ -1,3 +1,4 @@
+import { routes } from "@/lib/routes";
 import { canonicalUrl, siteConfig } from "@/lib/site";
 
 export type BreadcrumbItem = {
@@ -8,22 +9,22 @@ export type BreadcrumbItem = {
 
 /** Indexable page breadcrumb trails (Home › Page). Homepage has no trail — Google requires ≥2 ListItems. */
 export const pageBreadcrumbs = {
-  home: [{ name: "Home", path: "/" }] satisfies BreadcrumbItem[],
+  home: [{ name: "Home", path: routes.home }] satisfies BreadcrumbItem[],
   subscriptionPlans: [
-    { name: "Home", path: "/" },
-    { name: "Subscription Plans", path: "/subscription-plans/" },
+    { name: "Home", path: routes.home },
+    { name: "Subscription Plans", path: routes.subscriptionPlans },
   ] satisfies BreadcrumbItem[],
   installationGuide: [
-    { name: "Home", path: "/" },
-    { name: "Installation Guide", path: "/installation-guide/" },
+    { name: "Home", path: routes.home },
+    { name: "Installation Guide", path: routes.installationGuide },
   ] satisfies BreadcrumbItem[],
   resellerPanel: [
-    { name: "Home", path: "/" },
-    { name: "Reseller Panel", path: "/reseller-panel/" },
+    { name: "Home", path: routes.home },
+    { name: "Reseller Panel", path: routes.resellerPanel },
   ] satisfies BreadcrumbItem[],
   contactUs: [
-    { name: "Home", path: "/" },
-    { name: "Contact Us", path: "/contact-us/" },
+    { name: "Home", path: routes.home },
+    { name: "Contact Us", path: routes.contactUs },
   ] satisfies BreadcrumbItem[],
 } as const;
 
@@ -54,7 +55,7 @@ export function siteJsonLd() {
         "Strong 8K IPTV UK",
         "Strong 8K IPTV USA",
       ],
-      url: canonicalUrl("/"),
+      url: canonicalUrl(routes.home),
       description: siteConfig.description,
       inLanguage: "en-GB",
     },
@@ -62,7 +63,7 @@ export function siteJsonLd() {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: siteConfig.name,
-      url: canonicalUrl("/"),
+      url: canonicalUrl(routes.home),
       logo: `${siteConfig.siteUrl.replace(/\/$/, "")}/strong-8k.PNG`,
       contactPoint: {
         "@type": "ContactPoint",

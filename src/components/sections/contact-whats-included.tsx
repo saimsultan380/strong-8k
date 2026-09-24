@@ -6,20 +6,20 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 const INCLUDED = [
   {
-    title: "All 40,000+ live channels",
-    body: "Sports, movies, news, entertainment and international",
+    title: "The same live channel catalogue",
+    body: "Your Strong 8K trial includes the same live channel catalogue offered to paid customers.",
   },
   {
-    title: "The complete VOD library",
-    body: "120,000+ movies and series on demand",
+    title: "The same VOD library",
+    body: "Use the full test period to explore the categories you would watch regularly.",
   },
   {
-    title: "Full picture quality",
-    body: "HD, FHD, 4K and 8K UHD, whatever your device supports",
+    title: "Available picture quality options",
+    body: "The same available picture quality options offered to paid customers.",
   },
   {
-    title: "Real peak-time performance",
-    body: "You're on the same servers as our paying customers, not a demo line",
+    title: "Test in the evening",
+    body: "Test in the evening if that is when your household usually watches. Try several channel categories and an on-demand title so you can compare different parts of the service.",
   },
 ];
 
@@ -44,8 +44,8 @@ export function ContactWhatsIncluded() {
             className="mt-3 max-w-3xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[36px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            What&apos;s Included in Your{" "}
-            <span style={{ color: "var(--hero-accent)" }}>24-Hour Trial</span>
+            What is included in the{" "}
+            <span style={{ color: "var(--hero-accent)" }}>24-hour test</span>?
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -53,8 +53,9 @@ export function ContactWhatsIncluded() {
             className="mt-4 max-w-2xl text-sm leading-[1.75] sm:text-[15px]"
             style={{ color: "var(--hero-muted)" }}
           >
-            This isn&apos;t a cut-down demo. Your free IPTV trial UK includes exactly what paying
-            customers get:
+            Your Strong 8K trial includes the same live channel catalogue, VOD library and
+            available picture quality options offered to paid customers. Use the full test period
+            to explore the categories you would watch regularly.
           </p>
         </FadeIn>
 
@@ -89,7 +90,8 @@ export function ContactWhatsIncluded() {
             className="mt-6 text-center text-sm font-semibold sm:text-[15px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Test it properly. That&apos;s what it&apos;s for.
+            A free IPTV trial is most useful when it answers your own questions about
+            compatibility, navigation and the content you actually want.
           </p>
         </FadeIn>
       </Container>

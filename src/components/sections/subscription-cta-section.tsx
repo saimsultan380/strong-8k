@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { routes } from "@/lib/routes";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
@@ -65,8 +66,8 @@ export function SubscriptionCtaSection() {
               className="mx-auto max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Lock In Your Strong 8K IPTV Subscription Today –{" "}
-              <span style={{ color: "var(--hero-accent)" }}>From £9.99</span>
+              Compare, test and then{" "}
+              <span style={{ color: "var(--hero-accent)" }}>subscribe</span>
             </h2>
           </FadeIn>
 
@@ -75,9 +76,9 @@ export function SubscriptionCtaSection() {
               className="mx-auto mt-7 max-w-[720px] text-[15px] leading-[1.8] sm:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              One payment. Zero contracts. Everything included. Start with the free 24-hour trial,
-              pick the plan that suits you, and you&apos;ll be watching in under five minutes — at
-              the best IPTV price in the UK.
+              Every Strong 8K IPTV duration above contains the same listed features. Choose the
+              term that matches your budget and confidence in the service, then keep your
+              confirmation and credentials secure.
             </p>
           </FadeIn>
 
@@ -85,7 +86,7 @@ export function SubscriptionCtaSection() {
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-12">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/contact-us/"
+                  href={routes.contactUs}
                   className="inline-flex items-center gap-2.5 rounded-xl px-8 py-4 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
                   style={{
                     background: "var(--hero-cta-primary-bg)",

@@ -6,19 +6,24 @@ import { FadeIn } from "@/components/animation/fade-in";
 
 const CHOICES = [
   {
-    id: "new",
-    title: "New to IPTV? Start with 1 Month",
-    body: "If this is your first IPTV service, the 1-month plan is a low-commitment way to test everything on your own devices and broadband. Combine it with the free 24-hour trial first, and you'll know exactly what you're paying for before you spend anything at all.",
+    id: "one",
+    title: "One month",
+    body: "Useful when you want more time to check a Strong 8K setup after the free trial. The smaller upfront payment offers flexibility, but its effective monthly cost is highest.",
   },
   {
-    id: "regular",
-    title: "Regular Viewers: 6 Months Hits the Sweet Spot",
-    body: "Watch TV most evenings? The 6-month plan cuts your cost to £4.33 a month — a 57% saving — without committing to a full year. It's the most popular choice among customers upgrading from their first month.",
+    id: "three",
+    title: "Three months",
+    body: "Choose a full quarter of access after checking that your device and preferred channels work during the trial.",
   },
   {
-    id: "best",
-    title: "Best Value: The 12-Month Strong IPTV Plan",
-    body: "For households where the TV is always on, nothing beats the annual plan. At £3.58 a month, this Strong IPTV package is the cheapest way to keep every channel, every movie, and every match running all year — and you won't touch a renewal screen for 12 months.",
+    id: "six",
+    title: "Six months",
+    body: "Compare the total with three months and check the refund terms. This duration may suit a regular viewer who already knows the app works on their device.",
+  },
+  {
+    id: "twelve",
+    title: "Twelve months",
+    body: "Lowest effective monthly cost at the displayed Strong 8K prices. Check the current catalogue, support and policy carefully before choosing the longest term.",
   },
 ];
 
@@ -54,8 +59,8 @@ export function SubscriptionChoiceGuidance() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
               style={{ color: "var(--hero-heading)" }}
             >
-              Which Strong 8K IPTV Subscription Is{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Right for You?</span>
+              Which IPTV subscription term should you{" "}
+              <span style={{ color: "var(--hero-accent)" }}>choose</span>?
             </h2>
           </FadeIn>
 
@@ -64,8 +69,8 @@ export function SubscriptionChoiceGuidance() {
               className="mx-auto mt-6 max-w-[720px] text-sm leading-[1.75] sm:text-[15px] md:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Not sure which duration to pick? Here&apos;s our honest recommendation based on how
-              most customers use the service.
+              One month, three months, six months or twelve months — choose the duration that
+              suits your household after the free trial.
             </p>
           </FadeIn>
         </div>

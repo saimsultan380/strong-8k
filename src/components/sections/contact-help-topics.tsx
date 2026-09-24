@@ -2,39 +2,40 @@
 
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { routes } from "@/lib/routes";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 const TOPICS = [
   {
-    title: "Plans & pricing",
+    title: "Plan selection",
     body: (
       <>
-        Not sure which duration suits you? Compare options on our{" "}
+        Compare the total price and the one-screen allowance on the{" "}
         <Link
-          href="/subscription-plans/"
+          href={routes.subscriptionPlans}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
           Subscription Plans
         </Link>{" "}
-        page or just ask us directly.
+        page.
       </>
     ),
   },
   {
-    title: "Setup & installation",
+    title: "Setup",
     body: (
       <>
-        Stuck on any device? Our{" "}
+        Follow the{" "}
         <Link
-          href="/installation-guide/"
+          href={routes.installationGuide}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Installation Guide
+          device steps
         </Link>{" "}
-        covers everything, or we&apos;ll walk you through it live on WhatsApp.
+        and send the model if a menu differs.
       </>
     ),
   },
@@ -42,21 +43,21 @@ const TOPICS = [
     title: "Reseller enquiries",
     body: (
       <>
-        Want to sell IPTV under your own brand? Ask about the{" "}
+        Request the credit price sheet through the{" "}
         <Link
-          href="/reseller-panel/"
+          href={routes.resellerPanel}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
           Reseller Panel
-        </Link>
-        .
+        </Link>{" "}
+        route.
       </>
     ),
   },
   {
     title: "Existing customers",
-    body: "Renewals, playback issues, or account questions — message us any time.",
+    body: "Send a concise account question and the time of any playback problem.",
   },
 ];
 

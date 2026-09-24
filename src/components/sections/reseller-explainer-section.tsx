@@ -26,29 +26,24 @@ export function ResellerExplainerSection() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Why Resell Strong 8K? Because Renewals Build{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Real Income</span>
+              Why the panel matters to a{" "}
+              <span style={{ color: "var(--hero-accent)" }}>reseller</span>
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <div className="mt-7 space-y-4 text-center text-[15px] leading-[1.8] sm:text-base">
               <p style={{ color: "var(--hero-muted)" }}>
-                Anyone can make a first sale. The resellers who build real monthly income are the
-                ones whose customers come back — month after month, year after year. And customers
-                only renew when the service behind your panel actually works.
+                Working with an IPTV supplier starts with clear credit rules and practical account
+                tools. The Strong 8K IPTV reseller panel lets you create subscriptions, renew
+                existing lines and check account status from one dashboard. Unused credits stay in
+                your balance without an expiry date.
               </p>
               <p style={{ color: "var(--hero-muted)" }}>
-                That&apos;s why choosing the right IPTV supplier in the UK is the single most
-                important decision you&apos;ll make as a reseller. A cheap panel with overloaded
-                servers looks profitable on paper — until the first big Saturday night, when streams
-                freeze, refund requests pile up, and your reputation takes the hit.
-              </p>
-              <p style={{ color: "var(--hero-muted)" }}>
-                Strong 8K is built the other way around. Stable servers, Anti-Freeze technology, and
-                99.9% uptime mean fewer complaints reaching you and more customers renewing without
-                a second thought. Low churn is what turns a side hustle into predictable, recurring
-                revenue.
+                The service includes Anti-Freeze technology and 99.9% server uptime. Use a
+                demonstration to explore the dashboard and test the viewing experience before
+                choosing a package. Your business results depend on your prices, costs, customers
+                and support.
               </p>
             </div>
           </FadeIn>

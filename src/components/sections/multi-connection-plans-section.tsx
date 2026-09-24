@@ -125,7 +125,7 @@ function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
           className="mt-4 text-[13px]"
           style={{ color: "rgba(255, 255, 255, 0.7)" }}
         >
-          Starting at
+          Price:
         </p>
         <div className="mt-1 flex flex-wrap items-baseline gap-2.5">
           <span
@@ -192,7 +192,7 @@ export function MultiConnectionPlansSection() {
               className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Choose Your{" "}
+              Choose your{" "}
               <span
                 style={{
                   backgroundImage: "var(--grad-text)",
@@ -201,9 +201,9 @@ export function MultiConnectionPlansSection() {
                   backgroundClip: "text",
                 }}
               >
-                Strong 8K IPTV Plan
+                Strong 8K IPTV plan
               </span>{" "}
-              – 1, 3, 6 or 12 Months
+              — 1, 3, 6 or 12 months
             </h2>
           </FadeIn>
 
@@ -212,9 +212,10 @@ export function MultiConnectionPlansSection() {
               className="text-sm leading-[1.75] sm:text-[15px] md:text-right"
               style={{ color: "var(--hero-muted)" }}
             >
-              Pick the duration that fits your budget. Every plan below is a complete, affordable
-              IPTV subscription for UK viewers — same channels, same VOD library, same quality,
-              same support.
+              Each Strong 8K IPTV card below repeats the same catalogue and features. There is no
+              shorter list on the monthly plan or an extra channel tier on the annual plan. A
+              standard plan provides one simultaneous connection; ask for a separate multi-screen
+              quote if several people need to watch at once.
             </p>
           </FadeIn>
         </div>

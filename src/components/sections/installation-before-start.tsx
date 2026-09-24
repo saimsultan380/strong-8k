@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { KeyRound, Wifi, Smartphone } from "lucide-react";
+import { routes } from "@/lib/routes";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
@@ -9,21 +10,22 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 const NEEDS = [
   {
     icon: KeyRound,
-    title: "Your Strong 8K login details",
+    title: "Your account details",
     body: (
       <>
-        The username, password and server URL (or M3U link / Xtream Codes) we sent you by WhatsApp
-        or email after your order. Haven&apos;t subscribed yet? Grab a plan on our{" "}
+        You may receive a username, password and server URL for a supported server login, or one
+        playlist link. Copy the address exactly and avoid publishing it in a support forum.
+        Haven&apos;t activated an account yet? Choose a{" "}
         <Link
-          href="/subscription-plans/"
+          href={routes.subscriptionPlans}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Subscription Plans
+          Subscription Plan
         </Link>{" "}
-        page or start with the{" "}
+        or request the{" "}
         <Link
-          href="/contact-us/"
+          href={routes.contactUs}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
@@ -35,13 +37,13 @@ const NEEDS = [
   },
   {
     icon: Wifi,
-    title: "A stable internet connection",
-    body: "10–15 Mbps for HD, 25 Mbps+ for 4K. WiFi or ethernet both work; ethernet is more stable for TVs.",
+    title: "Your device and connection",
+    body: "Have the device make and model to hand. As a starting point, allow around 10–15 Mbps for HD and 25 Mbps or more for 4K. Actual requirements depend on the stream, player and other devices sharing your connection.",
   },
   {
     icon: Smartphone,
-    title: "An IPTV player app",
-    body: "Recommendations for every device are below. Most are free.",
+    title: "A compatible player",
+    body: "Check the player’s publisher and platform in the official device store. Some apps charge a separate licence fee. Confirm whether the app accepts a playlist link, a server login or a device ID before installing it.",
   },
 ];
 
@@ -66,8 +68,8 @@ export function InstallationBeforeStart() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Before You Start:{" "}
-            <span style={{ color: "var(--hero-accent)" }}>What You&apos;ll Need</span>
+            Before you start:{" "}
+            <span style={{ color: "var(--hero-accent)" }}>three useful checks</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -75,7 +77,8 @@ export function InstallationBeforeStart() {
             className="mt-5 max-w-2xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Setup takes minutes, but make sure you have these three things ready first:
+            Check your account details, your device and connection, and a compatible player
+            before you begin.
           </p>
         </FadeIn>
 
@@ -119,7 +122,7 @@ export function InstallationBeforeStart() {
             className="mt-8 text-center text-[15px]"
             style={{ color: "var(--hero-muted)" }}
           >
-            That&apos;s it. Now find your device and follow along.
+            Now find your device and follow along.
           </p>
         </FadeIn>
       </Container>

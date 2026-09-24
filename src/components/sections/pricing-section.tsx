@@ -5,23 +5,24 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { routes } from "@/lib/routes";
 
 const WHATSAPP_LINK = "https://wa.me/447401921250";
 
 const PLAN_FEATURES = [
-  "1 Screen connection",
+  "1 screen connection",
   "40,000+ live channels (UK & international)",
   "Full international sports packages",
   "120,000+ VOD movies & series, updated daily",
   "30,000+ complete series box sets",
   "SD / HD / FHD / 4K / 8K UHD quality",
   "99.9% server uptime with Anti-Freeze technology",
-  "Free TV & VOD updates for the life of your plan",
+  "Free TV & VOD updates throughout your plan",
   "M3U, MAG, Xtream Codes & Enigma supported",
   "Radio and music channels included",
   "Compatible with Smart TV, smartphone, tablet & PC",
-  "Catch-up TV & EPG guide",
-  "Instant activation — start watching within minutes",
+  "Catch-up TV & full EPG guide",
+  "Instant activation — watching within minutes",
   "24/7 technical support",
 ];
 
@@ -132,7 +133,7 @@ function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
           className="mt-4 text-[13px]"
           style={{ color: "rgba(255, 255, 255, 0.7)" }}
         >
-          Starting at
+          Price:
         </p>
         <div className="mt-1 flex flex-wrap items-baseline gap-2.5">
           <span
@@ -179,7 +180,7 @@ function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
               boxShadow: "var(--hero-cta-primary-shadow)",
             }}
           >
-            Get This Plan
+            GET THIS PLAN
           </a>
         </motion.div>
       </div>
@@ -212,7 +213,7 @@ export function PricingSection() {
               >
                 Strong 8K IPTV
               </span>{" "}
-              Subscription{" "}
+              subscription plans{" "}
               <span
                 style={{
                   backgroundImage: "var(--grad-text)",
@@ -221,9 +222,8 @@ export function PricingSection() {
                   backgroundClip: "text",
                 }}
               >
-                Plans
-              </span>{" "}
-              – Flexible & Affordable
+                — choose your term
+              </span>
             </h2>
           </FadeIn>
 
@@ -232,9 +232,11 @@ export function PricingSection() {
               className="text-sm leading-[1.75] sm:text-[15px] md:text-right"
               style={{ color: "var(--hero-muted)" }}
             >
-              Choose the plan that fits your viewing habits. Every Strong 8K IPTV subscription
-              includes the full channel list, complete VOD library, and 24/7 support — the only
-              difference is how long you stay connected. Longer plans, bigger savings.
+              Pick from one, three, six or twelve months. Every Strong 8K IPTV subscription card
+              below carries the same full catalogue and one-screen allowance; the duration and
+              price change. Review the Subscription Plans page for the full price comparison and
+              payment details. A Strong 8K IPTV subscription starts at the displayed £9.99 monthly
+              price.
             </p>
           </FadeIn>
         </div>
@@ -251,15 +253,15 @@ export function PricingSection() {
               className="text-[15px] leading-[1.8]"
               style={{ color: "var(--hero-muted)" }}
             >
-              Want to compare every plan in detail? Visit our{" "}
+              Review the{" "}
               <Link
-                href="/subscription-plans/"
+                href={routes.subscriptionPlans}
                 className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                 style={{ color: "var(--hero-heading)" }}
               >
                 Subscription Plans
               </Link>{" "}
-              page.
+              page for the full price comparison and payment details.
             </p>
           </div>
         </FadeIn>

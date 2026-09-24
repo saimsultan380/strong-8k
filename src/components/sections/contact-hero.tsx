@@ -4,7 +4,6 @@ import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { HeroReveal } from "@/components/animation/hero-reveal";
 import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
-import { siteConfig } from "@/lib/site";
 
 const WHATSAPP_LINK = "https://wa.me/447401921250";
 
@@ -37,7 +36,7 @@ export function ContactHero() {
           className="mx-auto max-w-[920px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[52px]"
           style={{ color: "var(--hero-heading)" }}
           lines={[
-            "IPTV Free Trial UK – Test Strong 8K Free for",
+            "IPTV Free Trial UK – Test Strong 8K Channels for",
             <span key="accent" style={{ color: "var(--hero-accent)" }}>
               24 Hours
             </span>,
@@ -47,15 +46,15 @@ export function ContactHero() {
         <HeroReveal delay={0.18}>
           <div className="mx-auto mt-5 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
-              Why pay for an IPTV service you haven&apos;t seen? {siteConfig.shortName} gives every
-              new customer a genuine free trial — 24 hours of full access to 40,000+ channels, the
-              complete VOD library, and real 4K/8K picture quality. No card details, no commitment,
-              no catch.
+              Use your free IPTV trial to see how Strong 8K works on the device and connection you
+              already use. Request a 24-hour trial, tell us your device model and receive the
+              login details for a compatible player. No payment or card details are required.
             </p>
             <p style={{ color: "var(--hero-muted)" }}>
-              Claiming it takes one WhatsApp message, and most trials are activated within minutes.
-              And if you&apos;re here for anything else — a question about plans, setup help, or
-              reseller queries — the same team answers everything, 24/7.
+              Browse 40,000+ live channels and explore 120,000+ films and series, with streams up
+              to 8K UHD on supported content and hardware. Check favourite categories, try the
+              programme guide and see how playback performs on your own screen. Channel
+              availability and picture quality vary by content and setup.
             </p>
           </div>
         </HeroReveal>

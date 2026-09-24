@@ -10,7 +10,7 @@ const WHATSAPP_LINK = "https://wa.me/447401921250";
 const PACK_FEATURES = [
   "1 credit = 1 month per customer",
   "Credits never expire",
-  "40,000+ channels & 120,000+ VOD for your customers",
+  "40,000+ channels & 120,000+ VOD",
   "SD to 8K UHD quality",
   "Instant line activation from your dashboard",
   "Unlimited customer accounts",
@@ -21,23 +21,23 @@ const PACK_FEATURES = [
 const PACKS = [
   {
     name: "Starter Pack",
-    credits: "120 Credits",
+    credits: "120 credits",
     description:
-      "Perfect for testing the waters — enough for 120 monthly customers or a mix of longer plans.",
+      "All three packages include the same customer catalogue. The package size changes the credits available to create lines.",
     highlight: false,
   },
   {
     name: "Growth Pack",
-    credits: "240 Credits",
+    credits: "240 credits",
     description:
-      "For resellers ready to build a customer base — better value per credit as you scale.",
+      "It does not give Starter customers a smaller channel selection than Pro customers.",
     highlight: true,
   },
   {
     name: "Pro Pack",
-    credits: "360 Credits",
+    credits: "360 credits",
     description:
-      "Our best wholesale rate, for established resellers and high-volume sellers.",
+      "Contact support for the cash price of your chosen package.",
     highlight: false,
   },
 ];
@@ -94,8 +94,8 @@ export function ResellerPlansSection() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Strong 8K Reseller Credit Packages –{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Transparent Pricing</span>
+              Strong 8K reseller credit{" "}
+              <span style={{ color: "var(--hero-accent)" }}>packages</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -103,8 +103,9 @@ export function ResellerPlansSection() {
               className="mt-5 text-[15px] leading-[1.75]"
               style={{ color: "var(--hero-muted)" }}
             >
-              No hidden fees, no monthly minimums, no credits that quietly vanish. Pick a package
-              and start selling today:
+              All three packages include the same customer catalogue. The package size changes the
+              credits available to create lines; it does not give Starter customers a smaller
+              channel selection than Pro customers.
             </p>
           </FadeIn>
         </div>
@@ -197,7 +198,8 @@ export function ResellerPlansSection() {
               className="mb-5 text-center text-base font-bold"
               style={{ color: "var(--hero-heading)" }}
             >
-              What each subscription costs you in credits:
+              Credit usage: 1 month uses 1 credit; 3 months use 3 credits; 6 months use 6
+              credits; and 12 months use 12 credits.
             </p>
             <div
               className="overflow-hidden rounded-2xl border"
@@ -243,8 +245,7 @@ export function ResellerPlansSection() {
               className="mt-5 text-center text-sm leading-[1.75] sm:text-[15px]"
               style={{ color: "var(--hero-muted)" }}
             >
-              Your reseller panel includes progressive account ranks, with the ability to create up to
-              10 customer trials per day from the start.
+              Contact support for the cash price of your chosen package.
             </p>
           </div>
         </FadeIn>

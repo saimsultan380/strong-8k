@@ -8,23 +8,23 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 const STEPS = [
   {
     Icon: UserPlus,
-    title: "1. Create Your Reseller Account",
-    body: "Message us on WhatsApp, choose your starter package, and receive your panel login the same day. No lengthy application, no volume commitments.",
+    title: "Ask for account terms",
+    body: "Confirm the minimum package, permitted markets, pricing and support responsibilities.",
   },
   {
     Icon: Coins,
-    title: "2. Load Your Credits",
-    body: "Credits are your currency: 1 credit = 1 month of subscription for one customer. A 12-month line costs 12 credits. Top up whenever you like — your Strong8K balance never expires.",
+    title: "Top up the panel",
+    body: "One credit equals one month for one customer. A twelve-month line uses twelve credits, and unused credits do not expire.",
   },
   {
     Icon: UserCheck,
-    title: "3. Create Customer Subscriptions",
-    body: "Generate a new line in seconds from your dashboard. Set the duration, activate instantly, and send your customer their login details. No waiting on us — everything is in your hands.",
+    title: "Create a customer line",
+    body: "Choose the duration, record its renewal date and share private login details securely.",
   },
   {
     Icon: Tag,
-    title: "4. Sell at Your Own Price",
-    body: "You decide what to charge. Buy wholesale, sell at retail, and pocket the difference on every single subscription and every renewal. Your prices, your packages, your profit.",
+    title: "Set your own retail price",
+    body: "Calculate payment fees, support time and refund exposure as well as wholesale cost. A margin is never guaranteed.",
   },
 ];
 
@@ -49,8 +49,8 @@ export function ResellerProfitabilitySection() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            How the Strong 8K Reseller Panel{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Works</span>
+            How a Strong 8K reseller account{" "}
+            <span style={{ color: "var(--hero-accent)" }}>works</span>
           </h2>
         </FadeIn>
 

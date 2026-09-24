@@ -8,9 +8,9 @@ import {
 } from "@/lib/site";
 
 const BENEFITS = [
-  "No dish, aerial, or engineer visit",
-  "Works with the IPTV app you already use",
-  "Login details delivered within minutes",
+  "No dish is required",
+  "A standard account is sold for one simultaneous screen",
+  "Keep your credentials private",
 ];
 
 const freeTrialWhatsapp = whatsappUrlWithText(
@@ -51,9 +51,10 @@ export function IptvSubscriptionExplainer() {
               className="mt-6 max-w-xl text-sm leading-[1.8] sm:text-[15px] md:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Strong 8K IPTV is a premium internet-based television service built for viewers in
-              the UK who want more channels, sharper picture quality, and fewer interruptions than
-              traditional TV can offer.
+              Strong 8K IPTV is an internet-delivered TV subscription for viewers who prefer
+              choosing their own player and device. Instead of installing new hardware, you add the
+              supplied account details to a compatible app. The app retrieves the channel guide and
+              available on-demand titles for that account.
             </p>
           </FadeIn>
 
@@ -81,8 +82,8 @@ export function IptvSubscriptionExplainer() {
             <div className="grid gap-4 border-b pb-6 sm:grid-cols-3" style={{ borderColor: "var(--feature-card-border)" }}>
               {[
                 { value: "40K+", label: "Live channels" },
-                { value: "8K", label: "Ultra HD quality" },
-                { value: "5 min", label: "Average setup" },
+                { value: "8K", label: "UHD options" },
+                { value: "1", label: "Screen as standard" },
               ].map(({ value, label }) => (
                 <div key={label}>
                   <p className="text-2xl font-black text-gradient-brand">{value}</p>
@@ -97,18 +98,18 @@ export function IptvSubscriptionExplainer() {
                 className="text-sm leading-[1.8] sm:text-[15px] md:text-base"
                 style={{ color: "var(--hero-muted)" }}
               >
-                Instead of a dish or aerial, Strong8K delivers live television and on-demand content
-                straight through your internet connection. One subscription unlocks live sports,
-                films, series, documentaries, news, and kids&apos; entertainment — in resolutions
-                ranging from HD all the way up to 8K UHD.
+                No dish is required. A standard Strong 8K account is sold for one simultaneous
+                screen, while extra connections can be requested. If you want to move between a TV
+                and a phone, check that the app on each device accepts your login format; if you
+                want both to play at once, ask for a multi-screen price.
               </p>
               <p
                 className="text-sm leading-[1.8] sm:text-[15px] md:text-base"
                 style={{ color: "var(--hero-muted)" }}
               >
-                Everything runs through the IPTV app of your choice. You receive your login details
-                within minutes of ordering, enter them into your preferred player, and start
-                watching. No engineer visit, no contract, no hardware to buy.
+                The Strong 8K team can explain supported login formats, plan lengths and setup. Keep
+                your credentials private and ask for current availability when a particular
+                programme is essential to you.
               </p>
             </div>
             <a

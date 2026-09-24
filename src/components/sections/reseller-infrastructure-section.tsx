@@ -5,12 +5,12 @@ import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 const DASHBOARD_ITEMS = [
-  "Create, renew, suspend or delete customer lines instantly",
-  "Live credit balance — always know exactly what you have left",
-  "Real-time connection monitoring — see who's online and spot issues early",
-  "Flexible line durations — 1, 3, 6 or 12 months, set per customer",
-  "Trial line creation — give prospects a taste before they buy",
-  "Customer overview — every subscriber, expiry date and status in one place",
+  "View your credit balance, account status and customer expiry dates in one place",
+  "Create a trial, activate a paid line or renew an existing account as needed",
+  "Trial access starts at up to ten accounts per day, with allowances linked to your account level",
+  "The Strong 8K dashboard supports line monitoring and flexible durations",
+  "Keep track of upcoming renewals",
+  "Check active accounts and top up credits when your business needs them",
 ];
 
 export function ResellerInfrastructureSection() {
@@ -34,8 +34,8 @@ export function ResellerInfrastructureSection() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Inside Your Strong 8K{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Reseller Dashboard</span>
+            Manage accounts from your{" "}
+            <span style={{ color: "var(--hero-accent)" }}>dashboard</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -43,7 +43,7 @@ export function ResellerInfrastructureSection() {
             className="mt-5 max-w-2xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Everything you need to run your IPTV panel lives in one clean interface:
+            View your credit balance, account status and customer expiry dates in one place.
           </p>
         </FadeIn>
 
@@ -70,8 +70,9 @@ export function ResellerInfrastructureSection() {
             className="mt-8 text-center text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            If you can use WhatsApp, you can run this panel. Most new resellers create their first
-            customer line within 10 minutes of logging in.
+            The Strong 8K dashboard supports line monitoring and flexible durations. Keep track of
+            upcoming renewals, check active accounts and top up credits when your business needs
+            them.
           </p>
         </FadeIn>
       </Container>

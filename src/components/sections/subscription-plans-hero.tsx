@@ -6,6 +6,7 @@ import { HeroReveal } from "@/components/animation/hero-reveal";
 import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { routes } from "@/lib/routes";
 
 export function SubscriptionPlansHero() {
   return (
@@ -36,9 +37,9 @@ export function SubscriptionPlansHero() {
           className="mx-auto max-w-[920px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
           style={{ color: "var(--hero-heading)" }}
           lines={[
-            "Strong 8K IPTV Subscription Plans &",
+            "Strong 8K IPTV Subscription Plans",
             <>
-              <span style={{ color: "var(--hero-accent)" }}>Prices UK</span>
+              and <span style={{ color: "var(--hero-accent)" }}>Prices</span>
             </>,
           ]}
         />
@@ -46,19 +47,16 @@ export function SubscriptionPlansHero() {
         <HeroReveal delay={0.18}>
           <div className="mx-auto mt-6 max-w-[750px] space-y-4 text-sm leading-[1.8] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
-              Every Strong 8K IPTV subscription comes with the same full package — 40,000+ live
-              channels, 120,000+ movies and series, and picture quality up to 8K UHD. The only
-              decision you need to make is how long you want to stay connected, with plans starting
-              from just £9.99.
+              Choose the access period that fits your needs and compare the total price. Every
+              Strong 8K IPTV subscription plan includes the same one-screen catalogue: 40,000+ live
+              channels, 120,000+ on-demand titles and supported streams up to 8K UHD. Picture
+              quality depends on the stream, player, display and connection. Use the free test to
+              check your setup before selecting a term.
             </p>
             <p style={{ color: "var(--hero-muted)" }}>
-              No contracts. No hidden fees. No stripped-down &quot;basic&quot; tiers. Whether you
-              choose 1 month or 12, Strong8K gives you everything from day one — and longer plans
-              simply cost less per month.
-            </p>
-            <p style={{ color: "var(--hero-muted)" }}>
-              Below you&apos;ll find every plan, a side-by-side comparison, and honest answers to
-              the pricing questions we get asked most.
+              Strong 8K prices are £9.99, £17.99, £25.99 and £42.99. Pay once for your chosen
+              duration, with VAT, activation, updates and support included. Our team can help you
+              select a player that accepts your account details.
             </p>
           </div>
         </HeroReveal>
@@ -81,7 +79,7 @@ export function SubscriptionPlansHero() {
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/contact-us/"
+                href={routes.contactUs}
                 className="flex w-full max-w-xs items-center justify-center gap-2 rounded-xl border px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] hover:text-[var(--hero-accent)] sm:w-auto sm:max-w-none sm:text-[15px]"
                 style={{
                   borderColor: "var(--hero-btn-border)",

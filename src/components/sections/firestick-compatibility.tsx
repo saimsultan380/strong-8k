@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { routes } from "@/lib/routes";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 
@@ -19,43 +20,50 @@ const DEVICES = [
     id: "smart-tvs",
     icon: Tv,
     title: "Smart TVs (Samsung, LG, Android TV)",
-    description: "Watch directly on your Smart TV with compatible IPTV apps.",
+    description:
+      "Smart TV owners can use supported Samsung, LG and Android TV players.",
   },
   {
     id: "firestick",
     icon: MonitorPlay,
-    title: "Amazon Firestick & Fire TV",
-    description: "One of the most popular ways UK viewers enjoy Strong 8K IPTV.",
+    title: "Firestick and Fire TV",
+    description:
+      "Firestick and Fire TV customers can follow the Android-based steps in our device setup page.",
   },
   {
     id: "android",
     icon: Smartphone,
-    title: "Android phones, tablets & TV boxes",
-    description: "Full support for Android mobiles, tablets, and set-top boxes.",
+    title: "Android phones and tablets",
+    description:
+      "Android phones and tablets have a different login path from television apps.",
   },
   {
     id: "apple",
     icon: TabletSmartphone,
-    title: "iPhone & iPad",
-    description: "Stream on the go or on the couch with your Apple devices.",
+    title: "iPhone and iPad",
+    description:
+      "iPhone and iPad have different login paths from Android and Smart TV players.",
   },
   {
     id: "desktop",
     icon: Monitor,
-    title: "Windows PC & Mac",
-    description: "Use VLC, browser players, or desktop IPTV apps on your computer.",
+    title: "Windows PCs and Macs",
+    description:
+      "Windows PCs and Macs have different login paths. Strong 8K browser viewing depends on the player and account supplied.",
   },
   {
     id: "mag",
     icon: Box,
-    title: "MAG boxes & Enigma2 receivers",
-    description: "Dedicated hardware support for MAG and Enigma2 setups.",
+    title: "MAG boxes and Enigma2 devices",
+    description:
+      "MAG boxes and Enigma2 devices have different login paths.",
   },
   {
     id: "browsers",
     icon: Globe,
-    title: "Web browsers (Chrome, Firefox)",
-    description: "Watch through your browser when an app isn't available.",
+    title: "Browser viewing",
+    description:
+      "Strong 8K browser viewing depends on the player and account supplied.",
   },
 ];
 
@@ -82,8 +90,8 @@ export function FirestickCompatibilitySection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Watch Strong 8K IPTV on{" "}
-                <span style={{ color: "var(--hero-accent)" }}>Any Device</span>
+                Compatible devices and{" "}
+                <span style={{ color: "var(--hero-accent)" }}>players</span>
               </h2>
             </FadeIn>
           </div>
@@ -92,8 +100,11 @@ export function FirestickCompatibilitySection() {
               className="text-[15px] leading-[1.75] sm:text-base md:text-right"
               style={{ color: "var(--hero-muted)" }}
             >
-              Your subscription isn&apos;t locked to one screen. Strong 8K IPTV works out of the box
-              on every popular device in the UK.
+              Smart TV owners can use supported Samsung, LG and Android TV players. Firestick and
+              Fire TV customers can follow the Android-based steps in our device setup page.
+              Android phones and tablets, iPhone and iPad, Windows PCs, Macs, MAG boxes and
+              Enigma2 devices have different login paths. Strong 8K browser viewing depends on the
+              player and account supplied.
             </p>
           </FadeIn>
         </div>
@@ -144,16 +155,18 @@ export function FirestickCompatibilitySection() {
             className="mt-10 text-center text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Switching devices later? No problem — your login works across all of them. Setup
-            instructions are in our{" "}
+            Some apps accept M3U links; others ask for Xtream Codes credentials or a device ID. The{" "}
             <Link
-              href="/installation-guide/"
+              href={routes.installationGuide}
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Installation Guide
-            </Link>
-            .
+              Strong 8K IPTV installation guide
+            </Link>{" "}
+            explains the login options. For the highest resolution, check that the stream, player
+            and screen support the format. Check the app publisher and its current availability
+            before downloading it, especially where installation from outside an official store is
+            involved.
           </p>
         </FadeIn>
       </Container>

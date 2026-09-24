@@ -5,24 +5,25 @@ import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
+import { routes } from "@/lib/routes";
 
 const POINTS = [
   {
-    title: "No contracts, ever",
+    title: "One payment for a fixed term",
     description:
-      "Every Strong 8K plan is a one-time payment for a fixed period. There's no auto-billing, no direct debit, and nothing to cancel — when your plan ends, you simply choose whether to renew.",
+      "There is no auto-billing or direct debit. When your plan ends, you decide whether to renew; there is nothing to cancel.",
     Icon: CalendarX,
   },
   {
-    title: "Renewal at the same price",
+    title: "Same renewal prices",
     description:
-      "Existing customers renew at the same discounted rates you see on this page. Your price doesn't creep up after the first term.",
+      "Existing customers renew at the same discounted rates shown on this page. The price does not increase after the first term.",
     Icon: RefreshCw,
   },
   {
-    title: "Money-back guarantee",
+    title: "Seven-day money-back guarantee",
     description:
-      "If the service doesn't work on your device and our support team can't fix it, you get your money back within the first 7 days. Combined with the free 24-hour trial, your risk is genuinely zero.",
+      "If the service doesn’t work on your device and our support team can’t fix it, you get your money back within the first 7 days.",
     Icon: ShieldCheck,
   },
 ];
@@ -59,8 +60,8 @@ export function SubscriptionWhyChoose() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
               style={{ color: "var(--hero-heading)" }}
             >
-              Payments, Renewals & Our{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Money-Back Guarantee</span>
+              Payments, renewals and{" "}
+              <span style={{ color: "var(--hero-accent)" }}>seven-day guarantee</span>
             </h2>
           </FadeIn>
         </div>
@@ -107,9 +108,12 @@ export function SubscriptionWhyChoose() {
             className="mx-auto mt-12 max-w-3xl text-center text-sm leading-[1.75] sm:text-[15px]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Questions about payment methods or multi-screen pricing? Message us any time via the{" "}
+            If your setup needs two simultaneous screens, ask Strong 8K for the extra charge in
+            advance. Do not assume a one-screen IPTV subscription includes a second connection
+            merely because you can install an app on two devices. Our 24/7 support team can
+            clarify the account limit. Message us any time via the{" "}
             <Link
-              href="/contact-us/"
+              href={routes.contactUs}
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >

@@ -55,8 +55,8 @@ export function SubscriptionFreeTrialPromo() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Not Sure Yet? Try Strong 8K Free for{" "}
-                <span style={{ color: "var(--hero-accent)" }}>24 Hours</span>
+                Test Strong 8K before selecting a{" "}
+                <span style={{ color: "var(--hero-accent)" }}>term</span>
               </h2>
             </FadeIn>
 
@@ -65,10 +65,10 @@ export function SubscriptionFreeTrialPromo() {
                 className="mx-auto mt-6 max-w-[700px] text-sm leading-[1.75] sm:text-[15px] md:text-base"
                 style={{ color: "var(--hero-muted)" }}
               >
-                You don&apos;t have to take our word for any of this. Claim a free 24-hour Strong 8K
-                trial and test the full service — every channel, the complete VOD library, and real
-                4K/8K picture quality — on your own device before paying a penny. No card details
-                required.
+                Try the full service free for 24 hours before paying. No card details are needed.
+                Browse the live and on-demand catalogues, check your player and test playback when
+                your household normally watches. Access expires automatically, so continuing is
+                your choice.
               </p>
             </FadeIn>
 

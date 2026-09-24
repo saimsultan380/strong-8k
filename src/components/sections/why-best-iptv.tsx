@@ -7,32 +7,32 @@ import { FadeIn } from "@/components/animation/fade-in";
 
 const POINTS = [
   {
-    id: "8k-quality",
+    id: "trial",
     icon: MonitorPlay,
-    title: "True 8K UHD Picture Quality",
+    title: "A trial on your own connection",
     description:
-      "Most services stop at 4K. Strong 8K goes further, streaming supported content in stunning 8K Ultra HD with HEVC/H.265 compression — so you get maximum detail without needing an ultra-fast broadband connection. Even on a standard UK connection, playback stays smooth and sharp.",
+      "Try Strong 8K on your Firestick or Smart TV at the times you usually watch. Browse favourite categories, check the guide and see how the player feels. Your 24-hour trial needs no card, and our team provides the activation details.",
   },
   {
-    id: "uptime",
+    id: "picture",
     icon: ShieldCheck,
-    title: "99.9% Uptime with Anti-Freeze Technology",
+    title: "Picture options for different devices",
     description:
-      "Nothing ruins a live match like a frozen screen. Our Anti-Freeze technology and automatic server switching keep your stream running through peak evening hours, big fixtures, and busy weekends. If one route slows down, your stream instantly moves to a faster one — you won't even notice.",
+      "Strong 8K supports SD, HD, FHD, 4K and 8K UHD viewing options. Choose the available format that suits your screen and connection. Native 8K UHD playback requires a suitable source stream, player and display.",
   },
   {
-    id: "uk-servers",
+    id: "support-viewing",
     icon: Server,
-    title: "Strong IPTV Servers Built for UK Viewers",
+    title: "Support for everyday viewing",
     description:
-      "Our high-capacity European servers are optimised for UK broadband networks, which means faster channel switching (zapping), quicker VOD loading, and stable playback at any hour of the day.",
+      "Strong 8K includes Anti-Freeze technology and 99.9% server uptime in every plan. If a stream fails, tell us the channel, time and device so we can investigate the specific problem.",
   },
   {
-    id: "support",
+    id: "first-login",
     icon: Headphones,
-    title: "Real Support, 24 Hours a Day",
+    title: "Help with the first login",
     description:
-      "No ticket queues, no waiting days for a reply. Our support team answers on WhatsApp and live chat around the clock — whether you need help installing, renewing, or fixing a playback issue. Most questions are solved in minutes.",
+      "If the Strong 8K IPTV playlist will not load, send support your app name, device model and error message. Our team provides 24/7 technical support through WhatsApp. Keep your password private when sharing screenshots.",
   },
 ];
 
@@ -59,8 +59,8 @@ export function WhyBestIptvSection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Why Choose{" "}
-                <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span> in the UK?
+                Why UK customers consider{" "}
+                <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>
               </h2>
             </FadeIn>
           </div>
@@ -69,8 +69,8 @@ export function WhyBestIptvSection() {
               className="text-[15px] leading-[1.75] sm:text-base md:text-right"
               style={{ color: "var(--hero-muted)" }}
             >
-              Thousands of viewers across the UK have already made the switch. Here&apos;s what sets
-              a Strong 8K subscription apart from the rest.
+              A trial on your own connection, picture options for different devices, support for
+              everyday viewing, and help with the first login.
             </p>
           </FadeIn>
         </div>

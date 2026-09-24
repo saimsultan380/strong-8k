@@ -6,24 +6,24 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 const STEPS = [
   {
-    title: "1. Test the Service First",
-    body: "Take a free 24-hour trial and run it on your own devices. Check the channels, the quality, the stability. You should believe in what you're selling.",
+    title: "1. Review the IPTV supplier agreement",
+    body: "Review the IPTV supplier agreement and your rights to market each content category.",
   },
   {
-    title: "2. Start with the Starter Pack",
-    body: "120 credits is enough to onboard your first customers without over-committing. Contact support for the pack price. You'll learn the panel inside-out with real customers on real lines.",
+    title: "2. Try the service and dashboard",
+    body: "Try the service and dashboard with an authorised test account.",
   },
   {
-    title: "3. Set Simple, Profitable Prices",
-    body: "Don't overthink it — mirror the market. Monthly around £10–£12, yearly around £40–£45. Yearly plans are your friend: cash upfront, and the customer is locked in happily for 12 months.",
+    title: "3. Obtain package prices",
+    body: "Obtain package prices and calculate a realistic cost for 1-, 3-, 6- and 12-month lines.",
   },
   {
-    title: "4. Find Your First Ten Customers",
-    body: "Start close to home: friends, family, workmates still paying for expensive TV packages. Offer them a trial, let the quality convert them. Word of mouth does the rest — a happy IPTV customer always knows three more.",
+    title: "4. Write clear customer terms",
+    body: "Write clear customer terms, including support hours, account expiry and refund conditions.",
   },
   {
-    title: "5. Reinvest and Scale",
-    body: "Roll your first profits into a bigger credit package for a lower per-credit rate. As your base grows, unlock sub-reseller selling and add a second income layer on top.",
+    title: "5. Buy an appropriate number of credits",
+    body: "Buy an appropriate number of credits, then monitor service quality before increasing the balance.",
   },
 ];
 
@@ -45,8 +45,8 @@ export function ResellerHowToSection() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]">
-            How to Become an IPTV Reseller in the UK –{" "}
-            <span style={{ color: "var(--hero-accent)" }}>5-Step Roadmap</span>
+            A five-step route to your first IPTV reseller{" "}
+            <span style={{ color: "var(--hero-accent)" }}>customers</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -54,7 +54,8 @@ export function ResellerHowToSection() {
             className="mt-5 max-w-2xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            New to reselling? Here&apos;s the exact path most of our successful resellers followed:
+            Following these steps helps an IPTV reseller understand the costs and customer
+            experience before committing to a larger credit balance.
           </p>
         </FadeIn>
 

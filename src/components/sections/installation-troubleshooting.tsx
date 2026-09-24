@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { routes } from "@/lib/routes";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
@@ -9,29 +10,29 @@ const WHATSAPP_LINK = "https://wa.me/447401921250";
 
 const ISSUES = [
   {
-    id: "buffering",
-    title: "Channels buffering or freezing?",
-    body: "First, test your internet speed — you need 10–15 Mbps for HD and 25 Mbps+ for 4K. If your speed is fine, restart your router and switch your TV device to ethernet or the 5GHz WiFi band. Still stuttering? Message support and we'll switch you to a faster server line.",
+    id: "login",
+    title: "“Invalid credentials.”",
+    body: "Paste the server URL without a trailing space and check capital letters in the password. Confirm the account has started and that you selected the correct login method.",
   },
   {
-    id: "login",
-    title: 'Login failed or "invalid credentials"?',
-    body: "Nine times out of ten it's a typing error — usernames and passwords are case-sensitive, and a stray space at the end counts as a wrong character. Copy-paste directly from your welcome message. If it still fails, contact support; your line may need a quick refresh.",
+    id: "buffering",
+    title: "Buffering on one device",
+    body: "If playback buffers, test a different permitted stream or device, reboot your player and router, and try Ethernet or stronger Wi-Fi. Note the time, app and connection type when contacting support.",
   },
   {
     id: "app-store",
-    title: "Can't find the app in your device's store?",
-    body: "App availability changes by region and device model. If a recommended app isn't showing, try the alternatives listed for your device above — or message us and we'll recommend the best current option for your exact model.",
+    title: "App not shown in the store",
+    body: "Store availability varies by country and device. Ask for another verified player; do not use a random Downloader code posted by an unrelated account.",
   },
   {
     id: "mac",
-    title: "Sent your MAC address but channels haven't appeared?",
-    body: "Activation normally takes 5–15 minutes. After that, fully close and reopen the app (or restart the TV). If it's been over 30 minutes, double-check you sent the MAC exactly as displayed — one wrong character and activation goes to the wrong device.",
+    title: "MAC address added but no channels",
+    body: "Refresh the player, check that the identifier matches exactly and ask support whether the account is active. Some apps also require their own licence payment.",
   },
   {
     id: "quality",
-    title: "Picture quality lower than expected?",
-    body: 'Check your player\'s settings — some apps default to a lower stream quality. Set quality to "Auto" or maximum, and make sure your device itself supports 4K/8K output on the HDMI port you\'re using.',
+    title: "Picture quality below expectation",
+    body: "Check what quality the stream actually offers and whether the device, app and display support it. Selecting a higher setting cannot make a lower-resolution source native high resolution.",
   },
 ];
 
@@ -54,7 +55,7 @@ export function InstallationTroubleshooting() {
 
         <FadeIn delay={0.1}>
           <h2 className="mt-4 max-w-4xl text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl md:text-[42px]">
-            Troubleshooting: Quick Fixes for Common Setup Issues
+            Troubleshooting: quick tests that narrow the problem
           </h2>
         </FadeIn>
 
@@ -110,7 +111,7 @@ export function InstallationTroubleshooting() {
             </a>{" "}
             or visit{" "}
             <Link
-              href="/contact-us/"
+              href={routes.contactUs}
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "#ffffff" }}
             >

@@ -11,46 +11,53 @@ import {
 import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
+import Link from "next/link";
+import { routes } from "@/lib/routes";
 
-const PLAYERS = ["IPTV Smarters Pro", "TiviMate", "IBO Player", "Smart IPTV", "XCIPTV", "VLC"];
+const PLAYERS = ["M3U", "Xtream Codes", "TV guide", "Catch-up", "8K UHD", "Parental controls"];
 
 const FEATURES = [
   {
     id: "epg",
     icon: ListVideo,
-    title: "Full EPG (TV Guide)",
-    description: "See what's on now and next across every channel, always up to date.",
+    title: "TV guide",
+    description:
+      "Your Strong 8K plan includes a TV guide. Check whether it appears for the particular channel, player and device you use.",
   },
   {
     id: "catchup",
     icon: Rewind,
-    title: "Catch-Up TV",
-    description: "Missed a show? Scroll back and watch it on your schedule.",
+    title: "Catch-up options",
+    description:
+      "Catch-up options are included. You can check whether those functions appear for the particular channel, player and device you use.",
   },
   {
     id: "multi-screen",
     icon: MonitorSmartphone,
-    title: "Multi-Screen Options",
+    title: "Additional screens",
     description:
-      "Add extra screens to your plan and watch different channels in different rooms.",
+      "Additional screens can be requested; one standard connection does not permit two simultaneous streams.",
   },
   {
     id: "parental",
     icon: Shield,
-    title: "Parental Controls",
-    description: "Lock adult or unwanted content behind a PIN in seconds.",
+    title: "Parental controls",
+    description:
+      "Your Strong 8K plan includes parental controls. Check whether those functions appear for the player and device you use.",
   },
   {
-    id: "anti-freeze",
+    id: "formats",
     icon: Zap,
-    title: "Anti-Freeze Streaming",
-    description: "Stable playback engineered for live events.",
+    title: "M3U and Xtream Codes support",
+    description:
+      "Your Strong 8K plan includes M3U and Xtream Codes support, plus available 8K UHD streams.",
   },
   {
-    id: "updates",
+    id: "uhd",
     icon: RefreshCw,
-    title: "Free Updates",
-    description: "New channels and VOD titles added at no extra cost.",
+    title: "Available 8K UHD streams",
+    description:
+      "You can check whether available 8K UHD streams appear for the particular channel, player and device you use.",
   },
 ];
 
@@ -77,8 +84,8 @@ export function HomepageKeyFeaturesSection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Key Features of Your{" "}
-                <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span> Subscription
+                Features to check in your{" "}
+                <span style={{ color: "var(--hero-accent)" }}>player</span>
               </h2>
             </FadeIn>
           </div>
@@ -87,7 +94,11 @@ export function HomepageKeyFeaturesSection() {
               className="text-[15px] leading-[1.75] sm:text-base md:text-right"
               style={{ color: "var(--hero-muted)" }}
             >
-              Strong 8K is built to feel effortless from day one. Every subscription includes:
+              Your Strong 8K plan includes a TV guide, catch-up options, parental controls, M3U
+              and Xtream Codes support, plus available 8K UHD streams. You can check whether those
+              functions appear for the particular channel, player and device you use. Additional
+              screens can be requested; one standard connection does not permit two simultaneous
+              streams.
             </p>
           </FadeIn>
         </div>
@@ -147,11 +158,19 @@ export function HomepageKeyFeaturesSection() {
                   className="text-lg font-bold md:text-xl"
                   style={{ color: "var(--hero-heading)" }}
                 >
-                  Works with every popular IPTV player
+                  Need help with any feature?
                 </h3>
                 <p className="mt-3 text-sm leading-[1.75]" style={{ color: "var(--feature-body)" }}>
-                  Keep your favourite app. M3U and Xtream Codes support means you&apos;re never
-                  locked into one player.
+                  If you need help with any feature, send the Strong 8K team your app name and
+                  device model. Our{" "}
+                  <Link
+                    href={routes.installationGuide}
+                    className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+                    style={{ color: "var(--hero-heading)" }}
+                  >
+                    setup guide
+                  </Link>{" "}
+                  covers the first login and common playback issues.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 lg:justify-end">

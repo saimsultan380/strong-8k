@@ -9,6 +9,7 @@ import {
   whatsappMessages,
   whatsappUrlWithText,
 } from "@/lib/site";
+import { routes } from "@/lib/routes";
 
 const freeTrialWhatsapp = whatsappUrlWithText(
   whatsappMessages.startFreeTrial,
@@ -42,7 +43,7 @@ export function HomepageCtaSection() {
               className="mx-auto mt-5 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Ready to Upgrade Your TV Experience with{" "}
+              Ready to try{" "}
               <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>?
             </h2>
           </FadeIn>
@@ -52,9 +53,9 @@ export function HomepageCtaSection() {
               className="mx-auto mt-7 max-w-[680px] text-[15px] leading-[1.8] sm:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Stop paying more for less. One Strong 8K subscription brings you 40,000+ live channels,
-              a VOD library bigger than any streaming app, true 8K UHD picture quality, and support
-              that actually answers — from just £9.99.
+              Look at the plans, test the 40,000+ channel catalogue and ask about any feature you
+              need before ordering. The Strong 8K IPTV team can help with device setup, 24/7
+              account questions and current availability.
             </p>
           </FadeIn>
 
@@ -63,8 +64,7 @@ export function HomepageCtaSection() {
               className="mx-auto mt-5 max-w-[680px] text-[15px] leading-[1.8] sm:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Start with the free 24-hour trial. If it&apos;s not the best IPTV subscription
-              you&apos;ve used in the UK, walk away — no card, no commitment, no hard feelings.
+              Start free trial · Subscribe Now · Contact Us
             </p>
           </FadeIn>
 
@@ -108,7 +108,7 @@ export function HomepageCtaSection() {
             >
               Questions before you order? Reach our team any time via the{" "}
               <Link
-                href="/contact-us/"
+                href={routes.contactUs}
                 className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                 style={{ color: "var(--hero-heading)" }}
               >

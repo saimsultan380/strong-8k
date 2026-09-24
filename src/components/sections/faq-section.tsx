@@ -7,6 +7,7 @@ import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 import { cn } from "@/lib/utils";
+import { routes } from "@/lib/routes";
 
 export type FaqItem = {
   id: string;
@@ -16,75 +17,75 @@ export type FaqItem = {
 
 const HOMEPAGE_FAQS: FaqItem[] = [
   {
-    id: "what-is-strong-8k",
-    q: "What is Strong 8K IPTV and how does it work?",
-    a: "Strong 8K IPTV is a subscription television service that streams live channels and on-demand content over your internet connection. After ordering, you receive login credentials (M3U or Xtream Codes) to enter into any compatible IPTV app. Once logged in, you get instant access to 40,000+ live channels and 120,000+ movies and series.",
+    id: "how-it-works",
+    q: "How does Strong 8K IPTV work?",
+    a: "Add the details from your welcome message to a compatible player. Your account then displays the catalogue available to it over your internet connection.",
   },
   {
     id: "firestick",
-    q: "Does Strong 8K IPTV work on Firestick?",
+    q: "Can I install Strong 8K IPTV on a Firestick?",
     a: (
       <>
-        Yes. The Amazon Firestick is one of the most popular devices among our UK customers.
-        Install an IPTV player such as IPTV Smarters or TiviMate, enter your Strong 8K credentials,
-        and you&apos;re watching within minutes. A full Firestick walkthrough is available in our{" "}
+        The{" "}
         <Link
-          href="/installation-guide/"
+          href={routes.installationGuide}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
           Installation Guide
-        </Link>
-        .
+        </Link>{" "}
+        has Fire TV steps and the current Strong 8K app code. Use a verified installer or an app
+        from the official store.
       </>
     ),
   },
   {
-    id: "internet-speed",
-    q: "What internet speed do I need for Strong 8K IPTV?",
-    a: "For HD streaming, 10–15 Mbps is enough. For 4K we recommend 25 Mbps or higher, and for the best 8K UHD experience, 50 Mbps+. Thanks to HEVC/H.265 compression, Strong 8K uses less bandwidth than most services at the same quality level.",
-  },
-  {
     id: "free-trial",
-    q: "Is there a free trial available?",
-    a: "Yes — every new customer can claim a free 24-hour trial with full access to all channels, VOD, and picture quality options. No card details required. Simply message us on WhatsApp to activate it.",
+    q: "Does the service have a free trial?",
+    a: "Yes. You can test the service for 24 hours without payment details. Support provides your login and activation time.",
   },
   {
-    id: "activation",
-    q: "How fast is activation after payment?",
-    a: "Activation is usually instant. Your login details are sent by WhatsApp or email within minutes of your order being confirmed — at most, within one hour during exceptionally busy periods.",
+    id: "internet-speed",
+    q: "What internet speed do I need?",
+    a: "Strong 8K IPTV playback depends on resolution, encoding, your player and network load. Test your own connection; wired Ethernet or stronger Wi-Fi may help a TV with unstable playback. Your welcome message may include an M3U playlist link.",
   },
   {
     id: "devices",
-    q: "How many devices can I use with one subscription?",
-    a: "A standard Strong 8K subscription covers one screen at a time. You can install the service on multiple devices and switch between them freely. If you'd like to watch on two or more screens simultaneously, multi-screen plans are available at a small extra cost.",
+    q: "Can I use more than one device?",
+    a: "You can ask about using your login on different supported devices, but the standard plan is for one stream at a time. Request multi-screen terms before playing on two screens together.",
   },
   {
-    id: "players",
-    q: "Which IPTV players are compatible with Strong 8K?",
-    a: "All major players. Strong 8K supports M3U, Xtream Codes, MAG, and Enigma2 formats, which means it works with IPTV Smarters Pro, TiviMate, IBO Player, Smart IPTV, GSE, XCIPTV, Perfect Player, VLC, and many more.",
-  },
-  {
-    id: "vs-netflix",
-    q: "What's the difference between Strong 8K IPTV and Netflix?",
-    a: "Netflix is a video-on-demand library only. Strong 8K gives you both: 40,000+ live TV channels — including live sports and news — plus an on-demand library of 120,000+ movies and series that's larger than any single streaming app.",
-  },
-  {
-    id: "reseller",
-    q: "Can I become a Strong 8K reseller?",
+    id: "which-plan",
+    q: "Which IPTV subscription is best for me?",
     a: (
       <>
-        Yes. If you&apos;d like to sell IPTV subscriptions under your own margin, our reseller
-        panel gives you credits, instant account creation, and full pricing control. Learn more on
-        our{" "}
+        Start with the trial, compare total cost and choose the duration that suits your household.
+        The{" "}
         <Link
-          href="/reseller-panel/"
+          href={routes.subscriptionPlans}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Reseller Panel
+          Subscription Plans
         </Link>{" "}
-        page.
+        page has the full plan comparison.
+      </>
+    ),
+  },
+  {
+    id: "reseller",
+    q: "Can I become a reseller?",
+    a: (
+      <>
+        Yes. Visit the{" "}
+        <Link
+          href={routes.resellerPanel}
+          className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+          style={{ color: "var(--hero-heading)" }}
+        >
+          business account page
+        </Link>{" "}
+        to compare credit packages and request a dashboard demonstration.
       </>
     ),
   },
@@ -292,7 +293,7 @@ export function FaqSection() {
       defaultOpenId="what-is-strong-8k"
       title={
         <>
-          Frequently Asked Questions About{" "}
+          Frequently asked questions about{" "}
           <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>
         </>
       }

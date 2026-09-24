@@ -1,24 +1,26 @@
 "use client";
 
+import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
+import { routes } from "@/lib/routes";
 
 const STEPS = [
   {
     number: "1",
-    title: "Message us on WhatsApp",
-    body: 'Tap the button above and send "Free Trial" along with your device type (Firestick, Smart TV, phone — anything works).',
+    title: "Message the team",
+    body: 'Include “Free Trial” and your device model so support can recommend the right player.',
   },
   {
     number: "2",
-    title: "Receive your trial login within minutes",
-    body: "We'll send your username, password and server details straight back. No card required, no forms to fill.",
+    title: "Receive the activation details",
+    body: "Ask when the 24 hours begin and which login format your app needs. Keep the server URL, username and password private.",
   },
   {
     number: "3",
-    title: "Watch everything for 24 hours",
-    body: "Test the channels, the VOD library, and the picture quality on your own broadband — especially during the evening, when weaker services fall apart.",
+    title: "Test the service",
+    body: "Check the guide, a mix of channels and the VOD library. If something fails, send the device and app details so the team can investigate.",
   },
 ];
 
@@ -43,8 +45,8 @@ export function ContactHowToClaim() {
             className="mt-3 max-w-3xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[36px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            How to Claim Your Free IPTV Trial –{" "}
-            <span style={{ color: "var(--hero-accent)" }}>3 Simple Steps</span>
+            How to claim your free IPTV trial in{" "}
+            <span style={{ color: "var(--hero-accent)" }}>three steps</span>
           </h2>
         </FadeIn>
 
@@ -89,8 +91,16 @@ export function ContactHowToClaim() {
             className="mx-auto mt-7 max-w-3xl text-center text-sm leading-[1.75] sm:text-[15px]"
             style={{ color: "var(--hero-muted)" }}
           >
-            That&apos;s the whole process. If you like what you see, upgrading to a paid plan takes
-            one more message. If not, your trial simply expires — nothing to cancel, nothing charged.
+            Your test expires automatically without a charge or a cancellation request. If you want
+            to continue after it ends, choose a{" "}
+            <Link
+              href={routes.subscriptionPlans}
+              className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+              style={{ color: "var(--hero-heading)" }}
+            >
+              Subscription Plan
+            </Link>{" "}
+            and confirm the payment and renewal terms separately.
           </p>
         </FadeIn>
       </Container>

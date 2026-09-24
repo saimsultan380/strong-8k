@@ -5,28 +5,33 @@ import { FadeIn } from "@/components/animation/fade-in";
 
 const APPS = [
   {
-    app: "Official Strong 8K",
-    bestFor: "Firestick, Fire TV, Android TV, Android Phones & Tablets",
-    code: "2675245",
+    app: "Strong 8K app from its verified publisher",
+    bestFor: "Firestick, Fire TV, supported Android TV and Android devices",
+    code: "4330396",
+  },
+  {
+    app: "Compatible player from the device’s official app store",
+    bestFor: "Samsung/LG TV, iPhone/iPad, Windows and Mac",
+    code: "Search the relevant store; no Downloader code required",
   },
 ];
 
 const RECOMMENDED_BY_DEVICE = [
   {
-    device: "Samsung & LG Smart TVs",
-    apps: "CR7 Player, IBO Player, HOT IPTV, SmartOne IPTV, Official Strong 8K App (when available)",
+    device: "Supported Smart TVs",
+    apps: "CR7 Player, IBO Player, HOT IPTV and SmartOne IPTV",
   },
   {
-    device: "Apple TV & Mac",
-    apps: "IBO Player Pro",
-  },
-  {
-    device: "iPhone & iPad",
+    device: "iPhone and iPad",
     apps: "iPlayTV AIO",
   },
   {
-    device: "Windows PC",
-    apps: "IBO Player (Microsoft Store) or IPTV Smarters Expert",
+    device: "Windows",
+    apps: "IBO Player or IPTV Smarters Expert",
+  },
+  {
+    device: "Compatible Apple devices",
+    apps: "IBO Player Pro",
   },
 ];
 
@@ -51,8 +56,8 @@ export function InstallationAppsCodes() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Recommended Apps &{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Downloader Codes</span>
+            Recommended apps and{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Downloader code</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -60,9 +65,9 @@ export function InstallationAppsCodes() {
             className="mt-5 max-w-3xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            On Firestick and Android devices, the fastest way to install Strong 8K IPTV is with the
-            free Downloader by AFTVnews. Simply open Downloader, enter the code below, and install
-            the app within minutes.
+            Download the Strong 8K app using Downloader code 4330396 on a Firestick or supported
+            Android device. Before permitting installation outside the device’s store, confirm that
+            4330396 points to the app and publisher you intended to install.
           </p>
         </FadeIn>
 
@@ -80,7 +85,7 @@ export function InstallationAppsCodes() {
                       backgroundColor: "transparent",
                     }}
                   >
-                    {["App", "Best For", "Downloader Code"].map((header) => (
+                    {["App/source", "Common devices", "Code or source"].map((header) => (
                       <th
                         key={header}
                         className="px-5 py-4 font-bold md:px-6"
@@ -125,8 +130,10 @@ export function InstallationAppsCodes() {
             className="mt-6 max-w-3xl text-sm leading-[1.75] sm:text-[15px]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Using a Samsung, LG, Apple TV, iPhone, iPad, or Mac? Those devices install apps directly
-            from their own app stores, so no Downloader code is required.
+            Player options include CR7 Player, IBO Player, HOT IPTV and SmartOne IPTV for supported
+            Smart TVs; iPlayTV AIO for iPhone and iPad; IBO Player or IPTV Smarters Expert for
+            Windows; and IBO Player Pro for compatible Apple devices. Availability, app charges and
+            login options vary by model and region. Check the listing for your exact device.
           </p>
         </FadeIn>
 
@@ -135,7 +142,7 @@ export function InstallationAppsCodes() {
             className="mt-12 text-xl font-bold sm:text-2xl"
             style={{ color: "var(--hero-heading)" }}
           >
-            Recommended Apps by Device
+            Player options by device
           </h3>
         </FadeIn>
 

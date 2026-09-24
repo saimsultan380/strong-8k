@@ -12,9 +12,9 @@ import {
 } from "@/lib/site";
 
 const HERO_FEATURES = [
-  { label: "40,000+ Live Channels", icon: Tv },
-  { label: "HD, 4K & 8K Streaming", icon: MonitorPlay },
-  { label: "24/7 Support", icon: Headphones },
+  { label: "40,000+ live channels", icon: Tv },
+  { label: "HD, 4K and 8K UHD options", icon: MonitorPlay },
+  { label: "24/7 support", icon: Headphones },
 ];
 
 const freeTrialWhatsapp = whatsappUrlWithText(
@@ -52,8 +52,8 @@ export function HeroSection() {
           <HeroTitleReveal
             className="max-w-[720px] text-left text-[28px] font-bold leading-[1.12] tracking-tight text-gradient-brand sm:text-4xl md:text-[44px] lg:text-[48px]"
             lines={[
-              "Strong 8K IPTV UK – Premium IPTV Subscription",
-              "with 40,000+ Channels & 8K UHD Streaming",
+              "Strong 8K IPTV UK – Premium Live TV",
+              "with 40,000+ Channels and 8K UHD",
             ]}
           />
 
@@ -63,10 +63,10 @@ export function HeroSection() {
               style={{ color: "var(--hero-muted)" }}
             >
               <p>
-                Tired of buffering screens and washed-out picture quality? Strong 8K IPTV brings crystal-clear streaming up to 8K UHD to homes across the United Kingdom — 40,000+ live channels and 120,000+ movies and series on demand, all on one subscription with instant activation.
+                Strong 8K IPTV brings live television and on-demand viewing to compatible devices without a dish or engineer appointment. Choose from 40,000+ live channels and 120,000+ movies and series, with streams in formats up to 8K UHD where the title, device, app and connection support it. Check the current channel list for your location before you order.
               </p>
               <p>
-                Whether you watch on a Smart TV, Firestick, Android box, iPhone, or PC, your Strong 8K subscription follows you everywhere. Setup takes minutes, every major IPTV player is supported, and our team is on hand 24/7 whenever you need them.
+                A Strong 8K account gives you a simple way to choose a viewing period, receive login details and follow a guide for your device. Whether you use a Firestick, Smart TV, phone or computer, you can ask for a free test first and speak to the team if you need a hand.
               </p>
             </div>
           </HeroReveal>

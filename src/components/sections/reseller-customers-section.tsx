@@ -2,16 +2,17 @@
 
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { routes } from "@/lib/routes";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 const BENEFITS = [
-  "40,000+ live channels covering sports, movies, news, entertainment and international content",
-  "120,000+ movies and series on demand, updated daily",
-  "Picture quality up to 8K UHD with Anti-Freeze streaming technology",
-  "99.9% uptime, engineered for peak evenings and big live events",
-  "Works on every device — Firestick, Smart TVs, Android, iPhone, PC and MAG boxes",
-  "All login formats — M3U, Xtream Codes, MAG and Enigma2",
+  "Access to the service described on our Subscription Plans page",
+  "When setting up an IPTV subscription, confirm the customer’s device and screen allowance",
+  "Compatible Firestick and Smart TV players can use an M3U link or Xtream Codes details, depending on the app",
+  "Direct customers to the free 24-hour trial so they can check the service before paying",
+  "A 24-hour trial gives them time to explore their Strong 8K player",
+  "Browse the guide and test their home connection",
 ];
 
 export function ResellerCustomersSection() {
@@ -35,8 +36,8 @@ export function ResellerCustomersSection() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            What Your Customers Get with{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Strong 8K</span>
+            What customers{" "}
+            <span style={{ color: "var(--hero-accent)" }}>receive</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -44,7 +45,9 @@ export function ResellerCustomersSection() {
             className="mt-5 max-w-2xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            You&apos;re only as good as the product you sell — and this one sells itself:
+            Strong 8K IPTV reseller customers receive access to the service described on our
+            Subscription Plans page. When setting up an IPTV subscription, confirm the
+            customer’s device and screen allowance.
           </p>
         </FadeIn>
 
@@ -71,24 +74,24 @@ export function ResellerCustomersSection() {
             className="mt-8 max-w-3xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            It&apos;s the same service sold on our{" "}
+            Compatible Firestick and Smart TV players can use an M3U link or Xtream Codes details,
+            depending on the app. Direct customers to the{" "}
             <Link
-              href="/subscription-plans/"
-              className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
-              style={{ color: "var(--hero-heading)" }}
-            >
-              Subscription Plans
-            </Link>{" "}
-            — so you can check exactly what your customers will experience, or test it yourself with
-            a{" "}
-            <Link
-              href="/contact-us/"
+              href={routes.contactUs}
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >
               free 24-hour trial
             </Link>{" "}
-            before buying your panel.
+            so they can check the service before paying. See the{" "}
+            <Link
+              href={routes.subscriptionPlans}
+              className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+              style={{ color: "var(--hero-heading)" }}
+            >
+              Subscription Plans
+            </Link>{" "}
+            page for the service they receive.
           </p>
         </FadeIn>
       </Container>

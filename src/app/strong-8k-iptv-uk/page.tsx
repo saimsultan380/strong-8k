@@ -13,6 +13,6 @@ export const metadata: Metadata = createPageMetadata({
   path: routes.home,
 });
 
-export default function Home() {
+export default function Strong8kIptvUkPage() {
   return <HomePage />;
 }

@@ -35,8 +35,8 @@ export function ContactCtaSection() {
               className="mx-auto mt-3 max-w-2xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[36px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Start Your Free IPTV Trial{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Now</span>
+              Start your trial or send a{" "}
+              <span style={{ color: "var(--hero-accent)" }}>question</span>
             </h2>
           </FadeIn>
 
@@ -45,8 +45,9 @@ export function ContactCtaSection() {
               className="mx-auto mt-5 max-w-[560px] text-sm leading-[1.8] sm:text-[15px]"
               style={{ color: "var(--hero-muted)" }}
             >
-              24 hours. Full access. Zero risk. See for yourself why UK viewers are switching to
-              Strong 8K — your trial is one message away.
+              Your message can be about a trial, a plan, a device problem or a reseller question.
+              Tell the team what you want to accomplish and which device you have; they can
+              direct you to the next step.
             </p>
           </FadeIn>
 

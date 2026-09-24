@@ -9,43 +9,44 @@ const ITEMS = [
   {
     id: "sports",
     icon: Trophy,
-    title: "Live Sports",
+    title: "Live sports",
     description:
-      "Complete international sports packages covering football, boxing, F1, cricket, rugby, UFC and more, with major events in high definition.",
+      "Find available football, cricket, motorsport, boxing and other sports in the programme guide.",
   },
   {
     id: "movies",
     icon: Film,
-    title: "Movies",
+    title: "Movies and series",
     description:
-      "120,000+ titles from new box-office releases to timeless classics, refreshed daily.",
+      "Browse by genre, choose a title and select an available quality option.",
   },
   {
     id: "series",
     icon: Clapperboard,
-    title: "Series & Box Sets",
+    title: "30,000+ complete series box sets",
     description:
-      "30,000+ complete series, so you can binge every season without switching apps.",
+      "Browse 120,000+ on-demand movies and series alongside 30,000+ complete series box sets. The library is updated daily.",
   },
   {
     id: "news",
     icon: Newspaper,
-    title: "News & Documentaries",
+    title: "News, family and radio",
     description:
-      "Stay informed with rolling news and documentary channels from around the world.",
+      "Save favourite channels and use your player’s parental controls where supported.",
   },
   {
     id: "kids",
     icon: Baby,
-    title: "Kids & Family",
+    title: "Children’s entertainment",
     description:
-      "A full range of children's channels and family-friendly VOD with parental controls built in.",
+      "The 40,000+ live channels include children’s entertainment, music and radio.",
   },
   {
     id: "music",
     icon: Music,
-    title: "Music & Radio",
-    description: "Music channels and radio stations included at no extra cost.",
+    title: "International programmes",
+    description:
+      "The catalogue includes sports, news, international programmes, children’s entertainment, music and radio.",
   },
 ];
 
@@ -71,8 +72,8 @@ export function EverythingIncludedSection() {
               className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              40,000+ Live Channels &{" "}
-              <span style={{ color: "var(--hero-accent)" }}>120,000+ Movies</span> On Demand
+              40,000+ live channels and{" "}
+              <span style={{ color: "var(--hero-accent)" }}>120,000+ on-demand titles</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -80,8 +81,11 @@ export function EverythingIncludedSection() {
               className="mt-6 max-w-2xl text-[15px] leading-[1.75] sm:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              One Strong 8K subscription replaces multiple streaming services. Here&apos;s what&apos;s
-              inside:
+              Explore the Strong 8K IPTV catalogue across 40,000+ live channels, including sports,
+              news, international programmes, children’s entertainment, music and radio. Browse
+              120,000+ on-demand movies and series alongside 30,000+ complete series box sets. The
+              library is updated daily. Contact Strong 8K for the latest availability if you want
+              to check a particular channel, title or event.
             </p>
           </FadeIn>
         </div>
@@ -126,8 +130,8 @@ export function EverythingIncludedSection() {
             className="mt-10 text-center text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            New channels and titles are added continuously — your library keeps growing while your
-            price stays the same.
+            Contact Strong 8K for the latest availability if you want to check a particular
+            channel, title or event.
           </p>
         </FadeIn>
       </Container>

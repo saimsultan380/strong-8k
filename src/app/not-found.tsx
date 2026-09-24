@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
 import { pageDescriptions, pageTitles } from "@/lib/site";
+import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
   title: { absolute: pageTitles.notFound },
@@ -20,11 +21,11 @@ export const metadata: Metadata = {
 };
 
 const HELPFUL_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Subscription Plans", href: "/subscription-plans/" },
-  { label: "Installation Guide", href: "/installation-guide/" },
-  { label: "Reseller Panel", href: "/reseller-panel/" },
-  { label: "Free Trial / Contact", href: "/contact-us/" },
+  { label: "Home", href: routes.home },
+  { label: "Subscription Plans", href: routes.subscriptionPlans },
+  { label: "Installation Guide", href: routes.installationGuide },
+  { label: "Reseller Panel", href: routes.resellerPanel },
+  { label: "Free Trial / Contact", href: routes.contactUs },
 ];
 
 export default function NotFound() {
@@ -52,14 +53,14 @@ export default function NotFound() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
-              href="/"
+              href={routes.home}
               className="inline-flex min-h-11 items-center justify-center rounded-xl bg-gradient-brand px-7 py-3 text-sm font-bold text-black transition-all duration-200 hover:brightness-110"
               style={{ boxShadow: "var(--hero-cta-primary-shadow)" }}
             >
               Back to Home
             </Link>
             <Link
-              href="/contact-us/"
+              href={routes.contactUs}
               className="inline-flex min-h-11 items-center justify-center rounded-xl border px-7 py-3 text-sm font-semibold transition-colors hover:bg-white/5"
               style={{
                 borderColor: "var(--hero-btn-border)",

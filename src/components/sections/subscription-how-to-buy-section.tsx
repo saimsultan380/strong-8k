@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, KeyRound, Play } from "lucide-react";
+import { ShoppingCart, KeyRound, Play, MessageCircle } from "lucide-react";
+import { routes } from "@/lib/routes";
 import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
@@ -9,31 +10,36 @@ import { FadeIn } from "@/components/animation/fade-in";
 const STEPS = [
   {
     number: 1,
-    heading: "1. Order Your Plan",
-    body: "Choose your duration above and complete your order — it takes less than two minutes on WhatsApp.",
+    heading: "Select the plan",
+    body: "Select the plan and tell support your device model.",
     Icon: ShoppingCart,
   },
   {
     number: 2,
-    heading: "2. Receive Your Strong8K Login Details",
-    body: "Your Strong8K credentials (M3U link or Xtream Codes) arrive instantly by WhatsApp or email — at most within the hour during peak periods. Check your spam folder just in case.",
-    Icon: KeyRound,
+    heading: "Confirm the term",
+    body: "Confirm the term, one-screen allowance, catalogue, payment method and written terms.",
+    Icon: MessageCircle,
   },
   {
     number: 3,
-    heading: "3. Install & Watch",
+    heading: "Keep the activation message private",
+    body: "Keep the activation message private; it may contain a playlist link or server-login details.",
+    Icon: KeyRound,
+  },
+  {
+    number: 4,
+    heading: "Follow the device setup steps",
     body: (
       <>
-        Enter your details into any compatible IPTV player and start watching. Never set up IPTV
-        before? Our step-by-step{" "}
+        Follow the{" "}
         <Link
-          href="/installation-guide/"
+          href={routes.installationGuide}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Installation Guide
+          device setup steps
         </Link>{" "}
-        covers every device — Firestick, Smart TV, Android, iPhone, and more.
+        for your app. Ask for help if the login fields differ on your device.
       </>
     ),
     Icon: Play,
@@ -88,8 +94,8 @@ export function SubscriptionHowToBuySection() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
               style={{ color: "var(--hero-heading)" }}
             >
-              From Payment to Watching in{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Under 5 Minutes</span>
+              From payment to your{" "}
+              <span style={{ color: "var(--hero-accent)" }}>first stream</span>
             </h2>
           </FadeIn>
         </div>
@@ -135,6 +141,16 @@ export function SubscriptionHowToBuySection() {
             </ScrollReveal>
           ))}
         </div>
+        <FadeIn delay={0.3}>
+          <p
+            className="mx-auto mt-10 max-w-3xl text-center text-sm leading-[1.75] sm:text-[15px]"
+            style={{ color: "var(--hero-muted)" }}
+          >
+            We activate accounts after payment confirmation and send the details needed for your
+            player. Message support if your login has not arrived or you need help with the first
+            stream.
+          </p>
+        </FadeIn>
       </Container>
     </section>
   );

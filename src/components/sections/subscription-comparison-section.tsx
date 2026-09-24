@@ -6,31 +6,31 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 const ROWS = [
   {
-    plan: "1 Month",
+    plan: "1 month",
     price: "£9.99",
     perMonth: "£9.99",
     save: "—",
     highlight: false,
   },
   {
-    plan: "3 Months",
+    plan: "3 months",
     price: "£17.99",
-    perMonth: "£5.99",
-    save: "40%",
+    perMonth: "about £6.00",
+    save: "about 40% less",
     highlight: false,
   },
   {
-    plan: "6 Months",
+    plan: "6 months",
     price: "£25.99",
-    perMonth: "£4.33",
-    save: "57%",
+    perMonth: "about £4.33",
+    save: "about 57% less",
     highlight: false,
   },
   {
-    plan: "12 Months",
+    plan: "12 months",
     price: "£42.99",
-    perMonth: "£3.58",
-    save: "64%",
+    perMonth: "about £3.58",
+    save: "about 64% less",
     highlight: true,
   },
 ];
@@ -68,8 +68,8 @@ export function SubscriptionComparisonSection() {
             className="mx-auto max-w-4xl text-center text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Compare Strong 8K Subscription Plans –{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Which Saves You More?</span>
+            Compare the{" "}
+            <span style={{ color: "var(--hero-accent)" }}>total cost</span>
           </h2>
         </FadeIn>
 
@@ -78,8 +78,8 @@ export function SubscriptionComparisonSection() {
             className="mx-auto mt-6 max-w-3xl text-center text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            The longer your plan, the less you pay per month. Here&apos;s exactly how the numbers
-            break down:
+            The comparison uses the current £9.99 monthly price and rounded figures. You pay the
+            displayed total for the selected term, not the effective monthly figure each month.
           </p>
         </FadeIn>
 
@@ -102,7 +102,7 @@ export function SubscriptionComparisonSection() {
                         "color-mix(in srgb, var(--hero-accent) 6%, var(--feature-card-bg))",
                     }}
                   >
-                    {["Plan", "Price", "Cost Per Month", "You Save vs Monthly"].map((header) => (
+                    {["Length", "Displayed total", "Effective cost per month", "Difference against separate monthly purchases"].map((header) => (
                       <th
                         key={header}
                         className="px-5 py-4 font-bold md:px-6"
@@ -157,9 +157,8 @@ export function SubscriptionComparisonSection() {
             className="mx-auto mt-10 max-w-3xl text-center text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            At £3.58 per month, the 12-month Strong 8K subscription costs less than a single
-            takeaway coffee — for 40,000+ channels and a VOD library bigger than any streaming app
-            in the UK.
+            There is no monthly direct debit or automatic renewal. You pay the displayed total for
+            the selected term, not the effective monthly figure each month.
           </p>
         </FadeIn>
       </Container>

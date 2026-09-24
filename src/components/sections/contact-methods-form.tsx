@@ -79,8 +79,8 @@ export function ContactMethodsForm() {
             className="mt-3 max-w-3xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[36px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Contact Strong 8K –{" "}
-            <span style={{ color: "var(--hero-accent)" }}>We Reply Fast</span>
+            Contact Strong 8K for{" "}
+            <span style={{ color: "var(--hero-accent)" }}>plans or support</span>
           </h2>
         </FadeIn>
 
@@ -100,11 +100,11 @@ export function ContactMethodsForm() {
                 strokeWidth={1.75}
               />
               <p className="mt-4 text-base font-bold" style={{ color: "var(--hero-heading)" }}>
-                WhatsApp (fastest)
+                WhatsApp
               </p>
               <p className="mt-2 text-sm leading-[1.7]" style={{ color: "var(--feature-body)" }}>
-                Our team is online 24/7, and most messages get a reply within 5 minutes. Trials,
-                orders, renewals and technical help all happen here.
+                Contact our 24/7 team on {siteConfig.phone} for trial requests, orders, renewals
+                and technical help.
               </p>
             </a>
           </ScrollReveal>
@@ -127,9 +127,10 @@ export function ContactMethodsForm() {
                 Email
               </p>
               <p className="mt-2 text-sm leading-[1.7]" style={{ color: "var(--feature-body)" }}>
-                <span style={{ color: "var(--hero-accent)" }}>{siteConfig.email}</span> — best for
-                detailed queries or anything with screenshots attached. We respond within a few
-                hours.
+                Send longer questions to{" "}
+                <span style={{ color: "var(--hero-accent)" }}>{siteConfig.email}</span>. For an
+                account issue, include your app name, device model and error message. Keep your
+                password out of public messages and screenshots.
               </p>
             </a>
           </ScrollReveal>
@@ -141,10 +142,9 @@ export function ContactMethodsForm() {
             style={{ color: "var(--hero-muted)" }}
           >
             <span className="font-semibold" style={{ color: "var(--hero-heading)" }}>
-              Contact form:
+              Send us a message
             </span>{" "}
-            Fill in the form below and we&apos;ll get back to you by email or WhatsApp — whichever
-            you prefer.
+            Name · Email · WhatsApp number · Device · Message
           </p>
         </FadeIn>
 

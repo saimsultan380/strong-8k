@@ -1,55 +1,74 @@
 import { FaqAccordionSection, type FaqItem } from "@/components/sections/faq-section";
+import Link from "next/link";
+import { routes } from "@/lib/routes";
 
 const SUBSCRIPTION_FAQS: FaqItem[] = [
   {
     id: "cost",
-    q: "How much does a Strong 8K IPTV subscription cost in the UK?",
-    a: "Plans start at £9.99 for 1 month and go up to £42.99 for 12 months. Every plan includes the full service — 40,000+ channels, 120,000+ VOD titles, and up to 8K UHD quality. The longer the plan, the lower your monthly cost, dropping to £3.58 per month on the annual plan.",
+    q: "What does a Strong 8K IPTV subscription cost?",
+    a: "Choose one month for £9.99, three months for £17.99, six months for £25.99 or twelve months for £42.99. Each price covers the full selected term.",
   },
   {
-    id: "best-value",
-    q: "Which Strong 8K plan offers the best value?",
-    a: "The 12-month plan, by a clear margin — it works out 64% cheaper per month than paying monthly. If you're not ready for a year, the 6-month plan at £4.33 per month is the best middle ground.",
+    id: "lowest-monthly",
+    q: "Which IPTV subscription gives the lowest monthly cost?",
+    a: "The twelve-month option works out to about £3.58 per month when paid as a £42.99 total, based on the displayed prices.",
   },
   {
     id: "free-trial",
     q: "Is there a free trial before I pay?",
-    a: "Yes. Every new customer can claim a free 24-hour trial with full access to all channels, VOD, and picture quality options. No card details are needed — just message us on WhatsApp and we'll activate it.",
-  },
-  {
-    id: "renewal-price",
-    q: "Do prices increase when I renew?",
-    a: "No. You renew at the same discounted prices listed on this page. We don't use introductory pricing that jumps at renewal.",
-  },
-  {
-    id: "upgrade",
-    q: "Can I upgrade from 1 month to a longer plan later?",
-    a: "Yes, at any time. Many customers start with 1 month, then move to 6 or 12 months once they've settled in. Message our support team and they'll set up the upgrade instantly.",
-  },
-  {
-    id: "hidden-fees",
-    q: "Are there any hidden fees or extra charges?",
-    a: "None. The price you see is the full price — VAT, activation, updates, and support are all included. The only optional extra is multi-screen access for watching on several devices simultaneously.",
-  },
-  {
-    id: "payment-methods",
-    q: "What payment methods do you accept?",
-    a: "We accept all major payment methods. Message us on WhatsApp when ordering and our team will confirm the options available and walk you through checkout — it takes under two minutes.",
-  },
-  {
-    id: "refunds",
-    q: "Can I get a refund if I'm not satisfied?",
-    a: "Yes. If the service doesn't work on your setup and our team can't resolve it, we offer a money-back guarantee within the first 7 days of your subscription.",
-  },
-  {
-    id: "multiple-devices",
-    q: "Does one subscription cover multiple devices?",
-    a: "You can install Strong 8K on as many devices as you like and switch between them freely. A standard plan streams to one screen at a time; affordable multi-screen plans are available if your household wants to watch different channels simultaneously.",
+    a: (
+      <>
+        Yes. Request a free 24-hour trial through{" "}
+        <Link
+          href={routes.contactUs}
+          className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+          style={{ color: "var(--hero-heading)" }}
+        >
+          Contact Us
+        </Link>{" "}
+        or WhatsApp. No card details are required.
+      </>
+    ),
   },
   {
     id: "sports-vod",
-    q: "Do all plans include sports and VOD, or do they cost extra?",
-    a: "Everything is included in every plan. Full international sports packages, all 120,000+ movies and series, catch-up TV, and the EPG guide come as standard — there are no add-on packs to buy.",
+    q: "Are sports and VOD in each plan?",
+    a: "Yes. Each duration includes the same 40,000+ channel and 120,000+ VOD catalogues, including the sports packages. There are no separate sports or VOD add-ons.",
+  },
+  {
+    id: "switch",
+    q: "Can I switch plans later?",
+    a: "Yes. Contact support to move to a longer duration and confirm the new expiry date before paying.",
+  },
+  {
+    id: "renewals",
+    q: "Do renewals cost the same?",
+    a: "Yes. Existing customers renew at the same discounted prices shown on this page, without an increase after the first term.",
+  },
+  {
+    id: "extra-charges",
+    q: "Are there extra service charges?",
+    a: "The displayed price includes VAT, activation, updates and support. Multi-screen access is the optional paid extra. A third-party player may charge its own app licence fee.",
+  },
+  {
+    id: "payment-methods",
+    q: "Which payment methods are available?",
+    a: "Message us on WhatsApp when ordering and our team will confirm the current payment options.",
+  },
+  {
+    id: "apps",
+    q: "Which apps can I use?",
+    a: "Supported login formats include M3U and Xtream Codes as shown on the cards. Choose a player compatible with your device and operating system; app availability varies by store.",
+  },
+  {
+    id: "multiple-screens",
+    q: "Does one plan cover multiple screens?",
+    a: "A standard plan has one active stream at a time; ask for multi-screen pricing if simultaneous viewing is needed.",
+  },
+  {
+    id: "refunds",
+    q: "Can I request a refund?",
+    a: "If the service doesn’t work on your device and Strong 8K support can’t fix it, you get your money back within the first 7 days. Contact us with your device and error details, including whether the problem affects HD, 4K or 8K UHD playback.",
   },
 ];
 
@@ -60,8 +79,8 @@ export function SubscriptionFaqSection() {
       defaultOpenId="cost"
       title={
         <>
-          Strong 8K IPTV Pricing –{" "}
-          <span style={{ color: "var(--hero-accent)" }}>Frequently Asked Questions</span>
+          Strong 8K IPTV pricing{" "}
+          <span style={{ color: "var(--hero-accent)" }}>FAQs</span>
         </>
       }
     />

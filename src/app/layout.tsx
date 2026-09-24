@@ -6,6 +6,7 @@ import ParticlesBg from "@/components/ui/particles-bg";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteJsonLd } from "@/lib/breadcrumbs";
 import { canonicalUrl, siteMetadataBase } from "@/lib/site";
+import { routes } from "@/lib/routes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   ...siteMetadataBase,
-  metadataBase: new URL(canonicalUrl("/")),
+  metadataBase: new URL(canonicalUrl(routes.home)),
   verification: {
     google: "6css43Rhe2qtd8Qoqo6sByeuJKNR16A3P4h5LBTTBLc",
   },

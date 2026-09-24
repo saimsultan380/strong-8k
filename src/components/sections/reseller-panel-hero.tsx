@@ -35,9 +35,9 @@ export function ResellerPanelHero() {
           className="mx-auto max-w-[960px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
           style={{ color: "var(--hero-heading)" }}
           lines={[
-            "Strong 8K IPTV Reseller Panel UK – Start Your Own",
+            "Strong 8K IPTV Reseller Panel UK – Wholesale Credits",
             <span key="accent" style={{ color: "var(--hero-accent)" }}>
-              IPTV Business
+              and Branding Options
             </span>,
           ]}
         />
@@ -45,19 +45,15 @@ export function ResellerPanelHero() {
         <HeroReveal delay={0.18}>
           <div className="mx-auto mt-6 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
-              Every month, thousands of UK households pay someone for their IPTV subscription. The
-              Strong 8K reseller panel lets that someone be you — no technical skills, no big
-              investment, no stock to hold.
+              Manage customer accounts, create lines and handle renewals through the Strong 8K
+              reseller panel. Choose a package of 120, 240 or 360 credits and use the balance to
+              activate the durations your customers need. Contact our team for the current package
+              price and a demonstration.
             </p>
             <p style={{ color: "var(--hero-muted)" }}>
-              Here&apos;s the model in one line: you buy credits at wholesale rates, create
-              subscriptions for your customers at whatever price you choose, and keep 100% of the
-              markup. As an IPTV reseller in the UK, your entire business runs from one dashboard —
-              Strong8K handles the servers, the streams, and the infrastructure behind the scenes.
-            </p>
-            <p style={{ color: "var(--hero-muted)" }}>
-              Starter packages begin at a price from support, and your panel is live the same day you
-              order.
+              With Strong 8K, your dashboard brings customer status, expiry dates and credit usage
+              together. You choose your retail prices and manage customer relationships. Confirm
+              the permitted catalogue and sales territories with us before launching your offer.
             </p>
           </div>
         </HeroReveal>

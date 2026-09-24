@@ -2,36 +2,35 @@
 
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { routes } from "@/lib/routes";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 
 const STEPS = [
   {
     number: 1,
-    heading: "Choose Your Plan",
-    body: "Pick the subscription length that suits you — from 1 month with no long-term commitment to 12 months at the lowest monthly cost. Order takes less than two minutes.",
+    heading: "Select a term",
+    body: "Compare the four Strong 8K durations above or start with the free test. Choose one screen or ask for a multi-screen quote.",
   },
   {
     number: 2,
-    heading: "Receive Your Login Details",
-    body: "Your Strong 8K credentials (M3U link or Xtream Codes) arrive by WhatsApp or email — usually instantly, and always within the hour, even at peak times.",
+    heading: "Receive your details",
+    body: "After Strong 8K activation, your welcome message supplies the information your compatible player requires. Save it in a private place.",
   },
   {
     number: 3,
-    heading: "Install & Start Watching",
+    heading: "Load and check your account",
     body: (
       <>
-        Enter your details into any compatible IPTV player, and that&apos;s it — 40,000+ channels
-        and the full VOD library, live on your screen. Average setup time: under 5 minutes. Full
-        walkthroughs for every device are in our{" "}
+        Follow the{" "}
         <Link
-          href="/installation-guide/"
+          href={routes.installationGuide}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Installation Guide
-        </Link>
-        .
+          device setup page
+        </Link>{" "}
+        for your device and test playback before settling into your usual viewing routine.
       </>
     ),
   },
@@ -60,8 +59,8 @@ export function GetStartedSection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Get Started with Strong 8K in{" "}
-                <span style={{ color: "var(--hero-accent)" }}>3 Simple Steps</span>
+                Get started in{" "}
+                <span style={{ color: "var(--hero-accent)" }}>three steps</span>
               </h2>
             </FadeIn>
           </div>
@@ -70,8 +69,9 @@ export function GetStartedSection() {
               className="text-sm leading-[1.75] md:text-right md:text-[15px]"
               style={{ color: "var(--hero-muted)" }}
             >
-              Choose a plan, receive your secure login details, and load the full service on your
-              preferred player.
+              The steps vary slightly between apps. If a menu has changed, send the team your exact
+              device model and a screenshot with credentials hidden. Strong 8K IPTV support can use
+              the model to identify the right menu.
             </p>
           </FadeIn>
         </div>

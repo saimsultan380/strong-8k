@@ -4,32 +4,32 @@ const INSTALLATION_FAQS: FaqItem[] = [
   {
     id: "how-long",
     q: "How long does Strong 8K IPTV setup take?",
-    a: "For most devices, under 5 minutes. Firestick and Android devices are the quickest. Samsung/LG TVs using MAC-based apps take slightly longer — up to 15 minutes — because of the one-time activation step.",
+    a: "App availability, download time and the login method vary. A simple player login may be quick; allow extra time for a television app that uses a device ID.",
   },
   {
     id: "which-app",
-    q: "Which IPTV app should I use with Strong 8K?",
-    a: "You can't really go wrong: IPTV Smarters Pro works on every device. For the best experience per device, we recommend VUI IPTV Player on Android phones, IPTV Stream Player on iPhone and Mac, and TiviMate on Firestick/Android TV.",
+    q: "Which IPTV app should I use?",
+    a: "Choose one for your exact device that accepts the format in your welcome message. Verify its publisher and any app licence fee.",
   },
   {
     id: "multi-device",
-    q: "Can I install Strong 8K IPTV on more than one device?",
-    a: "Yes — install it on as many devices as you like using the same login. A standard subscription streams to one screen at a time; multi-screen plans are available if you want simultaneous viewing.",
+    q: "Can I install Strong 8K IPTV on two devices?",
+    a: "You can install a compatible player on more than one device, but a standard connection plays on one screen at a time. A Firestick and phone need separate active streams if used simultaneously.",
   },
   {
     id: "vpn",
-    q: "Do I need a VPN to use Strong 8K IPTV?",
-    a: "The service works without a VPN. Some customers choose to use one for privacy, and that's fine too — Strong 8K runs normally alongside all major VPN apps.",
+    q: "Do I need a VPN?",
+    a: "A VPN is not required for setup. If you choose to use one for privacy, check its compatibility with your player and account terms.",
   },
   {
-    id: "m3u-xtream",
-    q: "What is an M3U link or Xtream Codes login?",
-    a: "They're simply two formats of the same login. Xtream Codes is a username + password + server URL (easiest for most apps). M3U is a single playlist link. Your welcome message includes both — use whichever your app asks for.",
+    id: "playlist",
+    q: "What is a playlist link?",
+    a: "An M3U link is a playlist address. Xtream Codes is a server URL with a username and password. These configure a Strong 8K IPTV player; they do not add extra channels.",
   },
   {
     id: "other-device",
-    q: "My device isn't listed here — can I still use Strong 8K?",
-    a: "Almost certainly. Strong 8K supports M3U, Xtream Codes, MAG and Enigma2 formats, which covers nearly every streaming device made in the last decade. Message our team with your device name and we'll send tailored steps.",
+    q: "What if my device is not shown here?",
+    a: "Send its make, model and operating system to support for a current compatibility check. A 24-hour trial can help you test the player once it is set up.",
   },
 ];
 

@@ -3,30 +3,26 @@ import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { Mail, MessageCircle } from "lucide-react";
 import { siteConfig, whatsappUrl } from "@/lib/site";
+import { routes } from "@/lib/routes";
 
 const FOOTER_LINKS = {
   service: [
-    { label: "Home", href: "/" },
-    { label: "Subscription Plan", href: "/subscription-plans/" },
-    { label: "Installation Guide", href: "/installation-guide/" },
-    { label: "Reseller Panel", href: "/reseller-panel/" },
-    { label: "Contact Us", href: "/contact-us/" },
+    { label: "Home", href: routes.home },
+    { label: "Subscription Plan", href: routes.subscriptionPlans },
+    { label: "Installation Guide", href: routes.installationGuide },
+    { label: "Reseller Panel", href: routes.resellerPanel },
+    { label: "Contact Us", href: routes.contactUs },
   ],
   support: [
-    { label: "Pricing Plans", href: "/subscription-plans/#pricing" },
-    { label: "Free Trial", href: "/contact-us/" },
-    { label: "Device Compatibility", href: "/#device-compatibility" },
-    { label: "FAQ", href: "/#faq" },
-  ],
-  legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Refund Policy", href: "#" },
+    { label: "Pricing Plans", href: `${routes.subscriptionPlans}#pricing` },
+    { label: "Free Trial", href: routes.contactUs },
+    { label: "Device Compatibility", href: `${routes.home}#device-compatibility` },
+    { label: "FAQ", href: `${routes.home}#faq` },
   ],
 };
 
 const TRUST_POINTS = [
-  "20,000+ Live Channels",
+  "40,000+ Live Channels",
   "7-Day Money-Back Guarantee",
   "24/7 UK Support",
   "No Contract",
@@ -49,7 +45,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr] lg:gap-16">
           {/* Brand column */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2.5 no-underline">
+            <Link href={routes.home} className="inline-flex items-center gap-2.5 no-underline">
               <Image
                 src="/strong-8k.PNG?v=2"
                 alt="Strong 8K IPTV"
@@ -64,8 +60,9 @@ export function Footer() {
               className="mt-4 max-w-sm text-sm leading-relaxed"
               style={{ color: "var(--footer-muted)" }}
             >
-              Premium IPTV streaming for UK & USA — 40,000+ live channels,
-              120,000+ on-demand titles, up to 8K UHD, and instant activation.
+              Live television and on-demand viewing for UK & USA customers —
+              40,000+ live channels, 120,000+ on-demand titles and supported
+              streams up to 8K UHD.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -112,18 +109,14 @@ export function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid gap-10 sm:grid-cols-3">
+          <div className="grid gap-10 sm:grid-cols-2">
             {Object.entries(FOOTER_LINKS).map(([group, links]) => (
               <div key={group}>
                 <h3
                   className="text-xs font-bold uppercase tracking-[0.18em]"
                   style={{ color: "var(--hero-accent)" }}
                 >
-                  {group === "service"
-                    ? "Service"
-                    : group === "support"
-                      ? "Support"
-                      : "Legal"}
+                  {group === "service" ? "Service" : "Support"}
                 </h3>
                 <ul className="mt-4 space-y-3">
                   {links.map((link) => (
@@ -155,9 +148,9 @@ export function Footer() {
             className="max-w-xl text-xs leading-relaxed md:text-right"
             style={{ color: "var(--footer-muted)" }}
           >
-            {siteConfig.name} is an independent streaming service provider. Channel
-            availability may vary. Use responsibly and in accordance with local
-            regulations.
+            {siteConfig.name} is an independent service provider. Channel
+            availability and playback features may vary by programme, device,
+            location and applicable rights.
           </p>
         </div>
       </Container>

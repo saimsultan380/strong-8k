@@ -12,47 +12,49 @@ import {
 import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
+import Link from "next/link";
+import { routes } from "@/lib/routes";
 
 const INCLUDED_FEATURES = [
   {
-    title: "Full channel list",
+    title: "40,000+ channels",
     description:
-      "All 40,000+ live channels, including complete international sports coverage.",
+      "Every duration includes 40,000+ channels, including the sports packages.",
     Icon: Tv,
   },
   {
-    title: "Complete VOD library",
-    description: "120,000+ movies and 30,000+ series box sets, updated daily.",
+    title: "120,000+ VOD titles",
+    description: "120,000+ VOD titles and 30,000+ complete series box sets.",
     Icon: Clapperboard,
   },
   {
-    title: "Maximum picture quality",
+    title: "Available 8K UHD streams",
     description:
-      "Stream in HD, FHD, 4K or 8K UHD, whatever your device supports.",
+      "Available 8K UHD streams require a compatible source, player and display.",
     Icon: MonitorPlay,
   },
   {
     title: "Anti-Freeze technology",
     description:
-      "99.9% uptime, engineered for live events and peak-hour viewing.",
+      "Anti-Freeze technology and 99.9% server uptime are included across the range.",
     Icon: Zap,
   },
   {
-    title: "Catch-up TV & EPG",
+    title: "Programme guide and catch-up TV",
     description:
-      "Full programme guide plus the ability to watch what you missed.",
+      "Every duration includes the programme guide, catch-up TV, updates and technical support. Catch-up availability varies by channel.",
     Icon: ListVideo,
   },
   {
-    title: "All player formats",
+    title: "M3U, MAG, Xtream Codes and Enigma2",
     description:
-      "M3U, Xtream Codes, MAG and Enigma2, so any popular app works.",
+      "M3U, MAG, Xtream Codes and Enigma2 provide ways to connect your account through a compatible player or device.",
     Icon: Smartphone,
   },
   {
-    title: "24/7 support",
+    title: "24/7 technical support",
     description:
-      "Real humans on WhatsApp and live chat, every day of the year.",
+      "Smart TV, Firestick, phone, tablet and PC users should choose a compatible player before buying.",
     Icon: Headphones,
   },
 ];
@@ -89,8 +91,8 @@ export function SubscriptionIncludedSection() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
               style={{ color: "var(--hero-heading)" }}
             >
-              Every Strong 8K IPTV Subscription{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Includes</span>
+              Features included with every Strong 8K IPTV{" "}
+              <span style={{ color: "var(--hero-accent)" }}>subscription</span>
             </h2>
           </FadeIn>
 
@@ -99,8 +101,9 @@ export function SubscriptionIncludedSection() {
               className="mx-auto mt-6 max-w-[720px] text-sm leading-[1.75] sm:text-[15px] md:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              There&apos;s no &quot;premium tier&quot; hiding the good stuff behind a higher price.
-              Every plan — even 1 month at £9.99 — includes the complete package:
+              Every duration includes 40,000+ channels, 120,000+ VOD titles, 30,000+ complete
+              series box sets, the programme guide, catch-up TV, updates and technical support.
+              Anti-Freeze technology and 99.9% server uptime are included across the range.
             </p>
           </FadeIn>
         </div>
@@ -147,8 +150,16 @@ export function SubscriptionIncludedSection() {
             className="mx-auto mt-12 max-w-3xl text-center text-sm leading-[1.75] sm:text-[15px]"
             style={{ color: "var(--hero-muted)" }}
           >
-            The only paid extra is multi-screen — if you want to watch different channels on two or
-            more devices at the same time, ask our team for multi-screen pricing when you order.
+            The{" "}
+            <Link
+              href={routes.installationGuide}
+              className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+              style={{ color: "var(--hero-heading)" }}
+            >
+              Installation Guide
+            </Link>{" "}
+            explains how to enter credentials securely. Smart TV, Firestick, phone, tablet and PC
+            users should choose a compatible player before buying.
           </p>
         </FadeIn>
       </Container>

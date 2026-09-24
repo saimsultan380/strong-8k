@@ -38,109 +38,82 @@ const DEVICES: DeviceGuide[] = [
     label: "Firestick / Android TV",
     shortLabel: "Fire TV",
     Icon: Tv,
-    title: "How to Install Strong 8K IPTV on Firestick, Fire TV & Android TV",
+    title: "Firestick, Fire TV and Android TV",
     intro:
-      "The Firestick is one of the most popular IPTV devices in the UK, and setup takes only a few minutes:",
+      "On a Firestick, open the device’s app store and look for a compatible IPTV player. If the verified Strong 8K app is supplied only through Downloader, first obtain Downloader by AFTVnews from the official store.",
     steps: [
-      "Allow apps from unknown sources. Go to Settings → My Fire TV → Developer Options and enable Apps from Unknown Sources. (Android TV: Settings → Security → Unknown Sources.)",
-      "Install Downloader by AFTVnews from the Amazon Appstore or Google Play Store.",
-      "Open Downloader and enter 2675245.",
-      "Download and install the Strong 8K App.",
-      "Open the app and enter your Strong 8K username and password to start streaming.",
+      "Confirm the download destination and publisher. If that verified app requires an external installation, enable the device’s relevant permission only for the installation you chose; turn it off afterward if the device allows it.",
+      "On the Firestick, enter 4330396 in Downloader, inspect the destination and install the verified app.",
+      "Open the app, select the login format from your welcome message and enter the server address, username and password, or the playlist link.",
+      "Let the Strong 8K IPTV guide and channels load. If the account is rejected, check for spaces or typing mistakes and contact support.",
     ],
-    tip: "If Developer Options isn't visible on newer Fire TV devices, go to Settings → My Fire TV → About, then press your device name 7 times to unlock it.",
+    note: "Amazon and Android menu labels differ across models and software versions. Follow the prompts shown on your device. If your menu looks different, return to this Strong 8K IPTV installation guide or ask support about the exact model.",
   },
   {
     id: "android",
     label: "Android Phone / Tablet",
     shortLabel: "Android",
     Icon: Smartphone,
-    title: "Strong 8K IPTV Setup on Android Phones & Tablets",
-    intro: "Installing Strong 8K IPTV on Android is quick and simple.",
+    title: "Android phone or tablet",
+    intro: "Search Google Play for a compatible player from a publisher you trust.",
     steps: [
-      "Install Downloader by AFTVnews from the Google Play Store.",
-      "Open Downloader and enter 2675245.",
-      "Download and install the Strong 8K App.",
-      "Launch the app.",
-      "Enter your Strong 8K username and password.",
-      "Start streaming live TV, sports, movies, and series.",
+      "Install it, open the add-account screen and choose M3U or Xtream Codes according to your activation message.",
+      "Enter the Strong 8K details exactly, save the profile and wait for the playlist to load.",
+      "Check playback on the connection you plan to use. Mobile data may consume a substantial allowance.",
     ],
-    tip: "For the best streaming experience, use a stable Wi-Fi connection instead of mobile data.",
   },
   {
     id: "ios",
     label: "iPhone / iPad",
     shortLabel: "iOS",
     Icon: Apple,
-    title: "How to Set Up Strong 8K IPTV on iPhone & iPad",
-    intro: "Everything installs directly from the Apple App Store.",
+    title: "iPhone and iPad",
+    intro:
+      "Open the Apple App Store and check the player supports your version of iOS and the login type you received.",
     steps: [
-      "Open the App Store on your iPhone or iPad.",
-      "Search for iPlayTV AIO.",
-      "Download and install the app.",
-      "Open the app.",
-      "Choose Login with Xtream Codes.",
-      "Enter your Strong 8K username and password.",
-      "Start streaming.",
+      "Install the app and choose to add a playlist or account.",
+      "Paste the supplied playlist link, or enter the server URL, username and password in the relevant fields.",
+      "Refresh the list if necessary and test the content available to your trial or paid account.",
     ],
-    recommended:
-      "Recommended for iPhone & iPad: iPlayTV AIO provides an excellent viewing experience with fast channel loading, EPG support, and smooth playback.",
   },
   {
     id: "windows",
     label: "Windows PC",
     shortLabel: "Windows",
     Icon: Monitor,
-    title: "Installing Strong 8K IPTV on Windows 10 & 11",
-    intro: "Watch Strong 8K IPTV on any Windows desktop or laptop.",
+    title: "Windows PC",
+    intro: "Obtain a compatible player from its official publisher or the Microsoft Store.",
     steps: [
-      "Open the Microsoft Store.",
-      "Install IBO Player or IPTV Smarters Expert.",
-      "Launch your chosen application.",
-      "Select Login with Xtream Codes.",
-      "Enter your Strong 8K username and password.",
-      "Click Login and start streaming.",
+      "Add the provided Strong 8K account using the format the app supports.",
+      "Check that the computer’s firewall, connection and player version allow playback. Share the error message with support if the list loads but a stream fails.",
     ],
-    note: "System Requirements: Windows 10 or Windows 11 (32-bit or 64-bit).",
   },
   {
     id: "mac",
     label: "Mac",
     shortLabel: "Mac",
     Icon: Laptop,
-    title: "Strong 8K IPTV Setup on Mac (macOS)",
-    intro: "Installing Strong 8K IPTV on macOS only takes a few minutes.",
+    title: "Mac",
+    intro:
+      "Check the Mac App Store or the verified publisher site for a player compatible with your macOS version.",
     steps: [
-      "Open the Mac App Store.",
-      "Search for IBO Player Pro.",
-      "Download and install the application.",
-      "Open the app.",
-      "Select Login with Xtream Codes.",
-      "Enter your Strong 8K username and password.",
-      "Start streaming.",
+      "Add your playlist or server login privately. The app may ask for a profile name; this is usually just a label on your computer.",
+      "Save the Strong 8K account, load the guide and check playback. If no player is available for your Mac, ask support for a current supported option.",
     ],
-    recommended:
-      "Recommended for Mac: IBO Player Pro offers excellent performance and works smoothly on both Intel and Apple Silicon (M1, M2, M3, and newer) Macs.",
   },
   {
     id: "smart-tv",
     label: "Samsung / LG TV",
     shortLabel: "Smart TV",
     Icon: MonitorSmartphone,
-    title: "How to Install Strong 8K IPTV on Samsung & LG Smart TVs",
+    title: "Samsung and LG Smart TVs",
     intro:
-      "Samsung and LG Smart TVs install IPTV apps directly from their built-in app stores.",
+      "Search the TV’s own app store for a player supported by your exact model and region.",
     steps: [
-      "Open your TV's app store. Samsung: Samsung Apps · LG: LG Content Store.",
-      "Search for one of the following apps: CR7 Player, IBO Player, HOT IPTV, SmartOne IPTV, or the Official Strong 8K App (if available).",
-      "Install your preferred app.",
-      "Open the application.",
-      "If the app supports Xtream Codes Login, enter your Strong 8K username and password.",
-      "If the app uses MAC Address Activation, the app will display a MAC address on screen.",
-      "Send the MAC address to our WhatsApp support team.",
-      "Once activated, restart the app and your channels will load automatically.",
+      "Some apps use a MAC address or device ID that must be paired with an account; others accept a direct login.",
+      "Send an identifier only through the verified support channel, and check each character before submission.",
+      "Restart or refresh the app after the account is added. If nothing loads, tell support the app name and the displayed identifier, keeping your password private.",
     ],
-    note: "Some Smart TV apps require MAC address activation, while others support direct Xtream Codes login. If the Official Strong 8K App is available for your TV model, simply install it and log in using your account credentials.",
   },
 ];
 
@@ -288,7 +261,8 @@ export function InstallationDeviceSelector() {
             style={{ color: "var(--hero-muted)" }}
           >
             Pick your device below. Each guide keeps steps in a numbered list so you can follow
-            along without hunting through headings.
+            along without hunting through headings. Amazon and Android menu labels differ across
+            models and software versions.
           </p>
         </FadeIn>
 

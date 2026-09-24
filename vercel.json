@@ -8,23 +8,63 @@
       "permanent": true
     },
     {
+      "source": "/subscription-plans",
+      "destination": "/iptv-subscription-plans/",
+      "permanent": true
+    },
+    {
+      "source": "/subscription-plans/",
+      "destination": "/iptv-subscription-plans/",
+      "permanent": true
+    },
+    {
+      "source": "/installation-guide",
+      "destination": "/iptv-installation-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/installation-guide/",
+      "destination": "/iptv-installation-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/reseller-panel",
+      "destination": "/iptv-reseller-panel/",
+      "permanent": true
+    },
+    {
+      "source": "/reseller-panel/",
+      "destination": "/iptv-reseller-panel/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/iptv-contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/iptv-contact-us/",
+      "permanent": true
+    },
+    {
       "source": "/free-trial",
-      "destination": "/contact-us/",
+      "destination": "/iptv-contact-us/",
       "permanent": true
     },
     {
       "source": "/free-trial/",
-      "destination": "/contact-us/",
+      "destination": "/iptv-contact-us/",
       "permanent": true
     },
     {
       "source": "/contact",
-      "destination": "/contact-us/",
+      "destination": "/iptv-contact-us/",
       "permanent": true
     },
     {
       "source": "/contact/",
-      "destination": "/contact-us/",
+      "destination": "/iptv-contact-us/",
       "permanent": true
     }
   ]

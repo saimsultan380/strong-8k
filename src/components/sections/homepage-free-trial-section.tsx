@@ -13,10 +13,10 @@ const freeTrialWhatsapp = whatsappUrlWithText(
 );
 
 const TRIAL_INCLUDES = [
-  "The complete 40,000+ channel list",
-  "Full access to the VOD library",
-  "Real picture quality — HD, 4K and 8K UHD",
-  "Genuine peak-time performance, not a demo server",
+  "Access the 40,000+ channel catalogue",
+  "Access the 120,000+ on-demand selection",
+  "No card or payment is required",
+  "Access expires automatically without a charge",
 ];
 
 export function HomepageFreeTrialSection() {
@@ -78,8 +78,8 @@ export function HomepageFreeTrialSection() {
                   className="mt-4 max-w-xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
                   style={{ color: "var(--hero-heading)" }}
                 >
-                  Try Strong 8K IPTV Free for{" "}
-                  <span style={{ color: "var(--hero-accent)" }}>24 Hours</span>
+                  Try Strong 8K IPTV free for{" "}
+                  <span style={{ color: "var(--hero-accent)" }}>24 hours</span>
                 </h2>
               </FadeIn>
 
@@ -88,8 +88,11 @@ export function HomepageFreeTrialSection() {
                   className="mt-6 max-w-xl text-sm leading-[1.75] sm:text-[15px]"
                   style={{ color: "var(--hero-muted)" }}
                 >
-                  Why take anyone&apos;s word for it? Test the full Strong 8K service on your own
-                  device, your own broadband, at your own pace — completely free for 24 hours.
+                  Use the Strong 8K trial to test picture quality, navigation and content
+                  categories on the connection you will actually use. Access the 40,000+ channel
+                  catalogue and 120,000+ on-demand selection during your 24-hour trial. No card or
+                  payment is required, and access expires automatically without a charge. Choose an
+                  IPTV subscription only if you decide to continue.
                 </p>
               </FadeIn>
 
@@ -98,7 +101,7 @@ export function HomepageFreeTrialSection() {
                   className="mt-7 text-sm font-semibold"
                   style={{ color: "var(--hero-heading)" }}
                 >
-                  Your trial includes everything a paid plan does:
+                  Your 24-hour trial includes:
                 </p>
                 <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                   {TRIAL_INCLUDES.map((item) => (
@@ -119,8 +122,7 @@ export function HomepageFreeTrialSection() {
                   className="mt-6 max-w-xl text-sm leading-[1.75] sm:text-[15px]"
                   style={{ color: "var(--hero-muted)" }}
                 >
-                  No card details. No commitment. If you like what you see — and we think you will —
-                  upgrading to a full plan takes one message.
+                  Choose an IPTV subscription only if you decide to continue.
                 </p>
               </FadeIn>
 
