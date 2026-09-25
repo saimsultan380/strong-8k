@@ -21,7 +21,7 @@ const NEEDS = [
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Subscription Plan
+          subscription prices and account options
         </Link>{" "}
         or request the{" "}
         <Link
@@ -68,8 +68,7 @@ export function InstallationBeforeStart() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Before you start:{" "}
-            <span style={{ color: "var(--hero-accent)" }}>three useful checks</span>
+            Before You <span style={{ color: "var(--hero-accent)" }}>Start</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -77,8 +76,8 @@ export function InstallationBeforeStart() {
             className="mt-5 max-w-2xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Check your account details, your device and connection, and a compatible player
-            before you begin.
+            You need an active account or trial, your login details, an internet connection, your
+            device model and a compatible app.
           </p>
         </FadeIn>
 

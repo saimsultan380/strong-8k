@@ -8,22 +8,23 @@ import { routes } from "@/lib/routes";
 const FOOTER_LINKS = {
   service: [
     { label: "Home", href: routes.home },
-    { label: "Subscription Plan", href: routes.subscriptionPlans },
+    { label: "Pricing", href: routes.subscriptionPlans },
     { label: "Installation Guide", href: routes.installationGuide },
     { label: "Reseller Panel", href: routes.resellerPanel },
     { label: "Contact Us", href: routes.contactUs },
   ],
   support: [
-    { label: "Pricing Plans", href: `${routes.subscriptionPlans}#pricing` },
-    { label: "Free Trial", href: routes.contactUs },
+    { label: "Pricing", href: `${routes.subscriptionPlans}#pricing` },
+    { label: "Free Trial", href: `${routes.contactUs}#free-trial` },
     { label: "Device Compatibility", href: `${routes.home}#device-compatibility` },
     { label: "FAQ", href: `${routes.home}#faq` },
+    { label: "Refund Policy", href: `${routes.subscriptionPlans}#refund-policy` },
   ],
 };
 
 const TRUST_POINTS = [
   "40,000+ Live Channels",
-  "7-Day Money-Back Guarantee",
+  "7-Day Money-Back Guarantee — Conditions Apply",
   "24/7 UK Support",
   "No Contract",
 ];

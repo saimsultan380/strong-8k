@@ -1,7 +1,5 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import {
   Tv,
   Smartphone,
@@ -9,11 +7,10 @@ import {
   Monitor,
   Laptop,
   MonitorSmartphone,
+  Box,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
-import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 type DeviceGuide = {
   id: string;
@@ -35,26 +32,41 @@ type DeviceGuide = {
 const DEVICES: DeviceGuide[] = [
   {
     id: "fire-tv",
-    label: "Firestick / Android TV",
+    label: "Firestick / Fire TV",
     shortLabel: "Fire TV",
     Icon: Tv,
-    title: "Firestick, Fire TV and Android TV",
+    title: "Set Up Strong 8K on Firestick and Fire TV",
     intro:
-      "On a Firestick, open the device’s app store and look for a compatible IPTV player. If the verified Strong 8K app is supplied only through Downloader, first obtain Downloader by AFTVnews from the official store.",
+      "On a supported Firestick or Fire TV, open the device’s app store and install Downloader by AFTVnews from the official store. Confirm the download destination and publisher before you continue.",
     steps: [
-      "Confirm the download destination and publisher. If that verified app requires an external installation, enable the device’s relevant permission only for the installation you chose; turn it off afterward if the device allows it.",
-      "On the Firestick, enter 4330396 in Downloader, inspect the destination and install the verified app.",
-      "Open the app, select the login format from your welcome message and enter the server address, username and password, or the playlist link.",
-      "Let the Strong 8K IPTV guide and channels load. If the account is rejected, check for spaces or typing mistakes and contact support.",
+      "If the verified Strong 8K app requires an installation outside the store, enable the device’s relevant permission only for that installation, then turn it off afterward if the device allows it.",
+      "Enter Downloader code 4330396, inspect the destination and install the verified app.",
+      "Open the app and choose the login format from your welcome message. For Xtream Codes, enter the server URL, username and password. For M3U, enter the supplied playlist URL.",
+      "Let the guide and channels load. If the account is rejected, check for spaces or typing mistakes and contact support with your device model and app name.",
     ],
-    note: "Amazon and Android menu labels differ across models and software versions. Follow the prompts shown on your device. If your menu looks different, return to this Strong 8K IPTV installation guide or ask support about the exact model.",
+    note: "Amazon menu labels differ across Fire TV models and software versions. Follow the prompts on your device. If your menu looks different, contact support with the exact model.",
+  },
+  {
+    id: "android-tv",
+    label: "Android TV",
+    shortLabel: "Android TV",
+    Icon: Tv,
+    title: "Set Up Strong 8K on Android TV",
+    intro:
+      "Android TV menus are separate from Fire TV. Open the Google Play Store on the television and look for a compatible player, or use Downloader only when support has given you code 4330396 for that model.",
+    steps: [
+      "Install the player from the Play Store, or enter 4330396 in Downloader after you have confirmed the publisher.",
+      "Open the app and select Xtream Codes or M3U to match your activation message.",
+      "For Xtream Codes, enter the server URL, username and password. For M3U, paste the playlist URL.",
+      "Save the profile and wait for the catalogue to load. If a menu label differs, send support the television model and the screen you are on.",
+    ],
   },
   {
     id: "android",
     label: "Android Phone / Tablet",
     shortLabel: "Android",
     Icon: Smartphone,
-    title: "Android phone or tablet",
+    title: "Set Up Strong 8K on Android Phones and Tablets",
     intro: "Search Google Play for a compatible player from a publisher you trust.",
     steps: [
       "Install it, open the add-account screen and choose M3U or Xtream Codes according to your activation message.",
@@ -67,7 +79,7 @@ const DEVICES: DeviceGuide[] = [
     label: "iPhone / iPad",
     shortLabel: "iOS",
     Icon: Apple,
-    title: "iPhone and iPad",
+    title: "Set Up Strong 8K on iPhone and iPad",
     intro:
       "Open the Apple App Store and check the player supports your version of iOS and the login type you received.",
     steps: [
@@ -81,7 +93,7 @@ const DEVICES: DeviceGuide[] = [
     label: "Windows PC",
     shortLabel: "Windows",
     Icon: Monitor,
-    title: "Windows PC",
+    title: "Set Up Strong 8K on Windows",
     intro: "Obtain a compatible player from its official publisher or the Microsoft Store.",
     steps: [
       "Add the provided Strong 8K account using the format the app supports.",
@@ -93,7 +105,7 @@ const DEVICES: DeviceGuide[] = [
     label: "Mac",
     shortLabel: "Mac",
     Icon: Laptop,
-    title: "Mac",
+    title: "Set Up Strong 8K on Mac",
     intro:
       "Check the Mac App Store or the verified publisher site for a player compatible with your macOS version.",
     steps: [
@@ -106,13 +118,28 @@ const DEVICES: DeviceGuide[] = [
     label: "Samsung / LG TV",
     shortLabel: "Smart TV",
     Icon: MonitorSmartphone,
-    title: "Samsung and LG Smart TVs",
+    title: "Set Up Strong 8K on Samsung and LG TVs",
     intro:
-      "Search the TV’s own app store for a player supported by your exact model and region.",
+      "Search the TV’s own app store for a player supported by your exact model and region. Some apps accept a direct login. Others use device-ID activation and ask for the exact identifiers shown on the player screen, such as a MAC address or device ID.",
     steps: [
-      "Some apps use a MAC address or device ID that must be paired with an account; others accept a direct login.",
-      "Send an identifier only through the verified support channel, and check each character before submission.",
-      "Restart or refresh the app after the account is added. If nothing loads, tell support the app name and the displayed identifier, keeping your password private.",
+      "Install the player from the television’s store and open the add-account screen.",
+      "For a direct login, enter the server URL, username and password, or the playlist URL, exactly as supplied.",
+      "For device-ID activation, copy the identifiers the player displays and send them only through verified support. Check each character before you submit them.",
+      "Restart or refresh the app after the account is added. If nothing loads, tell support the app name and the displayed identifier, and keep your password private.",
+    ],
+  },
+  {
+    id: "other",
+    label: "MAG / Enigma2",
+    shortLabel: "Other",
+    Icon: Box,
+    title: "Other Supported Devices",
+    intro:
+      "MAG and Enigma2 boxes are supported when the portal or playlist method matches the device. These steps do not apply to every set-top box.",
+    steps: [
+      "Note the device type and the MAC address or portal URL the box displays.",
+      "Send that identifier to support through WhatsApp so the account can be paired. Do not post it publicly.",
+      "Enter the portal or playlist details the team confirms, then reboot the device and test playback.",
     ],
   },
 ];
@@ -227,19 +254,6 @@ function GuideBody({ device }: { device: DeviceGuide }) {
 }
 
 export function InstallationDeviceSelector() {
-  const [activeId, setActiveId] = useState(DEVICES[0].id);
-  const detailRef = useRef<HTMLDivElement>(null);
-  const active = DEVICES.find((d) => d.id === activeId) ?? DEVICES[0];
-
-  const selectDevice = (id: string) => {
-    setActiveId(id);
-    if (window.matchMedia("(max-width: 1023px)").matches) {
-      requestAnimationFrame(() => {
-        detailRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    }
-  };
-
   return (
     <section
       id="choose-device"
@@ -260,68 +274,55 @@ export function InstallationDeviceSelector() {
             className="mt-4 max-w-2xl text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Pick your device below. Each guide keeps steps in a numbered list so you can follow
-            along without hunting through headings. Amazon and Android menu labels differ across
-            models and software versions.
+            Every supported-device guide is on this page. Use the links to jump to your device.
+            Menu labels differ across models and software versions.
           </p>
         </FadeIn>
 
-        <div className="mt-10 flex flex-wrap gap-2 sm:gap-3">
+        <nav className="mt-10 flex flex-wrap gap-2 sm:gap-3" aria-label="Device guides">
           {DEVICES.map((device) => {
             const Icon = device.Icon;
-            const isActive = device.id === activeId;
             return (
-              <button
+              <a
                 key={device.id}
-                type="button"
-                onClick={() => selectDevice(device.id)}
-                className={cn(
-                  "inline-flex items-center gap-2 rounded-xl border px-3.5 py-2.5 text-sm font-semibold transition-all duration-200",
-                  isActive && "shadow-sm",
-                )}
+                href={`#${device.id}`}
+                className="inline-flex items-center gap-2 rounded-xl border px-3.5 py-2.5 text-sm font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] hover:text-[var(--hero-accent)]"
                 style={{
-                  borderColor: isActive
-                    ? "var(--hero-accent)"
-                    : "var(--feature-card-border)",
-                  color: isActive ? "var(--hero-accent)" : "var(--hero-muted)",
+                  borderColor: "var(--feature-card-border)",
+                  color: "var(--hero-muted)",
                   backgroundColor: "transparent",
                 }}
               >
                 <Icon className="h-4 w-4" strokeWidth={1.75} />
                 <span className="hidden sm:inline">{device.label}</span>
                 <span className="sm:hidden">{device.shortLabel}</span>
-              </button>
+              </a>
             );
           })}
-        </div>
+        </nav>
 
-        <div ref={detailRef} className="mt-10 scroll-mt-28">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={active.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
-              className="rounded-2xl border p-6 sm:p-8 md:p-10"
+        <div className="mt-10 space-y-6">
+          {DEVICES.map((device) => (
+            <article
+              key={device.id}
+              id={device.id}
+              className="scroll-mt-28 rounded-2xl border p-6 sm:p-8 md:p-10"
               style={{
                 borderColor: "var(--feature-card-border)",
                 backgroundColor: "transparent",
               }}
             >
-              <ScrollReveal direction="up" delay={0.05} once>
-                <h2
-                  className="max-w-3xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[34px]"
-                  style={{ color: "var(--hero-heading)" }}
-                >
-                  {active.title}
-                </h2>
-              </ScrollReveal>
+              <h2
+                className="max-w-3xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[34px]"
+                style={{ color: "var(--hero-heading)" }}
+              >
+                {device.title}
+              </h2>
               <div className="mt-6">
-                <GuideBody device={active} />
+                <GuideBody device={device} />
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </article>
+          ))}
         </div>
       </Container>
     </section>

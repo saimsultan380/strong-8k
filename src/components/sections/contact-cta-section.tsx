@@ -5,12 +5,13 @@ import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
-const WHATSAPP_LINK = "https://wa.me/447401921250";
+const WHATSAPP_LINK = "https://wa.me/447401921250?text=Start-free-trial";
 
 export function ContactCtaSection() {
   return (
     <section
-      className="relative isolate overflow-hidden py-12 md:py-16"
+      id="free-trial"
+      className="relative isolate scroll-mt-28 overflow-hidden py-12 md:py-16"
       style={{ backgroundColor: "var(--hero-base)" }}
     >
       <Container className="relative z-10">
@@ -26,7 +27,7 @@ export function ContactCtaSection() {
               className="text-[11px] font-bold uppercase tracking-[0.22em]"
               style={{ color: "var(--hero-accent)" }}
             >
-              Zero Risk
+              24-Hour Trial
             </span>
           </FadeIn>
 
@@ -35,8 +36,8 @@ export function ContactCtaSection() {
               className="mx-auto mt-3 max-w-2xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[36px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Start your trial or send a{" "}
-              <span style={{ color: "var(--hero-accent)" }}>question</span>
+              Request a Free{" "}
+              <span style={{ color: "var(--hero-accent)" }}>24-Hour Trial</span>
             </h2>
           </FadeIn>
 
@@ -45,9 +46,10 @@ export function ContactCtaSection() {
               className="mx-auto mt-5 max-w-[560px] text-sm leading-[1.8] sm:text-[15px]"
               style={{ color: "var(--hero-muted)" }}
             >
-              Your message can be about a trial, a plan, a device problem or a reseller question.
-              Tell the team what you want to accomplish and which device you have; they can
-              direct you to the next step.
+              Tell us your device model and request a free 24-hour trial. We will provide the
+              account details and confirm when your trial begins. Test the available channels,
+              on-demand content and playback on your own connection. No card details are required,
+              and trial access expires without an automatic charge.
             </p>
           </FadeIn>
 
@@ -63,7 +65,7 @@ export function ContactCtaSection() {
                 }}
               >
                 <MessageCircle className="h-4 w-4" />
-                Claim My Free 24-Hour Trial →
+                Request My Free Trial
               </a>
             </div>
           </ScrollReveal>

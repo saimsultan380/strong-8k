@@ -35,9 +35,9 @@ export function ResellerPanelHero() {
           className="mx-auto max-w-[960px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
           style={{ color: "var(--hero-heading)" }}
           lines={[
-            "Strong 8K IPTV Reseller Panel UK – Wholesale Credits",
+            "Strong 8K Reseller Panel",
             <span key="accent" style={{ color: "var(--hero-accent)" }}>
-              and Branding Options
+              and Wholesale Credits
             </span>,
           ]}
         />
@@ -45,15 +45,13 @@ export function ResellerPanelHero() {
         <HeroReveal delay={0.18}>
           <div className="mx-auto mt-6 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
-              Manage customer accounts, create lines and handle renewals through the Strong 8K
-              reseller panel. Choose a package of 120, 240 or 360 credits and use the balance to
-              activate the durations your customers need. Contact our team for the current package
-              price and a demonstration.
+              Manage customer accounts, subscription durations and renewals through the Strong 8K
+              reseller panel. Compare the available credit packages and request a demonstration
+              before choosing an option.
             </p>
             <p style={{ color: "var(--hero-muted)" }}>
-              With Strong 8K, your dashboard brings customer status, expiry dates and credit usage
-              together. You choose your retail prices and manage customer relationships. Confirm
-              the permitted catalogue and sales territories with us before launching your offer.
+              Contact our team for wholesale pricing, credit rules, branding options and the
+              support arrangements that apply to your reseller account.
             </p>
           </div>
         </HeroReveal>

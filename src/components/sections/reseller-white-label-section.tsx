@@ -17,7 +17,7 @@ const CARDS = [
       </>
     ),
     paragraphs: [
-      "Strong 8K offers branding options for businesses that want customers to recognise their own name. Contact us about the available presentation, setup requirements and delivery time.",
+      "Branding options may need approval and can have an extra cost. Contact support before you promise a white-label setup to customers.",
       "An IPTV reseller can keep a consistent brand across customer messages and renewal reminders while using the panel to manage accounts.",
     ],
     footer: (
@@ -44,7 +44,7 @@ const CARDS = [
       </>
     ),
     paragraphs: [
-      "Sub-reseller tools let established sellers organise additional accounts within their operation. Speak to our team about access, credit allocation and account permissions before adding another seller.",
+      "Sub-reseller access is not included automatically. Ask support about eligibility, credit allocation and any extra charge before you add another seller.",
     ],
   },
 ] as const;
@@ -57,6 +57,15 @@ export function ResellerWhiteLabelSection() {
       style={{ backgroundColor: "var(--hero-base)" }}
     >
       <Container className="relative z-10">
+        <FadeIn delay={0.05}>
+          <h2
+            className="mb-8 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
+            style={{ color: "var(--hero-heading)" }}
+          >
+            Branding and{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Sub-Reseller Options</span>
+          </h2>
+        </FadeIn>
         <div className="grid gap-5 lg:grid-cols-2 lg:items-stretch">
           {CARDS.map((card, i) => (
             <ScrollReveal key={card.id} direction="up" delay={0.06 * i} once className="h-full">
@@ -77,9 +86,9 @@ export function ResellerWhiteLabelSection() {
                   </span>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                  <h2 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
+                  <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
                     {card.title}
-                  </h2>
+                  </h3>
                 </FadeIn>
                 <FadeIn delay={0.15}>
                   <div className="mt-6 flex flex-1 flex-col gap-4 text-sm leading-[1.8] sm:text-[15px]">

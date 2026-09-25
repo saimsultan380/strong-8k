@@ -4,9 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { HeroReveal } from "@/components/animation/hero-reveal";
 import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { routes } from "@/lib/routes";
+import { whatsappUrlWithText } from "@/lib/site";
 
 export function SubscriptionPlansHero() {
   return (
@@ -28,7 +27,7 @@ export function SubscriptionPlansHero() {
               className="text-[11px] font-bold uppercase tracking-[0.2em]"
               style={{ color: "var(--hero-accent)" }}
             >
-              Subscription Plans
+              Pricing
             </span>
           </div>
         </HeroReveal>
@@ -37,9 +36,8 @@ export function SubscriptionPlansHero() {
           className="mx-auto max-w-[920px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
           style={{ color: "var(--hero-heading)" }}
           lines={[
-            "Strong 8K IPTV Subscription Plans",
             <>
-              and <span style={{ color: "var(--hero-accent)" }}>Prices</span>
+              Strong 8K <span style={{ color: "var(--hero-accent)" }}>Subscription Prices</span>
             </>,
           ]}
         />
@@ -47,16 +45,9 @@ export function SubscriptionPlansHero() {
         <HeroReveal delay={0.18}>
           <div className="mx-auto mt-6 max-w-[750px] space-y-4 text-sm leading-[1.8] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
-              Choose the access period that fits your needs and compare the total price. Every
-              Strong 8K IPTV subscription plan includes the same one-screen catalogue: 40,000+ live
-              channels, 120,000+ on-demand titles and supported streams up to 8K UHD. Picture
-              quality depends on the stream, player, display and connection. Use the free test to
-              check your setup before selecting a term.
-            </p>
-            <p style={{ color: "var(--hero-muted)" }}>
-              Strong 8K prices are £9.99, £17.99, £25.99 and £42.99. Pay once for your chosen
-              duration, with VAT, activation, updates and support included. Our team can help you
-              select a player that accepts your account details.
+              Choose your subscription duration and the number of devices you want to stream on
+              at the same time. Every option includes the same service catalogue; your total price
+              depends on the duration and account quantity selected.
             </p>
           </div>
         </HeroReveal>
@@ -72,14 +63,16 @@ export function SubscriptionPlansHero() {
                   boxShadow: "var(--hero-cta-primary-shadow)",
                 }}
               >
-                View Plans Below
+                View Prices Below
                 <ArrowRight className="h-4 w-4 opacity-75" />
               </a>
             </motion.div>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href={routes.contactUs}
+              <a
+                href={whatsappUrlWithText("Start-free-trial")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex w-full max-w-xs items-center justify-center gap-2 rounded-xl border px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] hover:text-[var(--hero-accent)] sm:w-auto sm:max-w-none sm:text-[15px]"
                 style={{
                   borderColor: "var(--hero-btn-border)",
@@ -88,7 +81,7 @@ export function SubscriptionPlansHero() {
                 }}
               >
                 Start 24-Hour Free Trial
-              </Link>
+              </a>
             </motion.div>
           </div>
         </HeroReveal>

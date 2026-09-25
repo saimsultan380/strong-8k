@@ -36,8 +36,8 @@ export function ResellerCustomersSection() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            What customers{" "}
-            <span style={{ color: "var(--hero-accent)" }}>receive</span>
+            Customer Access and{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Supported Devices</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>
@@ -85,11 +85,11 @@ export function ResellerCustomersSection() {
             </Link>{" "}
             so they can check the service before paying. See the{" "}
             <Link
-              href={routes.subscriptionPlans}
+              href={routes.installationGuide}
               className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Subscription Plans
+              device installation guide
             </Link>{" "}
             page for the service they receive.
           </p>

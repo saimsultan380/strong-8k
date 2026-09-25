@@ -72,8 +72,8 @@ export function EverythingIncludedSection() {
               className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              40,000+ live channels and{" "}
-              <span style={{ color: "var(--hero-accent)" }}>120,000+ on-demand titles</span>
+              Explore the Strong 8K Channel and{" "}
+              <span style={{ color: "var(--hero-accent)" }}>On-Demand Catalogue</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>

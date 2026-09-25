@@ -1,38 +1,39 @@
 "use client";
 
-import Link from "next/link";
 import { Container } from "@/components/layout/container";
-import { routes } from "@/lib/routes";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
-
-const WHATSAPP_LINK = "https://wa.me/447401921250";
 
 const ISSUES = [
   {
     id: "login",
-    title: "“Invalid credentials.”",
-    body: "Paste the server URL without a trailing space and check capital letters in the password. Confirm the account has started and that you selected the correct login method.",
+    title: "Invalid credentials or an expired account",
+    body: "Check the server URL, username and password, or the playlist URL, for spaces and typing mistakes. Confirm the trial or subscription is still active and that you selected the login method in your welcome message.",
+  },
+  {
+    id: "catalogue",
+    title: "The entire catalogue fails to load",
+    body: "Restart the player and the device, then check the internet connection. If the list still does not appear, contact support with the app name and any error message.",
+  },
+  {
+    id: "channels",
+    title: "Individual channels or categories are unavailable",
+    body: "One missing channel or category, while the rest of the catalogue loads, is a content or source issue. Tell support which category failed and when it started.",
   },
   {
     id: "buffering",
-    title: "Buffering on one device",
-    body: "If playback buffers, test a different permitted stream or device, reboot your player and router, and try Ethernet or stronger Wi-Fi. Note the time, app and connection type when contacting support.",
+    title: "Buffering or an unstable connection",
+    body: "Test another stream, reboot the player and router, and try Ethernet or stronger Wi-Fi. Note the time, app and connection type when you contact support.",
   },
   {
-    id: "app-store",
-    title: "App not shown in the store",
-    body: "Store availability varies by country and device. Ask for another verified player; do not use a random Downloader code posted by an unrelated account.",
-  },
-  {
-    id: "mac",
-    title: "MAC address added but no channels",
-    body: "Refresh the player, check that the identifier matches exactly and ask support whether the account is active. Some apps also require their own licence payment.",
+    id: "licence",
+    title: "Player activation or licence problems",
+    body: "Some third-party players need their own licence or a device ID before streams play. Use the identifier the player shows and confirm any separate app charge with the publisher.",
   },
   {
     id: "quality",
-    title: "Picture quality below expectation",
-    body: "Check what quality the stream actually offers and whether the device, app and display support it. Selecting a higher setting cannot make a lower-resolution source native high resolution.",
+    title: "Quality below expectations",
+    body: "Resolution depends on the source stream, the player, the display and the connection. A higher setting cannot turn a lower-resolution source into 8K.",
   },
 ];
 
@@ -55,7 +56,7 @@ export function InstallationTroubleshooting() {
 
         <FadeIn delay={0.1}>
           <h2 className="mt-4 max-w-4xl text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl md:text-[42px]">
-            Troubleshooting: quick tests that narrow the problem
+            Troubleshooting Login and Playback
           </h2>
         </FadeIn>
 
@@ -101,23 +102,8 @@ export function InstallationTroubleshooting() {
             className="mt-10 text-sm sm:text-[15px]"
             style={{ color: "var(--hero-muted)" }}
           >
-            Still stuck?{" "}
-            <a
-              href={WHATSAPP_LINK}
-              className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
-              style={{ color: "#ffffff" }}
-            >
-              Message us on WhatsApp
-            </a>{" "}
-            or visit{" "}
-            <Link
-              href={routes.contactUs}
-              className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
-              style={{ color: "#ffffff" }}
-            >
-              Contact Us
-            </Link>
-            .
+            Technical support continues throughout your active subscription, including after the
+            first seven days. Contact us with your device, app and a description of the problem.
           </p>
         </FadeIn>
       </Container>

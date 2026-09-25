@@ -37,31 +37,25 @@ export function InstallationCtaSection() {
               className="mx-auto mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Need help with the{" "}
-              <span style={{ color: "var(--hero-accent)" }}>first login</span>?
+              Need Help Completing{" "}
+              <span style={{ color: "var(--hero-accent)" }}>Setup</span>?
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <div className="mx-auto mt-7 max-w-[680px] space-y-4 text-[15px] leading-[1.8]">
               <p style={{ color: "var(--hero-muted)" }}>
-                Tell the Strong 8K team where you stopped and which app you used. These{" "}
-                <Link
-                  href={routes.installationGuide}
-                  className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
-                  style={{ color: "var(--hero-heading)" }}
-                >
-                  setup instructions
-                </Link>{" "}
-                are here whenever you switch device, and the{" "}
+                Technical support continues throughout your active subscription, including after
+                the first seven days. Contact us with your device, app and a description of the
+                problem. You can also review{" "}
                 <Link
                   href={routes.subscriptionPlans}
                   className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
                   style={{ color: "var(--hero-heading)" }}
                 >
-                  Subscription Plans
-                </Link>{" "}
-                page shows the terms if your account has expired. Our team provides 24/7 help.
+                  subscription prices and account options
+                </Link>
+                .
               </p>
             </div>
           </FadeIn>

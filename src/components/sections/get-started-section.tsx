@@ -59,8 +59,8 @@ export function GetStartedSection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Get started in{" "}
-                <span style={{ color: "var(--hero-accent)" }}>three steps</span>
+                Get Started with Strong 8K in{" "}
+                <span style={{ color: "var(--hero-accent)" }}>Three Steps</span>
               </h2>
             </FadeIn>
           </div>

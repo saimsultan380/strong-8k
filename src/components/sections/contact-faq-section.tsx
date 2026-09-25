@@ -4,42 +4,42 @@ import { routes } from "@/lib/routes";
 
 const CONTACT_FAQS: FaqItem[] = [
   {
-    id: "really-free",
-    q: "Is the IPTV free trial really free?",
-    a: "Yes. It lasts 24 hours, requires no card details and ends without an automatic charge.",
+    id: "what-to-send",
+    q: "What information should I send?",
+    a: "For a technical issue, include your device model, app name, when the problem started and any error message. Keep passwords and playlist links out of public screenshots.",
   },
   {
-    id: "no-card",
-    q: "Do I need to give payment details?",
-    a: "No. You can request and use the test without supplying payment details.",
+    id: "trial",
+    q: "How do I request a trial?",
+    a: "Use Request My Free Trial on this page, or message us on WhatsApp with your device model. The trial lasts 24 hours, needs no card details and expires without a charge.",
   },
   {
-    id: "how-soon",
-    q: "How soon does access start?",
-    a: "Strong 8K support sends your login and confirms when the 24-hour trial starts. Our 24/7 team can help with the first login if you need assistance.",
-  },
-  {
-    id: "after-trial",
-    q: "What happens when it ends?",
-    a: "Access expires automatically. You do not need to cancel, and you will not be charged. Choose a paid plan only if you want to continue.",
-  },
-  {
-    id: "any-device",
-    q: "Can I test any device?",
+    id: "renew",
+    q: "How do I renew?",
     a: (
       <>
-        A compatible player is required. Tell support your exact Smart TV, Firestick, phone or
-        computer model and check the{" "}
+        Message support with your account details before the subscription ends, or choose a new
+        duration on the{" "}
         <Link
-          href={routes.installationGuide}
-          className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+          href={routes.subscriptionPlans}
+          className="font-semibold underline"
           style={{ color: "var(--hero-heading)" }}
         >
-          Installation Guide
-        </Link>
-        .
+          Pricing
+        </Link>{" "}
+        page. Renewal is optional.
       </>
     ),
+  },
+  {
+    id: "playback",
+    q: "Where do I report a playback problem?",
+    a: "Send it by WhatsApp or the enquiry form. Include the device, the app and what you see on screen. Support continues throughout your active subscription.",
+  },
+  {
+    id: "after-seven",
+    q: "Is support available after seven days?",
+    a: "Yes. Technical support continues after the first seven days. The 7-day money-back guarantee applies only to refund requests made within those seven days.",
   },
 ];
 
@@ -47,13 +47,13 @@ export function ContactFaqSection() {
   return (
     <FaqAccordionSection
       faqs={CONTACT_FAQS}
-      defaultOpenId="really-free"
+      defaultOpenId="what-to-send"
       eyebrow="FAQ"
-      description="Clear answers about the Strong 8K free trial, activation, devices, and what happens when your 24 hours end."
+      description="What to send, trials, renewals and support after seven days."
       title={
         <>
-          IPTV free trial{" "}
-          <span style={{ color: "var(--hero-accent)" }}>FAQs</span>
+          Contact and Support{" "}
+          <span style={{ color: "var(--hero-accent)" }}>Questions</span>
         </>
       }
     />

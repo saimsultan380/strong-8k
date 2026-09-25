@@ -21,43 +21,39 @@ const FEATURES = [
     id: "epg",
     icon: ListVideo,
     title: "TV guide",
-    description:
-      "Your Strong 8K plan includes a TV guide. Check whether it appears for the particular channel, player and device you use.",
+    description: "A programme guide is available where the player and channel support it.",
   },
   {
     id: "catchup",
     icon: Rewind,
-    title: "Catch-up options",
-    description:
-      "Catch-up options are included. You can check whether those functions appear for the particular channel, player and device you use.",
+    title: "Catch-up",
+    description: "Catch-up is available on supported channels and varies by programme.",
   },
   {
     id: "multi-screen",
     icon: MonitorSmartphone,
-    title: "Additional screens",
+    title: "One stream per account",
     description:
-      "Additional screens can be requested; one standard connection does not permit two simultaneous streams.",
+      "A standard account plays one stream at a time. Extra accounts are for simultaneous viewing.",
   },
   {
     id: "parental",
     icon: Shield,
-    title: "Parental controls",
-    description:
-      "Your Strong 8K plan includes parental controls. Check whether those functions appear for the player and device you use.",
+    title: "Player controls",
+    description: "Use the parental controls in your player where that app provides them.",
   },
   {
     id: "formats",
     icon: Zap,
-    title: "M3U and Xtream Codes support",
-    description:
-      "Your Strong 8K plan includes M3U and Xtream Codes support, plus available 8K UHD streams.",
+    title: "Login formats",
+    description: "Compatible players can use M3U playlist links or Xtream Codes details.",
   },
   {
     id: "uhd",
     icon: RefreshCw,
-    title: "Available 8K UHD streams",
+    title: "Picture quality",
     description:
-      "You can check whether available 8K UHD streams appear for the particular channel, player and device you use.",
+      "SD, HD, FHD, 4K and 8K UHD options depend on the source stream, player and display.",
   },
 ];
 
@@ -84,8 +80,8 @@ export function HomepageKeyFeaturesSection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Features to check in your{" "}
-                <span style={{ color: "var(--hero-accent)" }}>player</span>
+                Streaming Quality, Features and{" "}
+                <span style={{ color: "var(--hero-accent)" }}>Support</span>
               </h2>
             </FadeIn>
           </div>
@@ -94,11 +90,10 @@ export function HomepageKeyFeaturesSection() {
               className="text-[15px] leading-[1.75] sm:text-base md:text-right"
               style={{ color: "var(--hero-muted)" }}
             >
-              Your Strong 8K plan includes a TV guide, catch-up options, parental controls, M3U
-              and Xtream Codes support, plus available 8K UHD streams. You can check whether those
-              functions appear for the particular channel, player and device you use. Additional
-              screens can be requested; one standard connection does not permit two simultaneous
-              streams.
+              Available resolutions depend on the source stream, your player, display and
+              connection. A Strong 8K subscription can include a TV guide, catch-up on supported
+              channels, and M3U or Xtream Codes login. One account plays one stream at a time.
+              Technical support is available throughout an active subscription.
             </p>
           </FadeIn>
         </div>

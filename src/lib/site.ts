@@ -12,7 +12,7 @@ export const siteConfig = {
   shortName: "Strong 8K",
   tagline: "Premium Live TV with 40,000+ Channels and 8K UHD",
   description:
-    "Explore Strong 8K IPTV for UK and USA viewers: channel catalogue, compatible devices, 1–12 month plans and a 24-hour trial. Compare the service before you subscribe.",
+    "Strong 8K IPTV offers a premium IPTV subscription for UK viewers. Explore live TV, movies and series, and request a free 24-hour trial.",
   /** Canonical origin — HTTPS, non-www, no trailing slash on the origin itself */
   siteUrl: "https://strong-8k.co.uk",
   email: "support@strong8k.com",
@@ -43,25 +43,24 @@ export function whatsappUrlWithText(text: string): string {
 
 /** Exact SERP titles (shown in Google + browser tab) */
 export const pageTitles = {
-  home: "Strong 8K IPTV UK – Premium 8K Streaming & 40,000+ Channels",
-  subscriptionPlans: "Strong 8K IPTV Subscription Plans UK – Prices from £9.99",
-  installationGuide:
-    "Strong 8K IPTV Installation Guide – Setup for Supported Devices",
-  resellerPanel: "Strong 8K IPTV Reseller Panel UK – Wholesale Credit Packages",
-  contactUs: "IPTV Free Trial UK – Test Strong 8K Channels for 24 Hours",
+  home: "Strong 8K IPTV – Premium IPTV Subscription with 4K & 8K",
+  subscriptionPlans: "IPTV Subscription Prices & Plans | Strong 8K",
+  installationGuide: "Strong 8K Installation Guide | Supported Device Setup",
+  resellerPanel: "Strong 8K Reseller Panel | Wholesale Credits & Accounts",
+  contactUs: "Contact Strong 8K | Support & Trial Requests",
   notFound: "Page Not Found | Strong 8K IPTV",
 } as const;
 
 export const pageDescriptions = {
   home: siteConfig.description,
   subscriptionPlans:
-    "Compare Strong 8K IPTV subscription plans from £9.99. Review 1, 3, 6 and 12-month prices, the same channel catalogue in every plan, and trial and renewal details.",
+    "Compare Strong 8K subscription prices by duration and account quantity. Review device options, included features, activation and refund terms.",
   installationGuide:
-    "Set up Strong 8K IPTV on Fire TV, Android, iPhone, Windows, Mac or Smart TV. Find supported login formats, Downloader code 4330396 and fixes for common issues.",
+    "Set up Strong 8K IPTV on supported TVs, Firestick, Android, iPhone and computers. Find login instructions, the app code and troubleshooting help.",
   resellerPanel:
-    "Explore the Strong 8K IPTV reseller panel: 120, 240 and 360-credit packages, account tools, branding options and current pricing by request. See how the panel works.",
+    "Explore the Strong 8K reseller panel, credit packages and account management. Request wholesale pricing, a dashboard demo and reseller support.",
   contactUs:
-    "Request a 24-hour Strong 8K IPTV trial in the UK. Check device compatibility, test the channel catalogue and contact the team for setup, plans or reseller questions.",
+    "Contact Strong 8K for account help, installation support, renewals, reseller enquiries or a free 24-hour trial. Reach the team by WhatsApp or email.",
   notFound:
     "The page you are looking for could not be found. Browse Strong 8K IPTV plans, installation guides, or contact support.",
 } as const;

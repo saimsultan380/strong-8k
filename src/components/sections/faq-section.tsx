@@ -17,75 +17,71 @@ export type FaqItem = {
 
 const HOMEPAGE_FAQS: FaqItem[] = [
   {
-    id: "how-it-works",
-    q: "How does Strong 8K IPTV work?",
-    a: "Add the details from your welcome message to a compatible player. Your account then displays the catalogue available to it over your internet connection.",
+    id: "what-is",
+    q: "What is Strong 8K IPTV?",
+    a: "Strong 8K IPTV is a subscription for live television and on-demand films and series, played through a compatible app on your own device.",
   },
   {
-    id: "firestick",
-    q: "Can I install Strong 8K IPTV on a Firestick?",
+    id: "devices",
+    q: "Which devices can I use?",
     a: (
       <>
-        The{" "}
+        Supported setups include Smart TVs, Firestick, Android, iPhone, iPad, Windows and Mac,
+        when a compatible player is available. See the{" "}
         <Link
           href={routes.installationGuide}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Installation Guide
+          installation guide
         </Link>{" "}
-        has Fire TV steps and the current Strong 8K app code. Use a verified installer or an app
-        from the official store.
+        for the steps that match your device.
       </>
     ),
   },
   {
-    id: "free-trial",
-    q: "Does the service have a free trial?",
-    a: "Yes. You can test the service for 24 hours without payment details. Support provides your login and activation time.",
+    id: "8k",
+    q: "Does an 8K IPTV subscription make every channel 8K?",
+    a: "No. Resolution depends on the source stream and the full playback setup: the player, the screen and the connection. Up to 8K UHD is available only on supported content.",
   },
   {
-    id: "internet-speed",
-    q: "What internet speed do I need?",
-    a: "Strong 8K IPTV playback depends on resolution, encoding, your player and network load. Test your own connection; wired Ethernet or stronger Wi-Fi may help a TV with unstable playback. Your welcome message may include an M3U playlist link.",
-  },
-  {
-    id: "devices",
-    q: "Can I use more than one device?",
-    a: "You can ask about using your login on different supported devices, but the standard plan is for one stream at a time. Request multi-screen terms before playing on two screens together.",
-  },
-  {
-    id: "which-plan",
-    q: "Which IPTV subscription is best for me?",
+    id: "more-devices",
+    q: "Can I watch on more than one device?",
     a: (
       <>
-        Start with the trial, compare total cost and choose the duration that suits your household.
-        The{" "}
+        One account allows one active stream. You can switch that login between supported devices
+        at different times. For simultaneous streams, choose extra accounts on the{" "}
         <Link
           href={routes.subscriptionPlans}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          Subscription Plans
+          Pricing
         </Link>{" "}
-        page has the full plan comparison.
+        page.
       </>
     ),
   },
   {
-    id: "reseller",
-    q: "Can I become a reseller?",
+    id: "trial",
+    q: "Can I test the service before subscribing?",
+    a: "Yes. Request a free 24-hour trial. No card details are required, and the trial ends without an automatic charge.",
+  },
+  {
+    id: "support",
+    q: "How do I get technical support?",
     a: (
       <>
-        Yes. Visit the{" "}
+        Message the team on WhatsApp or use the{" "}
         <Link
-          href={routes.resellerPanel}
+          href={routes.contactUs}
           className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
           style={{ color: "var(--hero-heading)" }}
         >
-          business account page
-        </Link>{" "}
-        to compare credit packages and request a dashboard demonstration.
+          contact page
+        </Link>
+        . Include your device model, app name and the message on screen. Support continues
+        throughout an active subscription.
       </>
     ),
   },
@@ -293,8 +289,8 @@ export function FaqSection() {
       defaultOpenId="what-is-strong-8k"
       title={
         <>
-          Frequently asked questions about{" "}
-          <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>
+          Strong 8K IPTV{" "}
+          <span style={{ color: "var(--hero-accent)" }}>Questions Answered</span>
         </>
       }
     />

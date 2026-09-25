@@ -78,8 +78,8 @@ export function HomepageFreeTrialSection() {
                   className="mt-4 max-w-xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
                   style={{ color: "var(--hero-heading)" }}
                 >
-                  Try Strong 8K IPTV free for{" "}
-                  <span style={{ color: "var(--hero-accent)" }}>24 hours</span>
+                  Try Strong 8K IPTV Free for{" "}
+                  <span style={{ color: "var(--hero-accent)" }}>24 Hours</span>
                 </h2>
               </FadeIn>
 

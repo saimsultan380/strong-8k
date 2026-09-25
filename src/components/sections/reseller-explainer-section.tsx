@@ -17,7 +17,7 @@ export function ResellerExplainerSection() {
               className="text-[11px] font-bold uppercase tracking-[0.22em]"
               style={{ color: "var(--hero-accent)" }}
             >
-              Why Resell Strong 8K
+              Panel Overview
             </span>
           </FadeIn>
 
@@ -26,24 +26,21 @@ export function ResellerExplainerSection() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Why the panel matters to a{" "}
-              <span style={{ color: "var(--hero-accent)" }}>reseller</span>
+              How the Reseller Panel{" "}
+              <span style={{ color: "var(--hero-accent)" }}>Works</span>
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.15}>
             <div className="mt-7 space-y-4 text-center text-[15px] leading-[1.8] sm:text-base">
               <p style={{ color: "var(--hero-muted)" }}>
-                Working with an IPTV supplier starts with clear credit rules and practical account
-                tools. The Strong 8K IPTV reseller panel lets you create subscriptions, renew
-                existing lines and check account status from one dashboard. Unused credits stay in
-                your balance without an expiry date.
+                After your reseller account is approved, you buy credits and use them to activate
+                customer subscriptions. From the dashboard you can create accounts, check status
+                and renew lines when a customer continues.
               </p>
               <p style={{ color: "var(--hero-muted)" }}>
-                The service includes Anti-Freeze technology and 99.9% server uptime. Use a
-                demonstration to explore the dashboard and test the viewing experience before
-                choosing a package. Your business results depend on your prices, costs, customers
-                and support.
+                Unused credits remain on your balance. Request a demonstration before you choose
+                a package so you can see how activation and renewals work.
               </p>
             </div>
           </FadeIn>

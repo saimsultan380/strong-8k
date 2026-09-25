@@ -4,13 +4,8 @@ import { Footer } from "@/components/layout/footer";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { SubscriptionPlansHero } from "@/components/sections/subscription-plans-hero";
 import { MultiConnectionPlansSection } from "@/components/sections/multi-connection-plans-section";
-import { SubscriptionComparisonSection } from "@/components/sections/subscription-comparison-section";
-import { SubscriptionChoiceGuidance } from "@/components/sections/subscription-choice-guidance";
-import { SubscriptionFreeTrialPromo } from "@/components/sections/subscription-free-trial-promo";
-import { SubscriptionHowToBuySection } from "@/components/sections/subscription-how-to-buy-section";
-import { SubscriptionIncludedSection } from "@/components/sections/subscription-included-section";
-import { SubscriptionWhyChoose } from "@/components/sections/subscription-why-choose";
-import { SubscriptionFaqSection } from "@/components/sections/subscription-faq-section";
+import { SubscriptionBeforeOrder } from "@/components/sections/subscription-before-order";
+import { RefundPolicySection } from "@/components/sections/refund-policy-section";
 import { SubscriptionCtaSection } from "@/components/sections/subscription-cta-section";
 import { pageDescriptions, pageTitles, createPageMetadata } from "@/lib/site";
 import { routes } from "@/lib/routes";
@@ -30,13 +25,8 @@ export default function SubscriptionPlansPage() {
       <Breadcrumbs items={pageBreadcrumbs.subscriptionPlans} />
       <SubscriptionPlansHero />
       <MultiConnectionPlansSection />
-      <SubscriptionComparisonSection />
-      <SubscriptionChoiceGuidance />
-      <SubscriptionFreeTrialPromo />
-      <SubscriptionHowToBuySection />
-      <SubscriptionIncludedSection />
-      <SubscriptionWhyChoose />
-      <SubscriptionFaqSection />
+      <SubscriptionBeforeOrder />
+      <RefundPolicySection />
       <SubscriptionCtaSection />
       <Footer />
       <FloatingWhatsApp />

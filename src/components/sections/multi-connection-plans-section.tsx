@@ -1,58 +1,42 @@
 "use client";
 
+import { useState } from "react";
 import { Container } from "@/components/layout/container";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { FadeIn } from "@/components/animation/fade-in";
 import { motion } from "framer-motion";
+import { whatsappUrlWithText } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
-const WHATSAPP_LINK = "https://wa.me/447401921250";
+const ACCOUNT_OPTIONS = [1, 2, 3, 4] as const;
 
-const PLAN_FEATURES = [
-  "1 Screen connection",
+const PRICES: Record<number, Record<number, string>> = {
+  1: { 1: "£9.99", 3: "£17.99", 6: "£25.99", 12: "£42.99" },
+  2: { 1: "£17.91", 3: "£34.25", 6: "£50.59", 12: "£83.27" },
+  3: { 1: "£25.51", 3: "£49.59", 6: "£73.67", 12: "£120.11" },
+  4: { 1: "£33.11", 3: "£64.93", 6: "£96.75", 12: "£149.99" },
+};
+
+const SHARED_FEATURES = [
   "40,000+ live channels (UK & international)",
   "Full international sports packages",
   "120,000+ VOD movies & series, updated daily",
-  "30,000+ complete series box sets",
-  "SD / HD / FHD / 4K / 8K UHD quality",
-  "99.9% server uptime with Anti-Freeze technology",
-  "Free TV & VOD updates throughout your plan",
+  "30,000+ complete series box sets, within the VOD library",
+  "SD / HD / FHD / 4K / 8K UHD quality where the stream supports it",
+  "Free TV & VOD updates throughout your subscription",
   "M3U, MAG, Xtream Codes & Enigma supported",
   "Radio and music channels included",
   "Works on Smart TV, Firestick, phone, tablet & PC",
-  "Catch-up TV & full EPG guide",
-  "Instant activation — watching within minutes",
-  "24/7 technical support",
+  "Catch-up TV & full EPG guide where supported",
+  "Activation after payment confirmation",
+  "Technical support throughout the active subscription",
 ];
 
 const PLANS = [
-  {
-    months: 1,
-    label: "1 Month",
-    originalPrice: "£20",
-    price: "£9.99",
-    popular: false,
-  },
-  {
-    months: 3,
-    label: "3 Months",
-    originalPrice: "£40",
-    price: "£17.99",
-    popular: false,
-  },
-  {
-    months: 6,
-    label: "6 Months",
-    originalPrice: "£60",
-    price: "£25.99",
-    popular: false,
-  },
-  {
-    months: 12,
-    label: "12 Months",
-    originalPrice: "£99",
-    price: "£42.99",
-    popular: true,
-  },
+  { months: 1, label: "1 month", bestValue: false },
+  { months: 3, label: "3 months", bestValue: false },
+  { months: 6, label: "6 months", bestValue: false },
+  { months: 12, label: "12 months", bestValue: true },
 ];
 
 function PriceGlowDivider() {
@@ -88,19 +72,36 @@ function PriceGlowDivider() {
 
 type Plan = (typeof PLANS)[number];
 
-function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
+function PricingCard({
+  plan,
+  accounts,
+  delay = 0,
+}: {
+  plan: Plan;
+  accounts: number;
+  delay?: number;
+}) {
+  const price = PRICES[accounts][plan.months];
+  const allowance =
+    accounts === 1
+      ? "1 account · 1 active stream at a time"
+      : `${accounts} accounts · ${accounts} simultaneous streams`;
+  const features = [allowance, ...SHARED_FEATURES];
+  const href = whatsappUrlWithText(
+    `Get this plan: ${plan.label}, ${accounts} account${accounts > 1 ? "s" : ""}, ${price}`,
+  );
   return (
     <ScrollReveal direction="up" delay={delay} once className="h-full">
       <div
         className="relative flex h-full flex-col rounded-xl border px-6 py-7 transition-all duration-300 md:px-7 md:py-8"
         style={{
           backgroundColor: "transparent",
-          borderColor: plan.popular
+          borderColor: plan.bestValue
             ? "rgba(212, 168, 75, 0.55)"
             : "var(--feature-card-border)",
         }}
       >
-        {plan.popular && (
+        {plan.bestValue && (
           <div className="absolute -top-3 left-1/2 -translate-x-1/2">
             <span
               className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-black"
@@ -109,7 +110,7 @@ function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
                 boxShadow: "0 4px 12px rgba(184, 134, 11, 0.35)",
               }}
             >
-              Most Popular
+              Best Value
             </span>
           </div>
         )}
@@ -125,27 +126,21 @@ function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
           className="mt-4 text-[13px]"
           style={{ color: "rgba(255, 255, 255, 0.7)" }}
         >
-          Price:
+          Full amount payable
         </p>
         <div className="mt-1 flex flex-wrap items-baseline gap-2.5">
-          <span
-            className="text-base font-medium line-through"
-            style={{ color: "rgba(255, 255, 255, 0.35)" }}
-          >
-            {plan.originalPrice}
-          </span>
           <span
             className="text-4xl font-bold tracking-tight md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            {plan.price}
+            {price}
           </span>
         </div>
 
         <PriceGlowDivider />
 
         <ul className="mb-8 flex flex-1 flex-col gap-3">
-          {PLAN_FEATURES.map((feature) => (
+          {features.map((feature) => (
             <li key={feature} className="flex items-start gap-3 text-[13px] leading-[1.55] sm:text-[14px]">
               <span
                 className="mt-[9px] h-px w-3 shrink-0"
@@ -162,15 +157,17 @@ function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
 
         <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full">
           <a
-            href={WHATSAPP_LINK}
-            className="flex w-full items-center justify-center rounded-lg px-6 py-3.5 text-[13px] font-extrabold uppercase tracking-[0.08em] transition-all duration-200 hover:brightness-110"
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-full items-center justify-center rounded-lg px-6 py-3.5 text-center text-[13px] font-extrabold uppercase tracking-[0.08em] transition-all duration-200 hover:brightness-110"
             style={{
               background: "var(--grad-brand)",
               color: "var(--hero-cta-primary-fg)",
               boxShadow: "var(--hero-cta-primary-shadow)",
             }}
           >
-            Get This Plan →
+            Get This Plan
           </a>
         </motion.div>
       </div>
@@ -179,6 +176,8 @@ function PricingCard({ plan, delay = 0 }: { plan: Plan; delay?: number }) {
 }
 
 export function MultiConnectionPlansSection() {
+  const [accounts, setAccounts] = useState<(typeof ACCOUNT_OPTIONS)[number]>(1);
+
   return (
     <section
       id="pricing"
@@ -192,7 +191,7 @@ export function MultiConnectionPlansSection() {
               className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Choose your{" "}
+              Choose Your Accounts and{" "}
               <span
                 style={{
                   backgroundImage: "var(--grad-text)",
@@ -201,9 +200,8 @@ export function MultiConnectionPlansSection() {
                   backgroundClip: "text",
                 }}
               >
-                Strong 8K IPTV plan
-              </span>{" "}
-              — 1, 3, 6 or 12 months
+                Subscription Duration
+              </span>
             </h2>
           </FadeIn>
 
@@ -212,19 +210,76 @@ export function MultiConnectionPlansSection() {
               className="text-sm leading-[1.75] sm:text-[15px] md:text-right"
               style={{ color: "var(--hero-muted)" }}
             >
-              Each Strong 8K IPTV card below repeats the same catalogue and features. There is no
-              shorter list on the monthly plan or an extra channel tier on the annual plan. A
-              standard plan provides one simultaneous connection; ask for a separate multi-screen
-              quote if several people need to watch at once.
+              We recommend one account for each device streaming at the same time. Choose two
+              accounts for two simultaneous streams, three for three, or four for four. If you
+              watch on different supported devices at different times, one account lets you switch
+              between them while keeping to one active stream.
             </p>
           </FadeIn>
         </div>
 
-        <div className="grid w-full items-stretch gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {PLANS.map((plan, i) => (
-            <PricingCard key={plan.months} plan={plan} delay={0.08 * i} />
-          ))}
+        <div
+          className="mb-8 flex flex-wrap gap-2 sm:gap-3"
+          role="tablist"
+          aria-label="Account quantities"
+        >
+          {ACCOUNT_OPTIONS.map((count) => {
+            const active = accounts === count;
+            return (
+              <button
+                key={count}
+                type="button"
+                role="tab"
+                id={`pricing-tab-${count}`}
+                aria-selected={active}
+                aria-controls={`pricing-panel-${count}`}
+                onClick={() => setAccounts(count)}
+                className={cn(
+                  "rounded-xl border px-4 py-2.5 text-sm font-semibold transition-all duration-200",
+                )}
+                style={{
+                  borderColor: active ? "transparent" : "var(--feature-card-border)",
+                  color: active ? "var(--hero-cta-primary-fg)" : "var(--hero-muted)",
+                  background: active ? "var(--hero-cta-primary-bg)" : "transparent",
+                  boxShadow: active ? "var(--hero-cta-primary-shadow)" : "none",
+                }}
+              >
+                {count} {count === 1 ? "Account" : "Accounts"}
+              </button>
+            );
+          })}
         </div>
+
+        {ACCOUNT_OPTIONS.map((count) => {
+          const active = accounts === count;
+          return (
+            <div
+              key={count}
+              id={`pricing-panel-${count}`}
+              role="tabpanel"
+              aria-labelledby={`pricing-tab-${count}`}
+              hidden={!active}
+              className={cn(!active && "hidden")}
+            >
+              <h3
+                className="mb-6 text-xl font-bold sm:text-2xl"
+                style={{ color: "var(--hero-heading)" }}
+              >
+                {count} {count === 1 ? "Account" : "Accounts"}
+              </h3>
+              <div className="grid w-full items-stretch gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+                {PLANS.map((plan, i) => (
+                  <PricingCard
+                    key={`${count}-${plan.months}`}
+                    plan={plan}
+                    accounts={count}
+                    delay={active ? 0.04 * i : 0}
+                  />
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </Container>
     </section>
   );

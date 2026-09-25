@@ -12,7 +12,7 @@ export const pageBreadcrumbs = {
   home: [{ name: "Home", path: routes.home }] satisfies BreadcrumbItem[],
   subscriptionPlans: [
     { name: "Home", path: routes.home },
-    { name: "Subscription Plans", path: routes.subscriptionPlans },
+    { name: "Pricing", path: routes.subscriptionPlans },
   ] satisfies BreadcrumbItem[],
   installationGuide: [
     { name: "Home", path: routes.home },
@@ -50,11 +50,7 @@ export function siteJsonLd() {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: siteConfig.name,
-      alternateName: [
-        siteConfig.shortName,
-        "Strong 8K IPTV UK",
-        "Strong 8K IPTV USA",
-      ],
+      alternateName: [siteConfig.shortName, "Strong 8K IPTV UK"],
       url: canonicalUrl(routes.home),
       description: siteConfig.description,
       inLanguage: "en-GB",
@@ -68,6 +64,7 @@ export function siteJsonLd() {
       contactPoint: {
         "@type": "ContactPoint",
         email: siteConfig.email,
+        telephone: siteConfig.phone,
         contactType: "customer support",
         availableLanguage: ["English"],
       },

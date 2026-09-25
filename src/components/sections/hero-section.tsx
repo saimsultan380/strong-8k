@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Tv, MonitorPlay, Headphones } from "lucide-react";
+import { routes } from "@/lib/routes";
 import { Container } from "@/components/layout/container";
 import { HeroReveal } from "@/components/animation/hero-reveal";
 import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
@@ -52,8 +54,8 @@ export function HeroSection() {
           <HeroTitleReveal
             className="max-w-[720px] text-left text-[28px] font-bold leading-[1.12] tracking-tight text-gradient-brand sm:text-4xl md:text-[44px] lg:text-[48px]"
             lines={[
-              "Strong 8K IPTV UK – Premium Live TV",
-              "with 40,000+ Channels and 8K UHD",
+              "Strong 8K IPTV – Premium IPTV Subscription",
+              "with 40,000+ Channels & Up to 8K UHD",
             ]}
           />
 
@@ -63,10 +65,10 @@ export function HeroSection() {
               style={{ color: "var(--hero-muted)" }}
             >
               <p>
-                Strong 8K IPTV brings live television and on-demand viewing to compatible devices without a dish or engineer appointment. Choose from 40,000+ live channels and 120,000+ movies and series, with streams in formats up to 8K UHD where the title, device, app and connection support it. Check the current channel list for your location before you order.
+                Strong 8K IPTV brings live television, films and series together through a compatible player on your TV, phone or computer. Explore the available catalogue, check your device and try the service before choosing a subscription.
               </p>
               <p>
-                A Strong 8K account gives you a simple way to choose a viewing period, receive login details and follow a guide for your device. Whether you use a Firestick, Smart TV, phone or computer, you can ask for a free test first and speak to the team if you need a hand.
+                Built for viewers across the UK, your Strong 8K subscription includes setup assistance and technical support throughout your active subscription. Picture quality depends on the available source stream, your device, player and internet connection, with resolutions up to 8K UHD on supported content.
               </p>
             </div>
           </HeroReveal>
@@ -74,15 +76,15 @@ export function HeroSection() {
           <HeroReveal variant="cta" delay={0.28}>
             <div className="mt-5 flex flex-row items-stretch justify-start gap-2 sm:mt-6 sm:gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 sm:flex-initial">
-                <a
-                  href="#pricing"
+                <Link
+                  href={routes.subscriptionPlans}
                   className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
                 >
                   Subscribe Now
-                </a>
+                </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-[1.35] sm:flex-initial">
                 <a
@@ -94,7 +96,7 @@ export function HeroSection() {
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
                 >
-                  Start free trial
+                  Start 24-Hour Free Trial
                 </a>
               </motion.div>
             </div>

@@ -6,24 +6,16 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 
 const STEPS = [
   {
-    title: "1. Review the IPTV supplier agreement",
-    body: "Review the IPTV supplier agreement and your rights to market each content category.",
+    title: "You support your customers",
+    body: "You handle customer questions, renewals and the terms you agree with them.",
   },
   {
-    title: "2. Try the service and dashboard",
-    body: "Try the service and dashboard with an authorised test account.",
+    title: "Strong 8K supports the service and panel",
+    body: "Contact us about service faults, panel access and credit questions.",
   },
   {
-    title: "3. Obtain package prices",
-    body: "Obtain package prices and calculate a realistic cost for 1-, 3-, 6- and 12-month lines.",
-  },
-  {
-    title: "4. Write clear customer terms",
-    body: "Write clear customer terms, including support hours, account expiry and refund conditions.",
-  },
-  {
-    title: "5. Buy an appropriate number of credits",
-    body: "Buy an appropriate number of credits, then monitor service quality before increasing the balance.",
+    title: "Escalate when you need us",
+    body: "Send the account reference, device, app and a short description of the problem so we can investigate.",
   },
 ];
 
@@ -45,8 +37,8 @@ export function ResellerHowToSection() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]">
-            A five-step route to your first IPTV reseller{" "}
-            <span style={{ color: "var(--hero-accent)" }}>customers</span>
+            Reseller Support and{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Responsibilities</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>

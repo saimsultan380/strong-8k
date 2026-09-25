@@ -2,39 +2,44 @@ import { FaqAccordionSection, type FaqItem } from "@/components/sections/faq-sec
 
 const RESELLER_FAQS: FaqItem[] = [
   {
-    id: "retail-price",
-    q: "Can I set my own retail price?",
-    a: "Yes. You choose the price you charge customers. Your margin depends on credit costs, payment fees and the cost of supporting those customers.",
+    id: "start",
+    q: "How many credits do I need to start?",
+    a: "The Starter package contains 120 credits. Growth is 240 credits and Pro is 360 credits. Ask for a demonstration before you choose.",
+  },
+  {
+    id: "deducted",
+    q: "How are credits deducted?",
+    a: "One credit covers one month of one standard customer account. A 3-month line uses 3 credits, a 6-month line uses 6, and a 12-month line uses 12. Confirm with support if the customer needs extra simultaneous accounts.",
   },
   {
     id: "expire",
-    q: "Do the credits expire?",
-    a: "No. Unused credits remain available until you use them.",
+    q: "Do unused credits expire?",
+    a: "No. Unused credits remain on your balance until you use them.",
   },
   {
-    id: "white-label",
-    q: "Can I use a white label?",
-    a: "Yes. Branding options are available. Contact support to discuss the setup and any applicable charges.",
+    id: "trials",
+    q: "Can I create trials?",
+    a: "Trial access is limited. Current allowances start at up to ten trial accounts per day and can change with your account level. Trials are not unlimited.",
   },
   {
-    id: "sub-resellers",
-    q: "Can I create sub-resellers?",
-    a: "Sub-reseller tools are available. Ask support to explain the access requirements and how credits are allocated.",
-  },
-  {
-    id: "twelve-month",
-    q: "What does a 12-month line cost?",
-    a: "Twelve credits at the displayed usage rule; the cash cost depends on the current price per credit.",
-  },
-  {
-    id: "minimum",
-    q: "Is there a minimum purchase?",
-    a: "The Starter package contains 120 credits. You can request a demonstration before choosing a package.",
+    id: "branding",
+    q: "Which branding options are available?",
+    a: "White-label branding and sub-reseller access may need approval and can have an extra cost. Contact support before you offer either option.",
   },
   {
     id: "support",
     q: "Who supports my customers?",
-    a: "You manage the customer relationship, with Strong 8K support available for service and panel issues. Every package includes the same infrastructure, with Anti-Freeze technology and 99.9% server uptime.",
+    a: "You support the customers you sell to. Strong 8K supports service and panel issues. Escalate those problems to us with the account details.",
+  },
+  {
+    id: "renew",
+    q: "How do I renew customer accounts?",
+    a: "Renew a line from the dashboard before it expires. The renewal uses credits for the new duration on the same one-account rule.",
+  },
+  {
+    id: "refund",
+    q: "What are the reseller purchase and refund terms?",
+    a: "Wholesale credit purchases have their own terms. The consumer 7-day money-back guarantee on viewing subscriptions does not automatically apply to reseller credit packs. Ask support for the terms that apply to your package before you pay.",
   },
 ];
 
@@ -42,13 +47,13 @@ export function ResellerFaqSection() {
   return (
     <FaqAccordionSection
       faqs={RESELLER_FAQS}
-      defaultOpenId="retail-price"
+      defaultOpenId="start"
       eyebrow="FAQ"
-      description="Clear answers about credits, branding, sub-resellers, and support."
+      description="Credits, trials, branding, renewals and wholesale terms."
       title={
         <>
-          Strong 8K reseller panel{" "}
-          <span style={{ color: "var(--hero-accent)" }}>FAQs</span>
+          Reseller{" "}
+          <span style={{ color: "var(--hero-accent)" }}>Questions</span>
         </>
       }
     />

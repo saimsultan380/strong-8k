@@ -9,6 +9,14 @@ import { siteConfig } from "@/lib/site";
 
 const WHATSAPP_LINK = "https://wa.me/447401921250";
 
+const ENQUIRY_TYPES = [
+  "Technical support",
+  "Trial request",
+  "Pricing or new order",
+  "Renewal",
+  "Reseller enquiry",
+];
+
 const DEVICES = [
   "Firestick / Fire TV",
   "Android TV / Android Phone",
@@ -30,6 +38,7 @@ const inputStyle = {
 
 export function ContactMethodsForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [replyError, setReplyError] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,14 +48,22 @@ export function ContactMethodsForm() {
     const email = String(data.get("email") || "").trim();
     const whatsapp = String(data.get("whatsapp") || "").trim();
     const device = String(data.get("device") || "").trim();
+    const enquiry = String(data.get("enquiry") || "").trim();
     const message = String(data.get("message") || "").trim();
+
+    if (!email && !whatsapp) {
+      setReplyError(true);
+      return;
+    }
+    setReplyError(false);
 
     const text = [
       "Strong 8K Contact Form",
       `Name: ${name}`,
-      `Email: ${email}`,
-      `WhatsApp: ${whatsapp}`,
+      `Email: ${email || "Not provided"}`,
+      `WhatsApp: ${whatsapp || "Not provided"}`,
       `Device: ${device}`,
+      `Enquiry: ${enquiry}`,
       `Message: ${message}`,
     ].join("\n");
 
@@ -79,8 +96,8 @@ export function ContactMethodsForm() {
             className="mt-3 max-w-3xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[36px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Contact Strong 8K for{" "}
-            <span style={{ color: "var(--hero-accent)" }}>plans or support</span>
+            Speak to Our{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Support Team</span>
           </h2>
         </FadeIn>
 
@@ -137,14 +154,14 @@ export function ContactMethodsForm() {
         </div>
 
         <FadeIn delay={0.15}>
-          <p
-            className="mt-8 text-sm leading-[1.75] sm:text-[15px]"
-            style={{ color: "var(--hero-muted)" }}
+          <h2
+            className="mt-10 text-2xl font-bold leading-tight tracking-tight sm:text-3xl"
+            style={{ color: "var(--hero-heading)" }}
           >
-            <span className="font-semibold" style={{ color: "var(--hero-heading)" }}>
-              Send us a message
-            </span>{" "}
-            Name · Email · WhatsApp number · Device · Message
+            Send an Enquiry
+          </h2>
+          <p className="mt-3 text-sm leading-[1.75]" style={{ color: "var(--hero-muted)" }}>
+            Add an email address or a WhatsApp number. You do not need both.
           </p>
         </FadeIn>
 
@@ -180,7 +197,6 @@ export function ContactMethodsForm() {
                 <input
                   name="email"
                   type="email"
-                  required
                   autoComplete="email"
                   placeholder="you@example.com"
                   className={inputClass}
@@ -195,7 +211,6 @@ export function ContactMethodsForm() {
                 <input
                   name="whatsapp"
                   type="tel"
-                  required
                   autoComplete="tel"
                   placeholder="+44 7xxx xxx xxx"
                   className={inputClass}
@@ -228,6 +243,28 @@ export function ContactMethodsForm() {
 
             <label className="mt-4 block space-y-2">
               <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--hero-muted)" }}>
+                Enquiry type
+              </span>
+              <select
+                name="enquiry"
+                required
+                defaultValue=""
+                className={inputClass}
+                style={inputStyle}
+              >
+                <option value="" disabled>
+                  Select an enquiry type
+                </option>
+                {ENQUIRY_TYPES.map((type) => (
+                  <option key={type} value={type} style={{ color: "#000" }}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="mt-4 block space-y-2">
+              <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--hero-muted)" }}>
                 Message
               </span>
               <textarea
@@ -254,10 +291,19 @@ export function ContactMethodsForm() {
               </button>
               {submitted ? (
                 <p className="text-sm" style={{ color: "var(--hero-accent)" }}>
-                  Opening WhatsApp with your message…
+                  Your enquiry is ready in WhatsApp. Send it there to reach the team.
+                </p>
+              ) : null}
+              {replyError ? (
+                <p className="text-sm" style={{ color: "var(--hero-accent)" }}>
+                  Add an email address or a WhatsApp number so we can reply.
                 </p>
               ) : null}
             </div>
+            <p className="mt-4 text-xs leading-[1.7]" style={{ color: "var(--hero-muted)" }}>
+              This form opens WhatsApp with your message. We use the details only to reply to
+              your enquiry. There is no separate privacy page on this site.
+            </p>
           </form>
         </ScrollReveal>
       </Container>

@@ -34,8 +34,8 @@ export function ResellerInfrastructureSection() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Manage accounts from your{" "}
-            <span style={{ color: "var(--hero-accent)" }}>dashboard</span>
+            Manage Customer Accounts and{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Renewals</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>

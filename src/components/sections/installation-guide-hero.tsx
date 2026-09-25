@@ -38,9 +38,9 @@ export function InstallationGuideHero() {
           className="mx-auto max-w-[920px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[52px]"
           style={{ color: "var(--hero-heading)" }}
           lines={[
-            "Strong 8K IPTV Installation Guide – Easy Setup for All",
+            "Strong 8K IPTV Installation Guide",
             <span key="accent" style={{ color: "var(--hero-accent)" }}>
-              Supported Devices
+              for Supported Devices
             </span>,
           ]}
         />
@@ -48,32 +48,13 @@ export function InstallationGuideHero() {
         <HeroReveal delay={0.18}>
           <div className="mx-auto mt-6 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
-              Your account can be used through a compatible player on Fire TV, Android, iPhone, a
-              computer or a supported television. This page starts with the login formats, then
-              gives steps for each device. The same setup applies to a 24-hour trial. Keep your
-              account credentials in a private message and use the verified app source provided by
-              the team.
+              Set up your Strong 8K account or trial using the instructions for your device. Have
+              your login details ready, choose a compatible player and follow the relevant steps
+              below.
             </p>
             <p style={{ color: "var(--hero-muted)" }}>
-              If you have not activated an account yet, choose a{" "}
-              <Link
-                href={routes.subscriptionPlans}
-                className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
-                style={{ color: "var(--hero-heading)" }}
-              >
-                Subscription Plan
-              </Link>{" "}
-              or request the{" "}
-              <Link
-                href={routes.contactUs}
-                className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
-                style={{ color: "var(--hero-heading)" }}
-              >
-                free 24-hour trial
-              </Link>
-              . A Strong 8K IPTV subscription is listed as one simultaneous stream unless an extra
-              screen is arranged. Firestick owners can also check app compatibility before
-              activation.
+              If a menu or login screen differs, contact support with your device model, app name
+              and the message displayed. Keep passwords and account links out of public screenshots.
             </p>
           </div>
         </HeroReveal>
@@ -90,7 +71,7 @@ export function InstallationGuideHero() {
                   color: "var(--hero-cta-primary-fg)",
                 }}
               >
-                Get Setup Help on WhatsApp →
+                Get Setup Help
               </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="flex-1 sm:flex-initial">
@@ -103,7 +84,7 @@ export function InstallationGuideHero() {
                   backgroundColor: "transparent",
                 }}
               >
-                View Subscription Plans
+                View Prices
               </Link>
             </motion.div>
           </div>

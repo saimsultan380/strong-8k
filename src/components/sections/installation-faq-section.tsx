@@ -41,7 +41,7 @@ export function InstallationFaqSection() {
       title={
         <>
           Installation{" "}
-          <span style={{ color: "var(--hero-accent)" }}>FAQs</span>
+          <span style={{ color: "var(--hero-accent)" }}>Questions</span>
         </>
       }
     />

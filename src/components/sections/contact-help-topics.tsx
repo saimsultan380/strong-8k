@@ -82,9 +82,40 @@ export function ContactHelpTopics() {
             className="mt-3 max-w-3xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[36px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            What Can We{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Help You With?</span>
+            Help with Your{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Account</span>
           </h2>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <div className="mt-5 max-w-3xl space-y-4 text-sm leading-[1.8] sm:text-[15px]" style={{ color: "var(--hero-muted)" }}>
+            <p>
+              For setup instructions, visit our{" "}
+              <Link href={routes.installationGuide} className="font-semibold underline" style={{ color: "var(--hero-heading)" }}>
+                Installation Guide
+              </Link>
+              . For subscription duration and account options, visit{" "}
+              <Link href={routes.subscriptionPlans} className="font-semibold underline" style={{ color: "var(--hero-heading)" }}>
+                Pricing
+              </Link>
+              . Business enquiries about wholesale credits should use our{" "}
+              <Link href={routes.resellerPanel} className="font-semibold underline" style={{ color: "var(--hero-heading)" }}>
+                Reseller Panel
+              </Link>{" "}
+              page.
+            </p>
+            <p>
+              If a problem continues after seven days, contact us. We continue providing support
+              throughout your active subscription. Refund eligibility is explained in our{" "}
+              <Link
+                href={`${routes.subscriptionPlans}#refund-policy`}
+                className="font-semibold underline"
+                style={{ color: "var(--hero-heading)" }}
+              >
+                refund policy
+              </Link>
+              .
+            </p>
+          </div>
         </FadeIn>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2">

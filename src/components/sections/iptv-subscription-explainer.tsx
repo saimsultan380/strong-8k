@@ -8,9 +8,9 @@ import {
 } from "@/lib/site";
 
 const BENEFITS = [
-  "No dish is required",
-  "A standard account is sold for one simultaneous screen",
-  "Keep your credentials private",
+  "Live television and on-demand content",
+  "One active stream on a standard account",
+  "Check compatibility before you order",
 ];
 
 const freeTrialWhatsapp = whatsappUrlWithText(
@@ -42,7 +42,7 @@ export function IptvSubscriptionExplainer() {
               className="mt-4 max-w-xl text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-[48px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              What is{" "}
+              What Is{" "}
               <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>?
             </h2>
           </FadeIn>
@@ -51,10 +51,9 @@ export function IptvSubscriptionExplainer() {
               className="mt-6 max-w-xl text-sm leading-[1.8] sm:text-[15px] md:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Strong 8K IPTV is an internet-delivered TV subscription for viewers who prefer
-              choosing their own player and device. Instead of installing new hardware, you add the
-              supplied account details to a compatible app. The app retrieves the channel guide and
-              available on-demand titles for that account.
+              Strong 8K IPTV is a subscription service for watching live television and
+              on-demand content through an internet connection. You receive account details to
+              enter into a compatible IPTV player.
             </p>
           </FadeIn>
 
@@ -98,18 +97,9 @@ export function IptvSubscriptionExplainer() {
                 className="text-sm leading-[1.8] sm:text-[15px] md:text-base"
                 style={{ color: "var(--hero-muted)" }}
               >
-                No dish is required. A standard Strong 8K account is sold for one simultaneous
-                screen, while extra connections can be requested. If you want to move between a TV
-                and a phone, check that the app on each device accepts your login format; if you
-                want both to play at once, ask for a multi-screen price.
-              </p>
-              <p
-                className="text-sm leading-[1.8] sm:text-[15px] md:text-base"
-                style={{ color: "var(--hero-muted)" }}
-              >
-                The Strong 8K team can explain supported login formats, plan lengths and setup. Keep
-                your credentials private and ask for current availability when a particular
-                programme is essential to you.
+                A standard account allows one active stream at a time. Additional accounts are
+                available when several devices need to stream simultaneously. You can check
+                compatibility and test the service before ordering.
               </p>
             </div>
             <a

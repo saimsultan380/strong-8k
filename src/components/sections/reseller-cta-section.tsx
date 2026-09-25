@@ -35,8 +35,8 @@ export function ResellerCtaSection() {
               className="mx-auto mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Ask for the current wholesale{" "}
-              <span style={{ color: "var(--hero-accent)" }}>terms</span>
+              Request Pricing or a{" "}
+              <span style={{ color: "var(--hero-accent)" }}>Panel Demonstration</span>
             </h2>
           </FadeIn>
 
@@ -54,7 +54,7 @@ export function ResellerCtaSection() {
           <ScrollReveal direction="up" delay={0.1} once>
             <div className="mt-10 flex flex-row items-center justify-center gap-3">
               <motion.a
-                href={WHATSAPP_LINK}
+                href="#reseller-plans"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 className="flex min-h-12 flex-1 items-center justify-center rounded-xl px-4 py-3.5 text-[13px] font-bold transition-all duration-200 hover:brightness-110 sm:flex-initial sm:px-8 sm:text-[15px]"
@@ -64,7 +64,7 @@ export function ResellerCtaSection() {
                   color: "var(--hero-cta-primary-fg)",
                 }}
               >
-                Buy Reseller Panel Now →
+                Buy Reseller Panel
               </motion.a>
               <motion.a
                 href={WHATSAPP_LINK}
@@ -77,7 +77,7 @@ export function ResellerCtaSection() {
                   backgroundColor: "transparent",
                 }}
               >
-                Request a Free Demo First
+                Request a Free Demo
               </motion.a>
             </div>
           </ScrollReveal>

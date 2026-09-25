@@ -9,7 +9,7 @@ import { routes } from "@/lib/routes";
 
 const NAV_LINKS = [
   { label: "Home", href: routes.home },
-  { label: "Subscription Plan", href: routes.subscriptionPlans },
+  { label: "Pricing", href: routes.subscriptionPlans },
   { label: "Installation Guide", href: routes.installationGuide },
   { label: "Reseller Panel", href: routes.resellerPanel },
   { label: "Contact Us", href: routes.contactUs },
@@ -95,7 +95,7 @@ export function Header() {
               className="hidden md:inline-flex"
             >
               <Link
-                href={routes.contactUs}
+                href={routes.subscriptionPlans}
                 id="hero-get-started"
                 className="shrink-0 rounded-xl bg-gradient-brand px-4 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-200 hover:brightness-110 sm:px-5"
                 style={{
@@ -166,7 +166,7 @@ export function Header() {
                     whileTap={{ scale: 0.98 }}
                   >
                     <Link
-                      href={routes.contactUs}
+                      href={routes.subscriptionPlans}
                       className="flex w-full items-center justify-center rounded-xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-black shadow-sm transition-all duration-200 hover:brightness-110"
                       style={{
                         boxShadow: "var(--hero-cta-primary-shadow)",

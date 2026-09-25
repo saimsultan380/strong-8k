@@ -27,7 +27,7 @@ export function ContactHero() {
               className="text-[11px] font-bold uppercase tracking-[0.2em]"
               style={{ color: "var(--hero-accent)" }}
             >
-              Free Trial & Contact
+              Contact & Support
             </span>
           </div>
         </HeroReveal>
@@ -36,31 +36,28 @@ export function ContactHero() {
           className="mx-auto max-w-[920px] text-center text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[52px]"
           style={{ color: "var(--hero-heading)" }}
           lines={[
-            "IPTV Free Trial UK – Test Strong 8K Channels for",
-            <span key="accent" style={{ color: "var(--hero-accent)" }}>
-              24 Hours
-            </span>,
+            <>
+              Contact <span style={{ color: "var(--hero-accent)" }}>Strong 8K</span>
+            </>,
           ]}
         />
 
         <HeroReveal delay={0.18}>
           <div className="mx-auto mt-5 max-w-[760px] space-y-4 text-sm leading-[1.75] sm:text-[15px] md:text-base">
             <p style={{ color: "var(--hero-muted)" }}>
-              Use your free IPTV trial to see how Strong 8K works on the device and connection you
-              already use. Request a 24-hour trial, tell us your device model and receive the
-              login details for a compatible player. No payment or card details are required.
+              Contact our team for help with an existing account, installation, renewal, pricing
+              or reseller enquiries. You can also request a free 24-hour trial before subscribing.
             </p>
             <p style={{ color: "var(--hero-muted)" }}>
-              Browse 40,000+ live channels and explore 120,000+ films and series, with streams up
-              to 8K UHD on supported content and hardware. Check favourite categories, try the
-              programme guide and see how playback performs on your own screen. Channel
-              availability and picture quality vary by content and setup.
+              For a technical issue, include your device model, app name, when the problem started
+              and any error message. Our technical support continues throughout your active
+              subscription.
             </p>
           </div>
         </HeroReveal>
 
         <HeroReveal variant="cta" delay={0.28}>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href={WHATSAPP_LINK}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-bold transition-all duration-200 hover:brightness-110 sm:text-[15px]"
@@ -71,7 +68,18 @@ export function ContactHero() {
               }}
             >
               <MessageCircle className="h-4 w-4" />
-              Get My Free Trial on WhatsApp →
+              Message Support on WhatsApp
+            </a>
+            <a
+              href="#free-trial"
+              className="inline-flex min-h-12 items-center justify-center rounded-xl border px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:border-[var(--hero-accent)] sm:text-[15px]"
+              style={{
+                borderColor: "var(--hero-btn-border)",
+                color: "var(--hero-cta-secondary-text)",
+                backgroundColor: "transparent",
+              }}
+            >
+              Request a Free Trial
             </a>
           </div>
         </HeroReveal>

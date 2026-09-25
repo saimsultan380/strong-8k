@@ -43,7 +43,7 @@ export function HomepageCtaSection() {
               className="mx-auto mt-5 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Ready to try{" "}
+              Ready to Try{" "}
               <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>?
             </h2>
           </FadeIn>
@@ -53,9 +53,16 @@ export function HomepageCtaSection() {
               className="mx-auto mt-7 max-w-[680px] text-[15px] leading-[1.8] sm:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Look at the plans, test the 40,000+ channel catalogue and ask about any feature you
-              need before ordering. The Strong 8K IPTV team can help with device setup, 24/7
-              account questions and current availability.
+              Look at the prices, test the catalogue and ask about any feature you need before
+              ordering. Refund conditions are explained in the{" "}
+              <Link
+                href={`${routes.subscriptionPlans}#refund-policy`}
+                className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
+                style={{ color: "var(--hero-heading)" }}
+              >
+                refund policy
+              </Link>
+              .
             </p>
           </FadeIn>
 
@@ -86,8 +93,8 @@ export function HomepageCtaSection() {
                 </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
-                <a
-                  href="#pricing"
+                <Link
+                  href={routes.subscriptionPlans}
                   className="flex items-center justify-center rounded-xl border px-4 py-4 text-[13px] font-bold transition-all duration-200 hover:brightness-110 sm:px-8 sm:text-[15px]"
                   style={{
                     borderColor: "var(--hero-pill-border)",
@@ -96,7 +103,7 @@ export function HomepageCtaSection() {
                   }}
                 >
                   Subscribe Now
-                </a>
+                </Link>
               </motion.div>
             </div>
           </ScrollReveal>

@@ -13,7 +13,7 @@ const PACK_FEATURES = [
   "40,000+ channels & 120,000+ VOD",
   "SD to 8K UHD quality",
   "Instant line activation from your dashboard",
-  "Unlimited customer accounts",
+  "Create customer accounts from your credit balance",
   "White label branding available",
   "24/7 reseller support",
 ];
@@ -94,8 +94,8 @@ export function ResellerPlansSection() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Strong 8K reseller credit{" "}
-              <span style={{ color: "var(--hero-accent)" }}>packages</span>
+              Reseller Credit{" "}
+              <span style={{ color: "var(--hero-accent)" }}>Packages</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -173,7 +173,7 @@ export function ResellerPlansSection() {
                 </ul>
 
                 <motion.a
-                  href={WHATSAPP_LINK}
+                  href={`${WHATSAPP_LINK}?text=${encodeURIComponent(`Get this package: ${pack.name}, ${pack.credits}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -194,12 +194,18 @@ export function ResellerPlansSection() {
 
         <FadeIn delay={0.2}>
           <div className="mx-auto mt-14 max-w-3xl">
-            <p
-              className="mb-5 text-center text-base font-bold"
+            <h2
+              className="mb-5 text-center text-2xl font-bold leading-tight sm:text-3xl"
               style={{ color: "var(--hero-heading)" }}
             >
-              Credit usage: 1 month uses 1 credit; 3 months use 3 credits; 6 months use 6
-              credits; and 12 months use 12 credits.
+              How Credits Are <span style={{ color: "var(--hero-accent)" }}>Used</span>
+            </h2>
+            <p
+              className="mb-5 text-center text-sm leading-[1.75] sm:text-[15px]"
+              style={{ color: "var(--hero-muted)" }}
+            >
+              One credit covers one month of one standard customer account. Extra simultaneous
+              accounts should be confirmed with support before you create the line.
             </p>
             <div
               className="overflow-hidden rounded-2xl border"
@@ -209,7 +215,7 @@ export function ResellerPlansSection() {
                 <table className="w-full min-w-[420px] text-left text-sm sm:text-[15px]">
                   <thead>
                     <tr style={{ borderBottom: "1px solid var(--feature-card-border)" }}>
-                      {["Subscription", "Credits", "Your Cost (Pro rate)"].map((h) => (
+                      {["Subscription duration", "Credits for one standard customer account"].map((h) => (
                         <th
                           key={h}
                           className="px-5 py-4 font-bold md:px-6"
@@ -231,9 +237,6 @@ export function ResellerPlansSection() {
                         </td>
                         <td className="px-5 py-3.5 md:px-6" style={{ color: "var(--hero-muted)" }}>
                           {row.credits}
-                        </td>
-                        <td className="px-5 py-3.5 md:px-6" style={{ color: "var(--hero-accent)" }}>
-                          {row.cost}
                         </td>
                       </tr>
                     ))}

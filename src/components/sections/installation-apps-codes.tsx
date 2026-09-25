@@ -56,8 +56,8 @@ export function InstallationAppsCodes() {
             className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
             style={{ color: "var(--hero-heading)" }}
           >
-            Recommended apps and{" "}
-            <span style={{ color: "var(--hero-accent)" }}>Downloader code</span>
+            Strong 8K App and{" "}
+            <span style={{ color: "var(--hero-accent)" }}>Downloader Code</span>
           </h2>
         </FadeIn>
         <FadeIn delay={0.15}>

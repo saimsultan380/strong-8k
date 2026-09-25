@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const HELPFUL_LINKS = [
   { label: "Home", href: routes.home },
-  { label: "Subscription Plans", href: routes.subscriptionPlans },
+  { label: "Pricing", href: routes.subscriptionPlans },
   { label: "Installation Guide", href: routes.installationGuide },
   { label: "Reseller Panel", href: routes.resellerPanel },
   { label: "Free Trial / Contact", href: routes.contactUs },
