@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Tv, MonitorPlay, Headphones } from "lucide-react";
-import { routes } from "@/lib/routes";
 import { Container } from "@/components/layout/container";
 import { HeroReveal } from "@/components/animation/hero-reveal";
 import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
@@ -77,13 +76,13 @@ export function HeroSection() {
             <div className="mt-5 flex flex-row items-stretch justify-start gap-2 sm:mt-6 sm:gap-4">
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 sm:flex-initial">
                 <Link
-                  href={`${routes.subscriptionPlans}#pricing`}
+                  href="#home-pricing"
                   className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
                 >
-                  Subscribe Now
+                  View Plans & Prices
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-[1.35] sm:flex-initial">
@@ -96,7 +95,7 @@ export function HeroSection() {
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
                 >
-                  Start 24-Hour Free Trial
+                  Start Free Trial
                 </a>
               </motion.div>
             </div>

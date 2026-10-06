@@ -95,14 +95,14 @@ export function Header() {
               className="hidden md:inline-flex"
             >
               <Link
-                href={routes.subscriptionPlans}
+                href={`${routes.home}#home-pricing`}
                 id="hero-get-started"
                 className="shrink-0 rounded-xl bg-gradient-brand px-4 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-200 hover:brightness-110 sm:px-5"
                 style={{
                   boxShadow: "var(--hero-cta-primary-shadow)",
                 }}
               >
-                Subscribe Now
+                View Plans & Prices
               </Link>
             </motion.div>
           </div>
@@ -166,14 +166,14 @@ export function Header() {
                     whileTap={{ scale: 0.98 }}
                   >
                     <Link
-                      href={routes.subscriptionPlans}
+                      href={`${routes.home}#home-pricing`}
                       className="flex w-full items-center justify-center rounded-xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-black shadow-sm transition-all duration-200 hover:brightness-110"
                       style={{
                         boxShadow: "var(--hero-cta-primary-shadow)",
                       }}
                       onClick={closeMenu}
                     >
-                      Subscribe Now
+                      View Plans & Prices
                     </Link>
                   </motion.div>
                 </motion.div>

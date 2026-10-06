@@ -71,7 +71,7 @@ export function HomepageCtaSection() {
               className="mx-auto mt-5 max-w-[680px] text-[15px] leading-[1.8] sm:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Start free trial · Subscribe Now · Contact Us
+              Start Free Trial · View Plans & Prices · Contact Us
             </p>
           </FadeIn>
 
@@ -89,12 +89,12 @@ export function HomepageCtaSection() {
                     color: "var(--hero-cta-primary-fg)",
                   }}
                 >
-                  Start free trial
+                  Start Free Trial
                 </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
                 <Link
-                  href={routes.subscriptionPlans}
+                  href="#home-pricing"
                   className="flex items-center justify-center rounded-xl border px-4 py-4 text-[13px] font-bold transition-all duration-200 hover:brightness-110 sm:px-8 sm:text-[15px]"
                   style={{
                     borderColor: "var(--hero-pill-border)",
@@ -102,7 +102,7 @@ export function HomepageCtaSection() {
                     color: "var(--hero-heading)",
                   }}
                 >
-                  Subscribe Now
+                  View Plans & Prices
                 </Link>
               </motion.div>
             </div>
