@@ -10,8 +10,6 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { HomepageCtaSection } from "@/components/sections/homepage-cta-section";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
-
 export function HomePage() {
   return (
     <main className="relative flex flex-col">
@@ -27,7 +25,6 @@ export function HomePage() {
       <FaqSection />
       <HomepageCtaSection />
       <Footer />
-      <FloatingWhatsApp />
     </main>
   );
 }

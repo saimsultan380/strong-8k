@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { InstallationGuideHero } from "@/components/sections/installation-guide-hero";
 import { InstallationBeforeStart } from "@/components/sections/installation-before-start";
 import { InstallationAppsCodes } from "@/components/sections/installation-apps-codes";
@@ -33,7 +32,6 @@ export default function InstallationGuidePage() {
       <InstallationFaqSection />
       <InstallationCtaSection />
       <Footer />
-      <FloatingWhatsApp />
     </main>
   );
 }

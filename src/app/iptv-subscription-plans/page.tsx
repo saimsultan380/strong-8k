@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { SubscriptionPlansHero } from "@/components/sections/subscription-plans-hero";
 import { MultiConnectionPlansSection } from "@/components/sections/multi-connection-plans-section";
 import { SubscriptionBeforeOrder } from "@/components/sections/subscription-before-order";
@@ -29,7 +28,6 @@ export default function SubscriptionPlansPage() {
       <RefundPolicySection />
       <SubscriptionCtaSection />
       <Footer />
-      <FloatingWhatsApp />
     </main>
   );
 }

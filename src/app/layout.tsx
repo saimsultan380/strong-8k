@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ParticlesBg from "@/components/ui/particles-bg";
 import { JsonLd } from "@/components/seo/json-ld";
+import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { siteJsonLd } from "@/lib/breadcrumbs";
 import { canonicalUrl, siteMetadataBase } from "@/lib/site";
 import { routes } from "@/lib/routes";
@@ -58,6 +59,7 @@ export default function RootLayout({
           <div className="relative z-10 flex min-h-full flex-1 flex-col bg-transparent">
             {children}
           </div>
+          <FloatingWhatsApp />
         </ThemeProvider>
       </body>
     </html>

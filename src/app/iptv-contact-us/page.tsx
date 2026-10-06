@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { ContactHero } from "@/components/sections/contact-hero";
 import { ContactMethodsForm } from "@/components/sections/contact-methods-form";
 import { ContactCtaSection } from "@/components/sections/contact-cta-section";
@@ -29,7 +28,6 @@ export default function ContactUsPage() {
       <ContactHelpTopics />
       <ContactFaqSection />
       <Footer />
-      <FloatingWhatsApp />
     </main>
   );
 }

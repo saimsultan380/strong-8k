@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { ResellerPanelHero } from "@/components/sections/reseller-panel-hero";
 import { ResellerExplainerSection } from "@/components/sections/reseller-explainer-section";
 import { ResellerPlansSection } from "@/components/sections/reseller-plans-section";
@@ -37,7 +36,6 @@ export default function ResellerPanelPage() {
       <ResellerFaqSection />
       <ResellerCtaSection />
       <Footer />
-      <FloatingWhatsApp />
     </main>
   );
 }
