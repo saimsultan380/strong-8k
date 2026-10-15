@@ -27,8 +27,8 @@ export function HeroSection() {
     <section className="relative isolate">
       <Container className="relative z-10 grid min-h-[100svh] items-start gap-4 pb-8 pt-28 sm:gap-6 sm:pt-32 lg:grid-cols-[minmax(0,1.08fr)_minmax(280px,0.85fr)] lg:items-center lg:gap-10 lg:pb-14 lg:pt-32">
         <HeroReveal
-          variant="media"
-          delay={0.08}
+          variant="logoHero"
+          delay={0.16}
           className="order-1 flex justify-center lg:order-2"
         >
           <div className="relative w-full max-w-[180px] sm:max-w-[250px] lg:max-w-[360px]">

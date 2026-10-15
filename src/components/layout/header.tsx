@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { routes } from "@/lib/routes";
+import { HeroReveal } from "@/components/animation/hero-reveal";
 
 const NAV_LINKS = [
   { label: "Home", href: routes.home },
@@ -46,15 +47,17 @@ export function Header() {
             className="flex shrink-0 items-center gap-2.5 no-underline"
             onClick={closeMenu}
           >
-            <Image
-              src="/strong-8k.PNG?v=2"
-              alt="Strong 8K IPTV"
-              width={64}
-              height={64}
-              loading="eager"
-              unoptimized
-              className="h-12 w-12 object-contain sm:h-[3.25rem] sm:w-[3.25rem]"
-            />
+            <HeroReveal variant="logo" delay={0.05}>
+              <Image
+                src="/strong-8k.PNG?v=2"
+                alt="Strong 8K IPTV"
+                width={64}
+                height={64}
+                loading="eager"
+                unoptimized
+                className="h-12 w-12 object-contain sm:h-[3.25rem] sm:w-[3.25rem]"
+              />
+            </HeroReveal>
           </Link>
 
           {/* Nav links + actions */}

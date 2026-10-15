@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { siteConfig, whatsappUrlWithText } from "@/lib/site";
+import { siteConfig, whatsappUrl, whatsappUrlWithText } from "@/lib/site";
 
 const OPEN_AFTER_MS = 2000;
+const VISIBLE_MS = 5500;
 const subscribeWhatsapp = whatsappUrlWithText("Subscribe now");
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -20,8 +21,15 @@ export function FloatingWhatsApp() {
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setOpen(true), OPEN_AFTER_MS);
-    return () => window.clearTimeout(timer);
+    const openTimer = window.setTimeout(() => setOpen(true), OPEN_AFTER_MS);
+    const closeTimer = window.setTimeout(
+      () => setOpen(false),
+      OPEN_AFTER_MS + VISIBLE_MS,
+    );
+    return () => {
+      window.clearTimeout(openTimer);
+      window.clearTimeout(closeTimer);
+    };
   }, []);
 
   const spring = reduceMotion
@@ -29,92 +37,53 @@ export function FloatingWhatsApp() {
     : { type: "spring" as const, stiffness: 380, damping: 28, mass: 0.8 };
 
   return (
-    <div className="fixed right-4 bottom-4 z-[100] flex items-center sm:right-6 sm:bottom-6">
-      <div className="relative flex items-center">
-        <AnimatePresence>
-          {open ? (
-            <motion.div
-              key="whatsapp-offer"
-              role="dialog"
-              aria-label="Subscribe on WhatsApp"
-              initial={reduceMotion ? { opacity: 0 } : { x: "100%", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={reduceMotion ? { opacity: 0 } : { x: "100%", opacity: 0 }}
-              transition={spring}
-              className="absolute right-12 z-0 origin-right"
-            >
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] py-2 pr-3 pl-2 text-white shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
-                <motion.button
-                  type="button"
-                  onClick={() => setOpen(false)}
-                  aria-label="Close WhatsApp offer"
-                  initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.6 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: reduceMotion ? 0 : 0.12, duration: 0.22 }}
-                  whileHover={{ scale: 1.08 }}
-                  whileTap={{ scale: 0.92 }}
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/80 hover:border-white/40 hover:bg-white/10 hover:text-white"
-                >
-                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden>
-                    <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-                  </svg>
-                </motion.button>
-                <motion.a
-                  href={subscribeWhatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, x: reduceMotion ? 0 : 12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: reduceMotion ? 0 : 0.08, duration: 0.28 }}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-bold whitespace-nowrap text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)]"
-                >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  Subscribe Now
-                </motion.a>
-              </div>
-            </motion.div>
-          ) : null}
-        </AnimatePresence>
-
-      <motion.button
-        type="button"
-        onClick={() => setOpen((current) => !current)}
-        aria-expanded={open}
-        aria-label={
-          open
-            ? "Close WhatsApp offer"
-            : `Chat with ${siteConfig.shortName} on WhatsApp`
-        }
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={reduceMotion ? { duration: 0.01 } : { type: "spring", stiffness: 420, damping: 18, delay: 0.4 }}
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.94 }}
-        className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_rgba(37,211,102,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-      >
-        {!reduceMotion ? (
-          <motion.span
-            aria-hidden
-            className="absolute inset-0 rounded-full bg-[#25D366]"
-            animate={open ? { scale: 1, opacity: 0 } : { scale: [1, 1.45], opacity: [0.45, 0] }}
-            transition={
-              open
-                ? { duration: 0.2 }
-                : { duration: 1.8, repeat: Infinity, ease: "easeOut" }
-            }
-          />
+    <>
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            key="whatsapp-offer"
+            role="dialog"
+            aria-label="Subscribe on WhatsApp"
+            initial={reduceMotion ? { opacity: 0 } : { x: "110%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={reduceMotion ? { opacity: 0 } : { x: "110%", opacity: 0 }}
+            transition={spring}
+            className="fixed right-4 bottom-24 z-[100] origin-right sm:right-6 sm:bottom-28"
+          >
+            <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] py-2 pr-3 pl-2 text-white shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                aria-label="Close subscribe offer"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:bg-white/10 hover:text-white"
+              >
+                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden>
+                  <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+                </svg>
+              </button>
+              <a
+                href={subscribeWhatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-bold whitespace-nowrap text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-transform duration-200 hover:scale-[1.03]"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                Subscribe Now
+              </a>
+            </div>
+          </motion.div>
         ) : null}
-        <motion.span
-          className="relative flex"
-          animate={open && !reduceMotion ? { rotate: [0, -8, 8, 0] } : { rotate: 0 }}
-          transition={{ duration: 0.45 }}
-        >
-          <WhatsAppIcon className="h-8 w-8" />
-        </motion.span>
-      </motion.button>
-      </div>
-    </div>
+      </AnimatePresence>
+
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Chat with ${siteConfig.shortName} on WhatsApp`}
+        className="fixed right-4 bottom-4 z-[100] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_rgba(37,211,102,0.45)] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:right-6 sm:bottom-6"
+      >
+        <WhatsAppIcon className="h-8 w-8" />
+      </a>
+    </>
   );
 }
