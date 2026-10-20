@@ -43,7 +43,7 @@ export function whatsappUrlWithText(text: string): string {
 
 /** Exact SERP titles (shown in Google + browser tab) */
 export const pageTitles = {
-  home: "Strong 8K IPTV – Premium IPTV Subscription with 4K & 8K",
+  home: "Strong 8K – Premium IPTV Subscription up to 8K UHD",
   subscriptionPlans: "IPTV Subscription Prices & Plans | Strong 8K",
   installationGuide: "Strong 8K Installation Guide | Supported Device Setup",
   resellerPanel: "Strong 8K Reseller Panel | Wholesale Credits & Accounts",

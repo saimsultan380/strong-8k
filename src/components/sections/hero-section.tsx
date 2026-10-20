@@ -73,11 +73,11 @@ export function HeroSection() {
           </HeroReveal>
 
           <HeroReveal variant="cta" delay={0.28}>
-            <div className="mt-5 flex flex-row items-stretch justify-start gap-2 sm:mt-6 sm:gap-4">
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 sm:flex-initial">
+            <div className="mt-5 flex w-full max-w-full flex-row items-stretch justify-start gap-2.5 sm:mt-6 sm:gap-4">
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 basis-0 sm:flex-initial">
                 <Link
                   href="#home-pricing"
-                  className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
+                  className="flex h-full min-h-12 w-full items-center justify-center rounded-xl bg-gradient-brand px-3 py-3 text-center text-[13px] font-bold leading-tight text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px] sm:leading-normal"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
@@ -85,12 +85,12 @@ export function HeroSection() {
                   View Plans & Prices
                 </Link>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-[1.35] sm:flex-initial">
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 basis-0 sm:flex-initial">
                 <a
                   href={freeTrialWhatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl bg-gradient-brand px-2.5 py-3 text-[12px] font-bold text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px]"
+                  className="flex h-full min-h-12 w-full items-center justify-center rounded-xl bg-gradient-brand px-3 py-3 text-center text-[13px] font-bold leading-tight text-black transition-all duration-200 hover:brightness-110 sm:min-w-52 sm:px-7 sm:text-[14px] sm:leading-normal"
                   style={{
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}

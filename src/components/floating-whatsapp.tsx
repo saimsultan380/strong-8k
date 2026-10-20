@@ -7,6 +7,7 @@ import { siteConfig, whatsappUrl, whatsappUrlWithText } from "@/lib/site";
 const OPEN_AFTER_MS = 2000;
 const VISIBLE_MS = 5500;
 const subscribeWhatsapp = whatsappUrlWithText("Subscribe now");
+const slideEase = [0.22, 1, 0.36, 1] as const;
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -32,30 +33,38 @@ export function FloatingWhatsApp() {
     };
   }, []);
 
-  const spring = reduceMotion
-    ? { duration: 0.01 }
-    : { type: "spring" as const, stiffness: 380, damping: 28, mass: 0.8 };
-
   return (
-    <>
-      <AnimatePresence>
+    <div className="pointer-events-none fixed right-3 bottom-4 z-[100] flex max-w-[calc(100vw-1.5rem)] items-center justify-end gap-2 sm:right-6 sm:bottom-6">
+      <AnimatePresence initial={false}>
         {open ? (
           <motion.div
             key="whatsapp-offer"
             role="dialog"
             aria-label="Subscribe on WhatsApp"
-            initial={reduceMotion ? { opacity: 0 } : { x: "110%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={reduceMotion ? { opacity: 0 } : { x: "110%", opacity: 0 }}
-            transition={spring}
-            className="fixed right-4 bottom-24 z-[100] origin-right sm:right-6 sm:bottom-28"
+            initial={
+              reduceMotion
+                ? { opacity: 0 }
+                : { x: 28, opacity: 0, scale: 0.96 }
+            }
+            animate={{ x: 0, opacity: 1, scale: 1 }}
+            exit={
+              reduceMotion
+                ? { opacity: 0 }
+                : { x: 28, opacity: 0, scale: 0.96 }
+            }
+            transition={
+              reduceMotion
+                ? { duration: 0.01 }
+                : { duration: 0.48, ease: slideEase }
+            }
+            className="pointer-events-auto min-w-0"
           >
-            <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] py-2 pr-3 pl-2 text-white shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
+            <div className="flex max-w-[min(16.5rem,calc(100vw-5.25rem))] items-center gap-1.5 rounded-full border border-white/10 bg-[#111] py-1.5 pr-2 pl-1.5 text-white shadow-[0_12px_32px_rgba(0,0,0,0.45)] sm:max-w-none sm:gap-2 sm:py-2 sm:pr-3 sm:pl-2">
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close subscribe offer"
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:bg-white/10 hover:text-white"
+                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:bg-white/10 hover:text-white sm:h-8 sm:w-8"
               >
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden>
                   <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
@@ -65,10 +74,10 @@ export function FloatingWhatsApp() {
                 href={subscribeWhatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-bold whitespace-nowrap text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-transform duration-200 hover:scale-[1.03]"
+                className="flex min-w-0 items-center gap-1.5 rounded-full bg-[#25D366] px-3 py-2 text-[12px] font-bold text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-transform duration-200 hover:scale-[1.03] sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm"
               >
-                <WhatsAppIcon className="h-5 w-5" />
-                Get £42.99 a Year
+                <WhatsAppIcon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
+                <span className="truncate">Get £42.99 a Year</span>
               </a>
             </div>
           </motion.div>
@@ -80,10 +89,10 @@ export function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Chat with ${siteConfig.shortName} on WhatsApp`}
-        className="fixed right-4 bottom-4 z-[100] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_rgba(37,211,102,0.45)] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:right-6 sm:bottom-6"
+        className="pointer-events-auto relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_rgba(37,211,102,0.45)] transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
       >
         <WhatsAppIcon className="h-8 w-8" />
       </a>
-    </>
+    </div>
   );
 }
