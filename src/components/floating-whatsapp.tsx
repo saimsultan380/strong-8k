@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { siteConfig, whatsappUrl, whatsappUrlWithText } from "@/lib/site";
+import { siteConfig, whatsappUrlWithText } from "@/lib/site";
 
 const OPEN_AFTER_MS = 2000;
 const VISIBLE_MS = 5500;
-const subscribeWhatsapp = whatsappUrlWithText("Subscribe now");
+const SLIDE_CTA_TEXT = "Get £42.99 a Year";
+const slideWhatsapp = whatsappUrlWithText(SLIDE_CTA_TEXT);
+const floatingWhatsapp = whatsappUrlWithText("Subscribe Now");
 const slideEase = [0.22, 1, 0.36, 1] as const;
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -71,13 +73,13 @@ export function FloatingWhatsApp() {
                 </svg>
               </button>
               <a
-                href={subscribeWhatsapp}
+                href={slideWhatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex min-w-0 items-center gap-1.5 rounded-full bg-[#25D366] px-3 py-2 text-[12px] font-bold text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-transform duration-200 hover:scale-[1.03] sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm"
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
-                <span className="truncate">Get £42.99 a Year</span>
+                <span className="truncate">{SLIDE_CTA_TEXT}</span>
               </a>
             </div>
           </motion.div>
@@ -85,7 +87,7 @@ export function FloatingWhatsApp() {
       </AnimatePresence>
 
       <a
-        href={whatsappUrl}
+        href={floatingWhatsapp}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Chat with ${siteConfig.shortName} on WhatsApp`}
