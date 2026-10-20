@@ -68,7 +68,7 @@ export function FloatingWhatsApp() {
                 className="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-bold whitespace-nowrap text-white shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-transform duration-200 hover:scale-[1.03]"
               >
                 <WhatsAppIcon className="h-5 w-5" />
-                Subscribe Now
+                Get £42.99 a Year
               </a>
             </div>
           </motion.div>

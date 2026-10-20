@@ -47,12 +47,12 @@ export function HeroReveal({
   const reduceMotion = useReducedMotion();
   const meshReady = useMeshReady();
   const logo = isLogoVariant(variant) ? logoPresets[variant] : null;
-  const initial = logo
+  const initial = isLogoVariant(variant)
     ? {
         opacity: 0,
-        y: logo.y,
-        scale: logo.scale,
-        filter: `blur(${logo.blur}px)`,
+        y: logoPresets[variant].y,
+        scale: logoPresets[variant].scale,
+        filter: `blur(${logoPresets[variant].blur}px)`,
       }
     : variant === "text"
       ? heroRevealInitial
