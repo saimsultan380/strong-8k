@@ -7,8 +7,8 @@ import { ScrollReveal } from "@/components/animation/scroll-reveal";
 const ROWS = [
   {
     plan: "1 month",
-    price: "£9.99",
-    perMonth: "£9.99",
+    price: "£9.97",
+    perMonth: "£9.97",
     save: "—",
     highlight: false,
   },
@@ -21,14 +21,14 @@ const ROWS = [
   },
   {
     plan: "6 months",
-    price: "£25.99",
+    price: "£25.97",
     perMonth: "about £4.33",
     save: "about 57% less",
     highlight: false,
   },
   {
     plan: "12 months",
-    price: "£42.99",
+    price: "£42.97",
     perMonth: "about £3.58",
     save: "about 64% less",
     highlight: true,
@@ -78,7 +78,7 @@ export function SubscriptionComparisonSection() {
             className="mx-auto mt-6 max-w-3xl text-center text-[15px] leading-[1.75]"
             style={{ color: "var(--hero-muted)" }}
           >
-            The comparison uses the current £9.99 monthly price and rounded figures. You pay the
+            The comparison uses the current £9.97 monthly price and rounded figures. You pay the
             displayed total for the selected term, not the effective monthly figure each month.
           </p>
         </FadeIn>

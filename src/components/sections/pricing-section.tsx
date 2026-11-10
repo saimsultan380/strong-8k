@@ -31,8 +31,7 @@ export function PricingSection() {
               className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[42px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Strong 8K IPTV{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Plans & Prices</span>
+              Strong 8K subscription plans and prices
             </h2>
           </FadeIn>
           <FadeIn delay={0.12}>
@@ -40,8 +39,7 @@ export function PricingSection() {
               className="mt-5 text-sm leading-[1.75] sm:text-[15px]"
               style={{ color: "var(--hero-muted)" }}
             >
-              Choose 1, 3, 6 or 12 months. Every plan includes the same catalogue and one
-              screen at a time.
+              A 1-month plan is £9.97, 3 months are £17.99, 6 months are £25.97 and 12 months are £42.97. Each price covers the whole selected duration for one standard account, which allows one active stream at a time. Additional simultaneous streams need the matching extra-account option. Renewal is optional, and some player apps charge separately. Customers choose Strong 8K for the 40,000+ live channels, 120,000+ films and series, setup help, 24/7 support and a free 24-hour trial.
             </p>
           </FadeIn>
         </div>

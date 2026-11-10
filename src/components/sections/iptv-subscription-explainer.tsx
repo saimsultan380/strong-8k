@@ -7,10 +7,14 @@ import {
   whatsappUrlWithText,
 } from "@/lib/site";
 
-const BENEFITS = [
-  "Live television and on-demand content",
-  "One active stream on a standard account",
-  "Check compatibility before you order",
+const FACTS = [
+  { label: "Service", value: "IPTV subscription for live TV, sport, films and series" },
+  { label: "Catalogue", value: "40,000+ live channels and 120,000+ films and series" },
+  { label: "Viewers", value: "UK and USA" },
+  { label: "Plans", value: "1 month £9.97, 3 months £17.99, 6 months £25.97, 12 months £42.97" },
+  { label: "Streams", value: "One active stream on a standard account" },
+  { label: "Trial", value: "Free for 24 hours, with no card required" },
+  { label: "Picture", value: "SD, HD, Full HD, 4K and up to 8K UHD where supported" },
 ];
 
 const freeTrialWhatsapp = whatsappUrlWithText(
@@ -42,8 +46,7 @@ export function IptvSubscriptionExplainer() {
               className="mt-4 max-w-xl text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-[48px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              What Is{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>?
+              What is Strong 8K and how does it work?
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -51,25 +54,17 @@ export function IptvSubscriptionExplainer() {
               className="mt-6 max-w-xl text-sm leading-[1.8] sm:text-[15px] md:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Strong 8K IPTV is a subscription service for watching live television and
-              on-demand content through an internet connection. You receive account details to
-              enter into a compatible IPTV player.
+              Strong 8K, also written Strong8K, is an IPTV subscription service for watching live TV, sport, films and series over the internet. At strong-8k.co.uk, customers can choose 1, 3, 6 or 12-month plans, request a free 24-hour trial and get help setting up a compatible player. One standard account allows one active stream at a time.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <ul className="mt-8 space-y-3">
-              {BENEFITS.map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3 text-sm">
-                  <span
-                    className="mt-[9px] h-px w-3 shrink-0"
-                    style={{ background: "var(--grad-brand)" }}
-                    aria-hidden
-                  />
-                  <span style={{ color: "var(--hero-heading)" }}>{benefit}</span>
-                </li>
-              ))}
-            </ul>
+            <p
+              className="mt-6 max-w-xl text-sm leading-[1.8] sm:text-[15px] md:text-base"
+              style={{ color: "var(--hero-muted)" }}
+            >
+              IPTV sends television over your internet connection to a compatible player. After you choose a plan or trial, Strong 8K sends the account details for that player. The service is offered to viewers in the UK and USA. Extra accounts are available when more than one screen needs to play at the same time.
+            </p>
           </FadeIn>
         </div>
 
@@ -78,30 +73,23 @@ export function IptvSubscriptionExplainer() {
             className="rounded-2xl border p-6 sm:p-8 md:p-10"
             style={{ borderColor: "var(--feature-card-border)", backgroundColor: "transparent" }}
           >
-            <div className="grid gap-4 border-b pb-6 sm:grid-cols-3" style={{ borderColor: "var(--feature-card-border)" }}>
-              {[
-                { value: "40K+", label: "Live channels" },
-                { value: "8K", label: "UHD options" },
-                { value: "1", label: "Screen as standard" },
-              ].map(({ value, label }) => (
-                <div key={label}>
-                  <p className="text-2xl font-black text-gradient-brand">{value}</p>
-                  <p className="mt-1 text-xs" style={{ color: "var(--hero-muted)" }}>
-                    {label}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 space-y-5">
-              <p
-                className="text-sm leading-[1.8] sm:text-[15px] md:text-base"
-                style={{ color: "var(--hero-muted)" }}
-              >
-                A standard account allows one active stream at a time. Additional accounts are
-                available when several devices need to stream simultaneously. You can check
-                compatibility and test the service before ordering.
-              </p>
-            </div>
+            <h3 className="text-lg font-bold" style={{ color: "var(--hero-heading)" }}>
+              Strong 8K at a glance
+            </h3>
+            <table className="mt-5 w-full text-left text-sm">
+              <tbody>
+                {FACTS.map((fact) => (
+                  <tr key={fact.label} className="border-b" style={{ borderColor: "var(--feature-card-border)" }}>
+                    <th className="py-3 pr-4 align-top font-semibold" style={{ color: "var(--hero-heading)" }}>
+                      {fact.label}
+                    </th>
+                    <td className="py-3 align-top" style={{ color: "var(--hero-muted)" }}>
+                      {fact.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
             <a
               href={freeTrialWhatsapp}
               target="_blank"

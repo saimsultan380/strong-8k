@@ -50,7 +50,7 @@ export function siteJsonLd() {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: siteConfig.name,
-      alternateName: [siteConfig.shortName, "Strong 8K IPTV UK"],
+      alternateName: "Strong8K",
       url: canonicalUrl(routes.home),
       description: siteConfig.description,
       inLanguage: "en-GB",

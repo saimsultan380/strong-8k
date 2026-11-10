@@ -8,11 +8,11 @@ import type { Metadata } from "next";
 import { routes } from "@/lib/routes";
 
 export const siteConfig = {
-  name: "Strong 8K IPTV",
+  name: "Strong 8K",
   shortName: "Strong 8K",
   tagline: "Premium Live TV with 40,000+ Channels and 8K UHD",
   description:
-    "Strong 8K IPTV offers a premium IPTV subscription for UK viewers. Explore live TV, movies and series, and request a free 24-hour trial.",
+    "Strong 8K offers 40,000+ live channels and 120,000+ films and series for UK & USA viewers. Compare IPTV plans and try the service free for 24 hours.",
   /** Canonical origin — HTTPS, non-www, no trailing slash on the origin itself */
   siteUrl: "https://strong-8k.co.uk",
   email: "support@strong8k.com",
@@ -43,7 +43,7 @@ export function whatsappUrlWithText(text: string): string {
 
 /** Exact SERP titles (shown in Google + browser tab) */
 export const pageTitles = {
-  home: "Strong 8K – Premium IPTV Subscription up to 8K UHD",
+  home: "Strong 8K IPTV - Premium IPTV Subscription for UK & USA",
   subscriptionPlans: "IPTV Subscription Prices & Plans | Strong 8K",
   installationGuide: "Strong 8K Installation Guide | Supported Device Setup",
   resellerPanel: "Strong 8K Reseller Panel | Wholesale Credits & Accounts",

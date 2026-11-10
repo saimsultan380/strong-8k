@@ -6,7 +6,7 @@ import { siteConfig, whatsappUrlWithText } from "@/lib/site";
 
 const OPEN_AFTER_MS = 2000;
 const VISIBLE_MS = 5500;
-const SLIDE_CTA_TEXT = "Get £42.99 a Year";
+const SLIDE_CTA_TEXT = "Get £42.97 a Year";
 const slideWhatsapp = whatsappUrlWithText(SLIDE_CTA_TEXT);
 const floatingWhatsapp = whatsappUrlWithText("Subscribe Now");
 const slideEase = [0.22, 1, 0.36, 1] as const;

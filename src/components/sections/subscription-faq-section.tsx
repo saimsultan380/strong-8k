@@ -6,12 +6,12 @@ const SUBSCRIPTION_FAQS: FaqItem[] = [
   {
     id: "cost",
     q: "What does a Strong 8K IPTV subscription cost?",
-    a: "Choose one month for £9.99, three months for £17.99, six months for £25.99 or twelve months for £42.99. Each price covers the full selected term.",
+    a: "Choose one month for £9.97, three months for £17.99, six months for £25.97 or twelve months for £42.97. Each price covers the full selected term.",
   },
   {
     id: "lowest-monthly",
     q: "Which IPTV subscription gives the lowest monthly cost?",
-    a: "The twelve-month option works out to about £3.58 per month when paid as a £42.99 total, based on the displayed prices.",
+    a: "The twelve-month option works out to about £3.58 per month when paid as a £42.97 total, based on the displayed prices.",
   },
   {
     id: "free-trial",

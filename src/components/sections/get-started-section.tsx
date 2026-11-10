@@ -9,17 +9,17 @@ import { FadeIn } from "@/components/animation/fade-in";
 const STEPS = [
   {
     number: 1,
-    heading: "Select a term",
-    body: "Compare the four Strong 8K durations above or start with the free test. Choose one screen or ask for a multi-screen quote.",
+    heading: "Choose a plan",
+    body: "Compare the 1, 3, 6 and 12-month totals, or start with the free 24-hour trial. A standard account is one stream. Ask for extra accounts if more than one screen needs to play at once.",
   },
   {
     number: 2,
-    heading: "Receive your details",
-    body: "After Strong 8K activation, your welcome message supplies the information your compatible player requires. Save it in a private place.",
+    heading: "Receive account details",
+    body: "After activation, your welcome message supplies the login your compatible player needs. Save it in a private place.",
   },
   {
     number: 3,
-    heading: "Load and check your account",
+    heading: "Sign in and check playback",
     body: (
       <>
         Follow the{" "}
@@ -59,8 +59,7 @@ export function GetStartedSection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Get Started with Strong 8K in{" "}
-                <span style={{ color: "var(--hero-accent)" }}>Three Steps</span>
+                How to activate your Strong 8K subscription
               </h2>
             </FadeIn>
           </div>

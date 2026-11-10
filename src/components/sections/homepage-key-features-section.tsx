@@ -80,8 +80,7 @@ export function HomepageKeyFeaturesSection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Streaming Quality, Features and{" "}
-                <span style={{ color: "var(--hero-accent)" }}>Support</span>
+                HD, 4K and 8K streaming, EPG and catch-up TV
               </h2>
             </FadeIn>
           </div>
@@ -156,7 +155,7 @@ export function HomepageKeyFeaturesSection() {
                   Need help with any feature?
                 </h3>
                 <p className="mt-3 text-sm leading-[1.75]" style={{ color: "var(--feature-body)" }}>
-                  If you need help with any feature, send the Strong 8K team your app name and
+                  If playback buffers or a login fails, check that the account is active, the details match the player and another device is not using the same one-stream account. Send the Strong 8K team your app name and
                   device model. Our{" "}
                   <Link
                     href={routes.installationGuide}

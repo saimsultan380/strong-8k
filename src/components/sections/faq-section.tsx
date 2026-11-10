@@ -163,12 +163,12 @@ const HOMEPAGE_FAQS: FaqItem[] = [
   {
     id: "reviews-reddit",
     q: "How should I assess reviews or Reddit discussions?",
-    a: "When reading Strong 8K IPTV reviews or Reddit discussions, check the date, seller, country, device and subscription type. Experiences with one seller or account may not describe another. Compare the stated terms and use a trial on your own setup before deciding which provider suits you.",
+    a: "When reading Strong 8K reviews or discussions, check the date, seller, country, device and subscription type. An offer on another site may not match the plans, trial or support on strong-8k.co.uk. Compare the stated terms and use the 24-hour trial on your own setup before deciding.",
   },
   {
     id: "compare-providers",
     q: "How should I compare different providers?",
-    a: "When comparing Strong 8K with Ultra 8K or TREX, check the current catalogue, source resolutions, supported devices, simultaneous streams, total price and support arrangements offered by each seller. Test the programmes you actually watch. A name or advertised channel total is not enough to establish which option is best for your household.",
+    a: "When comparing Strong 8K with cable, satellite, streaming apps or another IPTV seller, check the current catalogue, source resolutions, supported devices, simultaneous streams, total price and support. Test the programmes you actually watch. A name or advertised channel total is not enough to decide which option suits your household.",
   },
   {
     id: "invoice-receipt",
@@ -433,8 +433,7 @@ export function FaqSection() {
       initialVisible={7}
       title={
         <>
-          Strong 8K IPTV{" "}
-          <span style={{ color: "var(--hero-accent)" }}>Questions Answered</span>
+          Strong 8K questions about subscriptions, channels and setup
         </>
       }
     />

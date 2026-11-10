@@ -72,8 +72,7 @@ export function EverythingIncludedSection() {
               className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Explore the Strong 8K Channel and{" "}
-              <span style={{ color: "var(--hero-accent)" }}>On-Demand Catalogue</span>
+              Explore 40,000+ live channels, films, series and sports
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>

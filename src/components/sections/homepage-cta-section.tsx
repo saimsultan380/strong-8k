@@ -43,8 +43,7 @@ export function HomepageCtaSection() {
               className="mx-auto mt-5 max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
               style={{ color: "var(--hero-heading)" }}
             >
-              Ready to Try{" "}
-              <span style={{ color: "var(--hero-accent)" }}>Strong 8K IPTV</span>?
+              Choose your Strong 8K plan or start a free trial
             </h2>
           </FadeIn>
 
@@ -53,8 +52,7 @@ export function HomepageCtaSection() {
               className="mx-auto mt-7 max-w-[680px] text-[15px] leading-[1.8] sm:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Look at the prices, test the catalogue and ask about any feature you need before
-              ordering. Refund conditions are explained in the{" "}
+              Compare the plans, request the 24-hour trial, or contact support before you order. Refund conditions are explained in the{" "}
               <Link
                 href={`${routes.subscriptionPlans}#refund-policy`}
                 className="font-semibold underline transition-colors hover:text-[var(--hero-accent)]"
@@ -89,7 +87,7 @@ export function HomepageCtaSection() {
                     color: "var(--hero-cta-primary-fg)",
                   }}
                 >
-                  Start Free Trial
+                  Request a free trial
                 </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
@@ -102,7 +100,7 @@ export function HomepageCtaSection() {
                     color: "var(--hero-heading)",
                   }}
                 >
-                  View Plans & Prices
+                  View plans and prices
                 </Link>
               </motion.div>
             </div>

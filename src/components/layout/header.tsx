@@ -50,7 +50,7 @@ export function Header() {
             <HeroReveal variant="logo" delay={0.05}>
               <Image
                 src="/strong-8k.PNG?v=2"
-                alt="Strong 8K IPTV"
+                alt="Strong 8K"
                 width={64}
                 height={64}
                 loading="eager"

@@ -90,8 +90,7 @@ export function FirestickCompatibilitySection() {
                 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-[44px]"
                 style={{ color: "var(--hero-heading)" }}
               >
-                Watch on Supported TVs,{" "}
-                <span style={{ color: "var(--hero-accent)" }}>Phones and Computers</span>
+                Watch Strong 8K on Firestick, Smart TV, mobile and computer
               </h2>
             </FadeIn>
           </div>

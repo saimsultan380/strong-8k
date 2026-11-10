@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Tv, MonitorPlay, Headphones } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { HeroReveal } from "@/components/animation/hero-reveal";
 import { HeroTitleReveal } from "@/components/animation/hero-title-reveal";
@@ -11,12 +10,6 @@ import {
   whatsappMessages,
   whatsappUrlWithText,
 } from "@/lib/site";
-
-const HERO_FEATURES = [
-  { label: "40,000+ live channels", icon: Tv },
-  { label: "HD, 4K and 8K UHD options", icon: MonitorPlay },
-  { label: "24/7 support", icon: Headphones },
-];
 
 const freeTrialWhatsapp = whatsappUrlWithText(
   whatsappMessages.startFreeTrial,
@@ -39,7 +32,7 @@ export function HeroSection() {
             />
             <Image
               src="/strong-8k.PNG?v=2"
-              alt="Strong 8K IPTV logo"
+              alt="Strong 8K"
               width={1024}
               height={1024}
               loading="eager"
@@ -53,8 +46,8 @@ export function HeroSection() {
           <HeroTitleReveal
             className="max-w-[720px] text-left text-[28px] font-bold leading-[1.12] tracking-tight text-gradient-brand sm:text-4xl md:text-[44px] lg:text-[48px]"
             lines={[
-              "Strong 8K IPTV – Premium IPTV Subscription",
-              "with 40,000+ Channels & Up to 8K UHD",
+              "Strong 8K - Premium IPTV Subscription",
+              "with 40,000+ Live Channels",
             ]}
           />
 
@@ -64,10 +57,10 @@ export function HeroSection() {
               style={{ color: "var(--hero-muted)" }}
             >
               <p>
-                Strong 8K IPTV brings live television, films and series together through a compatible player on your TV, phone or computer. Explore the available catalogue, check your device and try the service before choosing a subscription.
+                Strong 8K offers a premium IPTV subscription for viewers in the UK and USA, with 40,000+ live channels and 120,000+ on-demand films and series. Watch available sports, news, entertainment and family programmes through a compatible player on your Smart TV, Firestick, phone, tablet or computer.
               </p>
               <p>
-                Built for viewers across the UK, your Strong 8K subscription includes setup assistance and technical support throughout your active subscription. Picture quality depends on the available source stream, your device, player and internet connection, with resolutions up to 8K UHD on supported content.
+                Choose a 1, 3, 6 or 12-month plan, or start with a free 24-hour trial to check the service on your own device. Our Strong 8K IPTV subscriptions include setup assistance and 24/7 support. One standard account allows one active stream at a time, with extra accounts available for simultaneous viewing. Picture quality ranges from SD to HD, Full HD, 4K and up to 8K UHD where the source stream and your equipment support it.
               </p>
             </div>
           </HeroReveal>
@@ -82,7 +75,7 @@ export function HeroSection() {
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
                 >
-                  View Plans & Prices
+                  View plans and prices
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="min-w-0 flex-1 basis-0 sm:flex-initial">
@@ -95,38 +88,19 @@ export function HeroSection() {
                     boxShadow: "var(--hero-cta-primary-shadow)",
                   }}
                 >
-                  Start Free Trial
+                  Request a free trial
                 </a>
               </motion.div>
             </div>
           </HeroReveal>
 
           <HeroReveal delay={0.36}>
-            <ul className="mt-5 grid grid-cols-3 gap-2 text-center sm:gap-4 sm:text-left lg:max-w-[680px]">
-              {HERO_FEATURES.map((feature) => {
-                const Icon = feature.icon;
-                return (
-                  <li
-                    key={feature.label}
-                    className="flex flex-col items-center gap-1.5 border-r px-1 last:border-r-0 sm:flex-row sm:items-start sm:pr-4 sm:text-left"
-                    style={{ borderColor: "var(--hero-divider)" }}
-                  >
-                    <Icon
-                      className="h-4 w-4 shrink-0 sm:h-5 sm:w-5"
-                      style={{ color: "var(--hero-accent)" }}
-                      strokeWidth={1.75}
-                      aria-hidden
-                    />
-                    <span
-                      className="text-[11px] font-medium sm:text-sm"
-                      style={{ color: "var(--hero-muted)" }}
-                    >
-                      {feature.label}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
+            <p
+              className="mt-5 max-w-[680px] text-[11px] font-medium leading-relaxed sm:text-sm"
+              style={{ color: "var(--hero-muted)" }}
+            >
+              40,000+ live channels · 120,000+ films and series · Free 24-hour trial · 24/7 support
+            </p>
           </HeroReveal>
         </div>
       </Container>
