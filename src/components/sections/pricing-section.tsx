@@ -39,7 +39,7 @@ export function PricingSection() {
               className="mt-5 text-sm leading-[1.75] sm:text-[15px]"
               style={{ color: "var(--hero-muted)" }}
             >
-              A 1-month plan is £9.97, 3 months are £17.99, 6 months are £25.97 and 12 months are £42.97. Each price covers the whole selected duration for one standard account, which allows one active stream at a time. Additional simultaneous streams need the matching extra-account option. Renewal is optional, and some player apps charge separately. Customers choose Strong 8K for the 40,000+ live channels, 120,000+ films and series, setup help, 24/7 support and a free 24-hour trial.
+              Choose a Strong 8K plan for 1, 3, 6 or 12 months, with setup help and 24/7 support. Each standard account allows one active stream; extra accounts are available for simultaneous viewing. Renewal is optional, and some player apps charge separately. Try the service free for 24 hours before subscribing.
             </p>
           </FadeIn>
         </div>

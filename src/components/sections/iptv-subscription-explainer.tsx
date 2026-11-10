@@ -8,11 +8,9 @@ import {
 } from "@/lib/site";
 
 const FACTS = [
-  { label: "Service", value: "IPTV subscription for live TV, sport, films and series" },
   { label: "Catalogue", value: "40,000+ live channels and 120,000+ films and series" },
-  { label: "Viewers", value: "UK and USA" },
-  { label: "Plans", value: "1 month £9.97, 3 months £17.99, 6 months £25.97, 12 months £42.97" },
-  { label: "Streams", value: "One active stream on a standard account" },
+  { label: "Plans", value: "1 month £9.97 · 3 months £17.99 · 6 months £25.97 · 12 months £42.97" },
+  { label: "Streams", value: "One active stream per standard account; extra accounts for multiple screens at the same time" },
   { label: "Trial", value: "Free for 24 hours, with no card required" },
   { label: "Picture", value: "SD, HD, Full HD, 4K and up to 8K UHD where supported" },
 ];
@@ -54,16 +52,7 @@ export function IptvSubscriptionExplainer() {
               className="mt-6 max-w-xl text-sm leading-[1.8] sm:text-[15px] md:text-base"
               style={{ color: "var(--hero-muted)" }}
             >
-              Strong 8K, also written Strong8K, is an IPTV subscription service for watching live TV, sport, films and series over the internet. At strong-8k.co.uk, customers can choose 1, 3, 6 or 12-month plans, request a free 24-hour trial and get help setting up a compatible player. One standard account allows one active stream at a time.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={0.2}>
-            <p
-              className="mt-6 max-w-xl text-sm leading-[1.8] sm:text-[15px] md:text-base"
-              style={{ color: "var(--hero-muted)" }}
-            >
-              IPTV sends television over your internet connection to a compatible player. After you choose a plan or trial, Strong 8K sends the account details for that player. The service is offered to viewers in the UK and USA. Extra accounts are available when more than one screen needs to play at the same time.
+              Strong 8K, also written Strong8K, offers IPTV subscriptions for watching live TV, sport, films and series over the internet in the UK and USA. Choose a plan or trial at strong-8k.co.uk to receive account details and help setting up a compatible player.
             </p>
           </FadeIn>
         </div>
@@ -74,9 +63,19 @@ export function IptvSubscriptionExplainer() {
             style={{ borderColor: "var(--feature-card-border)", backgroundColor: "transparent" }}
           >
             <h3 className="text-lg font-bold" style={{ color: "var(--hero-heading)" }}>
-              Strong 8K at a glance
+              What’s included with Strong 8K
             </h3>
             <table className="mt-5 w-full text-left text-sm">
+              <thead>
+                <tr className="border-b" style={{ borderColor: "var(--feature-card-border)" }}>
+                  <th className="py-3 pr-4 font-semibold" style={{ color: "var(--hero-heading)" }}>
+                    Feature
+                  </th>
+                  <th className="py-3 font-semibold" style={{ color: "var(--hero-heading)" }}>
+                    Details
+                  </th>
+                </tr>
+              </thead>
               <tbody>
                 {FACTS.map((fact) => (
                   <tr key={fact.label} className="border-b" style={{ borderColor: "var(--feature-card-border)" }}>
@@ -97,7 +96,7 @@ export function IptvSubscriptionExplainer() {
               className="mt-8 inline-flex text-sm font-bold underline transition-colors hover:opacity-85"
               style={{ color: "var(--hero-accent)" }}
             >
-              Start free trial →
+              Start free trial
             </a>
           </div>
         </FadeIn>
